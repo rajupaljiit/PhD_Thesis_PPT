@@ -1,0 +1,22 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Introduction and Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Literature Survey}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Codebook Construction}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Encoding}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Classification}{10}{0}{2}
+\beamer@sectionintoc {3}{Research gaps}{11}{0}{3}
+\beamer@sectionintoc {4}{Objectives}{12}{0}{4}
+\beamer@subsectionintoc {4}{1}{Objectives}{12}{0}{4}
+\beamer@sectionintoc {5}{Proposed Works}{13}{0}{5}
+\beamer@subsectionintoc {5}{1}{GKS}{13}{0}{5}
+\beamer@subsectionintoc {5}{2}{Objectives}{23}{0}{5}
+\beamer@subsectionintoc {5}{3}{Optimal Codebook Generation}{24}{0}{5}
+\beamer@subsubsectionintoc {5}{3}{1}{BBO variants}{26}{0}{5}
+\beamer@subsubsectionintoc {5}{3}{2}{Codebook Generation using SBBO}{41}{0}{5}
+\beamer@subsectionintoc {5}{4}{Objectives}{46}{0}{5}
+\beamer@subsectionintoc {5}{5}{GRA-BOF method}{47}{0}{5}
+\beamer@subsectionintoc {6}{1}{Objectives}{55}{0}{5}
+\beamer@subsectionintoc {6}{2}{A new feature encoding method}{56}{0}{5}
+\beamer@subsectionintoc {6}{3}{Efficient Bag-of-Features Method for Histopathological Image Classification}{63}{0}{5}
+\beamer@sectionintoc {7}{Conclusion and Scope for Future Work}{65}{0}{6}
+\beamer@sectionintoc {8}{Key References}{70}{0}{7}

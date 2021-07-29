@@ -1,0 +1,30 @@
+\frametitle{Appendix I}
+\begin{itemize}
+\item Standard benchmark functions
+\end{itemize}
+\begin{table}
+\scriptsize
+%\caption{Represented benchmark functions. In category column MM, UM, NS, and S represent multi-modal, unimodal, non-separable and separable functions respectively. }
+\renewcommand{\arraystretch}{1}
+\vspace{-0.25cm}
+  \begin{tabular}{p{0.08in} p{0.32in} p{1.5in} p{0.4in} p{0.08in} p{0.34in} p{0.34in}}
+    \hline
+\textbf{Sr. No.}  &\textbf{Function Name}^^I&^^I \textbf{Equation}^^I&^^I^^I^^I\textbf{Range }^^I & \textbf{OV} &\textbf{Optimal Position Values }&\textbf{Category}\\
+\hline
+15.^^I&^^ISchwefel^^I&^^I$ ^^I- \sum_{i=1}^d x_i \sin\sqrt{|x_i|} $ &^^I[-512 - 512]^^I&^^I0^^I &^^I^^I (420.9687,..., 420.9687)& MM, S\\
+16.^^I&^^ISchwefel3^^I&^^I$ \sum_{i=1}^d |x_i| + \prod_{i=1}^d |x_i| $^^I&^^I[-10 - 10] ^^I&^^I 0^^I&^^I (0,0,\dots,0& MM,\ NS \\
+17.^^I&^^ISphere^^I&^^I$ \sum_{i=1}^{d} x_i^2 $ &^^I[-5.12 - 5.12]^^I&^^I0^^I&(0,0,\dots,0)^^I& UM,\ S\\
+18. &^^IStep^^I&^^I$\sum_{i=1}^{d} (\lfloor |x_i|\rfloor) $^^I&^^I[-100 - 100]^^I&^^I 0^^I&^^I (0,\dots,0)& UM,\ S\\
+19.^^I&^^ISum Squares^^I&^^I$  \sum_{i=1}^{d}ix_i^2$^^I&^^I[-10 - 10] ^^I&^^I0 &^^I(0,0,\dots,0)^^I& UM,\ S\\
+20.^^I&^^ITrigonometric^^I&^^I$ ^^I \sum_{i=1}^{d} [d - \sum_{j=1}^d \cos x_j + i (1 - cos(x_i) - sin(x_i))]^2 $ &^^I[0 - pi]^^I&^^I 0^^I&^^I (0,0,\dots,0& MM,\ NS \\
+
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[t]
+^^I^^I^^I\centering
+^^I^^I^^I\subfigure[SURF]{\includegraphics[width=0.3\linewidth]{Figures/2D/SURF_Points}}
+\subfigure[ORB]{\includegraphics[width=0.5\linewidth]{Figures/2D/ORB_Points}}
+^^I^^I^^I\caption{{\scriptsize $100$ keypoints detected by a) SURF and b) ORB }}\label{fig:emp}
+\end{figure}

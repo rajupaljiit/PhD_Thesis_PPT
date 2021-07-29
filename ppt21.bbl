@@ -1,0 +1,470 @@
+\begin{thebibliography}{10}
+
+\bibitem{ADLdataset}
+Histopathological image data sets.
+\newblock \url{http://signal.ee.psu.edu/histimg2.html}.
+\newblock (Accessed on 08/04/2018).
+
+\bibitem{agarwal2004}
+Shivani Agarwal, Aatif Awan, and Dan Roth.
+\newblock Learning to detect objects in images via a sparse, part-based
+  representation.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  26(11):1475--1490, 2004.
+
+\bibitem{aha1991}
+David~W Aha, Dennis Kibler, and Marc~K Albert.
+\newblock Instance-based learning algorithms.
+\newblock {\em Machine Learning}, 6:37--66, 1991.
+
+\bibitem{bar2015}
+Yaniv Bar, Idit Diamant, Lior Wolf, Sivan Lieberman, Eli Konen, and Hayit
+  Greenspan.
+\newblock Chest pathology detection using deep learning with non-medical
+  training.
+\newblock In {\em ISBI}, pages 294--297. Citeseer, 2015.
+
+\bibitem{bay2008}
+Herbert Bay, Andreas Ess, Tinne Tuytelaars, and Luc Van~Gool.
+\newblock Speeded-up robust features (surf).
+\newblock {\em Computer vision and image understanding}, 110(3):346--359, 2008.
+
+\bibitem{Bayramoglu2016}
+Neslihan Bayramoglu, Juho Kannala, and Janne Heikkil{\"a}.
+\newblock Deep learning for magnification independent breast cancer
+  histopathology image classification.
+\newblock In {\em Proc. of International conference on pattern recognition,
+  Cancun, Mexico, pp. 2440--2445}, 2016.
+
+\bibitem{Bosnacki2019}
+Dragan Bo{\v{s}}na{\v{c}}ki, Natal van Riel, and Mitko Veta.
+\newblock Deep learning with convolutional neural networks for histopathology
+  image analysis.
+\newblock In {\em Automated Reasoning for Systems Biology and Medicine}, pages
+  453--469. Springer, 2019.
+
+\bibitem{brighton2002}
+Henry Brighton and Chris Mellish.
+\newblock Advances in instance selection for instance-based learning
+  algorithms.
+\newblock {\em Data Mining and Knowledge Discovery}, 6:153--172, 2002.
+
+\bibitem{caicedo2009}
+Juan~C Caicedo, Angel Cruz, and Fabio~A Gonzalez.
+\newblock Histopathology image classification using bag of features and kernel
+  functions.
+\newblock In {\em Conference on Artificial Intelligence in Medicine in Europe},
+  pages 126--135. Springer, 2009.
+
+\bibitem{chang2013}
+Hang Chang, Nandita Nayak, Paul~T Spellman, and Bahram Parvin.
+\newblock Characterization of tissue histopathology via predictive sparse
+  decomposition and spatial pyramid matching.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 91--98. Springer, 2013.
+
+\bibitem{chang2005}
+KC~Chang, RG~Lee, C~Wen, and MF~Yeh.
+\newblock Comparison of similarity measures for clustering electrocardiogram
+  complexes.
+\newblock In {\em Computers in Cardiology, 2005}, pages 759--762. IEEE, 2005.
+
+\bibitem{cirecsan2013}
+Dan~C Cire{\c{s}}an, Alessandro Giusti, Luca~M Gambardella, and J{\"u}rgen
+  Schmidhuber.
+\newblock Mitosis detection in breast cancer histology images with deep neural
+  networks.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-assisted Intervention}, pages 411--418. Springer, 2013.
+
+\bibitem{cruz2011}
+Angel Cruz-Roa, Juan~C Caicedo, and Fabio~A Gonz{\'a}lez.
+\newblock Visual pattern mining in histology image collections using bag of
+  features.
+\newblock {\em Artificial intelligence in medicine}, 52(2):91--106, 2011.
+
+\bibitem{cruz2013}
+Angel~Alfonso Cruz-Roa, John Edison~Arevalo Ovalle, Anant Madabhushi, and Fabio
+  Augusto~Gonz{\'a}lez Osorio.
+\newblock A deep learning architecture for image representation, visual
+  interpretability and automated basal-cell carcinoma cancer detection.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 403--410. Springer, 2013.
+
+\bibitem{difranco2011}
+Matthew~D DiFranco, Gillian O’Hurley, Elaine~W Kay, R~William~G Watson, and
+  Padraig Cunningham.
+\newblock Ensemble based system for whole-slide prostate cancer probability
+  mapping using color texture features.
+\newblock {\em Computerized medical imaging and graphics}, 35(7):629--645,
+  2011.
+
+\bibitem{fournier2001}
+J{\'e}r{\^o}me Fournier, Matthieu Cord, and Sylvie Philipp-Foliguet.
+\newblock Retin: A content-based image indexing and retrieval system.
+\newblock {\em Pattern Analysis \& Applications}, 4(2-3):153--173, 2001.
+
+\bibitem{galaro2011}
+Joseph Galaro, Alexander~R Judkins, David Ellison, Jennifer Baccon, and Anant
+  Madabhushi.
+\newblock An integrated texton and bag of words classifier for identifying
+  anaplastic medulloblastomas.
+\newblock In {\em Engineering in Medicine and Biology Society, EMBC, 2011
+  Annual International Conference of the IEEE}, pages 3443--3446. IEEE, 2011.
+
+\bibitem{Garg2016}
+Vanita Garg and Kusum Deep.
+\newblock Performance of laplacian biogeography-based optimization algorithm on
+  cec 2014 continuous optimization benchmarks and camera calibration problem.
+\newblock {\em Swarm and Evolutionary Computation}, 27:132--144, 2016.
+
+\bibitem{georgescu2003}
+Bogdan Georgescu, Ilan Shimshoni, and Peter Meer.
+\newblock Mean shift based clustering in high dimensions: A texture
+  classification example.
+\newblock In {\em ICCV}, volume~3, page 456, 2003.
+
+\bibitem{ghosh2010}
+Madhumala Ghosh, Devkumar Das, Subhodip Mandal, Chandan Chakraborty, Mallika
+  Pala, Ashok~K Maity, Surjya~K Pal, and Ajoy~K Ray.
+\newblock Statistical pattern analysis of white blood cell nuclei morphometry.
+\newblock In {\em Students' Technology Symposium (TechSym), 2010 IEEE}, pages
+  59--66. IEEE, 2010.
+
+\bibitem{gurcan2009}
+Metin~N Gurcan, Laura~E Boucheron, Ali Can, Anant Madabhushi, Nasir~M Rajpoot,
+  and Bulent Yener.
+\newblock Histopathological image analysis: A review.
+\newblock {\em IEEE reviews in biomedical engineering}, 2:147--171, 2009.
+
+\bibitem{gutierrez2013}
+Ricardo Guti{\'e}rrez, Andrea Rueda, and Eduardo Romero.
+\newblock Learning semantic histopathological representation for basal cell
+  carcinoma classification.
+\newblock In {\em Proc. of SPIE Vol}, volume 8676, pages 86760U--1, 2013.
+
+\bibitem{hou2016}
+Le~Hou, Dimitris Samaras, Tahsin~M Kurc, Yi~Gao, James~E Davis, and Joel~H
+  Saltz.
+\newblock Patch-based convolutional neural network for whole slide tissue image
+  classification.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 2424--2433, 2016.
+
+\bibitem{huang2014}
+Yongzhen Huang, Zifeng Wu, Liang Wang, and Tieniu Tan.
+\newblock Feature coding in image classification: A comprehensive study.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  36(3):493--506, 2014.
+
+\bibitem{jurie2005}
+Frederic Jurie and Bill Triggs.
+\newblock Creating efficient codebooks for visual recognition.
+\newblock In {\em Computer Vision, 2005. ICCV 2005. Tenth IEEE International
+  Conference on}, volume~1, pages 604--610. IEEE, 2005.
+
+\bibitem{Karami2017}
+Ebrahim Karami, Siva Prasad, and Mohamed Shehata.
+\newblock Image matching using sift, surf, brief and orb: performance
+  comparison for distorted images.
+\newblock {\em arXiv preprint arXiv:1710.02726}, 2017.
+
+\bibitem{kumar2017}
+Meghana~Dinesh Kumar, Morteza Babaie, Shujin Zhu, Shivam Kalra, and
+  HR~Tizhoosh.
+\newblock A comparative study of cnn, bovw and lbp for classification of
+  histopathological images.
+\newblock {\em arXiv preprint arXiv:1710.01249}, 2017.
+
+\bibitem{kumar2018}
+Sandeep Kumar, Basudev Sharma, Vivek~Kumar Sharma, and Ramesh~C Poonia.
+\newblock Automated soil prediction using bag-of-features and chaotic spider
+  monkey optimization algorithm.
+\newblock {\em Evolutionary Intelligence}, pages 1--12, 2018.
+
+\bibitem{kuse2010}
+Manohar Kuse, Tanuj Sharma, and Sudhir Gupta.
+\newblock A classification scheme for lymphocyte segmentation in h\&e stained
+  histology images.
+\newblock In {\em Recognizing Patterns in Signals, Speech, Images and Videos},
+  pages 235--243. Springer, 2010.
+
+\bibitem{leibe2006}
+Bastian Leibe and Bernt Schiele.
+\newblock Interleaving object categorization and segmentation.
+\newblock In {\em Cognitive Vision Systems}, pages 145--161. Springer, 2006.
+
+\bibitem{li2016f}
+Li~Li, Lin Feng, Laihang Yu, Jun Wu, and Shenglan Liu.
+\newblock Fusion framework for color image retrieval based on bag-of-words
+  model and color local haar binary patterns.
+\newblock {\em Journal of Electronic Imaging}, 25(2):023022, 2016.
+
+\bibitem{li2015}
+Yali Li, Shengjin Wang, Qi~Tian, and Xiaoqing Ding.
+\newblock A survey of recent advances in visual feature detection.
+\newblock {\em Neurocomputing}, 149:736--751, 2015.
+
+\bibitem{lim2016}
+Wee~Loon Lim, Antoni Wibowo, Mohammad~Ishak Desa, and Habibollah Haron.
+\newblock A biogeography-based optimization algorithm hybridized with tabu
+  search for the quadratic assignment problem.
+\newblock {\em Computational intelligence and neuroscience}, 2016:27, 2016.
+
+\bibitem{lin2016}
+Wei-Chao Lin, Chih-Fong Tsai, Zong-Yao Chen, and Shih-Wen Ke.
+\newblock Keypoint selection for efficient bag-of-words feature generation and
+  effective image classification.
+\newblock {\em Information Sciences}, 329:33--51, 2016.
+
+\bibitem{Long2005}
+Xi~Long, W~Louis Cleveland, and Y~Lawrence Yao.
+\newblock A new preprocessing approach for cell recognition.
+\newblock {\em IEEE Transactions on Information Technology in Biomedicine},
+  9(3):407--412, 2005.
+
+\bibitem{ma2010analysis}
+Haiping Ma.
+\newblock An analysis of the equilibrium of migration models for
+  biogeography-based optimization.
+\newblock {\em Information Sciences}, 180(18):3444--3464, 2010.
+
+\bibitem{ma2011}
+Haiping Ma and Dan Simon.
+\newblock Blended biogeography-based optimization for constrained optimization.
+\newblock {\em Engineering Applications of Artificial Intelligence},
+  24(3):517--525, 2011.
+
+\bibitem{ma2017}
+Haiping Ma, Dan Simon, Patrick Siarry, Zhile Yang, and Minrui Fei.
+\newblock Biogeography-based optimization: a 10-year review.
+\newblock {\em IEEE Transactions on Emerging Topics in Computational
+  Intelligence}, 1(5):391--407, 2017.
+
+\bibitem{ma1999}
+Wei-Ying Ma and Bangalore~S Manjunath.
+\newblock Netra: A toolbox for navigating large image databases.
+\newblock {\em Multimedia systems}, 7(3):184--198, 1999.
+
+\bibitem{malon2008}
+Christopher Malon, Matthew Miller, Harold~Christopher Burger, Eric Cosatto, and
+  Hans~Peter Graf.
+\newblock Identifying histological elements with convolutional neural networks.
+\newblock In {\em Proceedings of the 5th international conference on Soft
+  computing as transdisciplinary science and technology}, pages 450--456. ACM,
+  2008.
+
+\bibitem{Mirjalili2017}
+Seyedali Mirjalili, Amir~H Gandomi, Seyedeh~Zahra Mirjalili, Shahrzad Saremi,
+  Hossam Faris, and Seyed~Mohammad Mirjalili.
+\newblock Salp swarm algorithm: A bio-inspired optimizer for engineering design
+  problems.
+\newblock {\em Advances in Engineering Software}, 114:163--191, 2017.
+
+\bibitem{mirjalili2016}
+Seyedali Mirjalili and Andrew Lewis.
+\newblock The whale optimization algorithm.
+\newblock {\em Advances in Engineering Software}, 95:51--67, 2016.
+
+\bibitem{mirjalili2014}
+Seyedali Mirjalili, Seyed~Mohammad Mirjalili, and Andrew Lewis.
+\newblock Grey wolf optimizer.
+\newblock {\em Advances in engineering software}, 69:46--61, 2014.
+
+\bibitem{mittal2016}
+Himanshu Mittal, Raju Pal, Ankur Kulhari, and Mukesh Saraswat.
+\newblock Chaotic kbest gravitational search algorithm (ckgsa).
+\newblock In {\em Contemporary Computing (IC3), 2016 Ninth International
+  Conference on}, pages 1--6. IEEE, 2016.
+
+\bibitem{Mohamed2017}
+Ali~W. Mohamed, Anas~A. Hadi, Anas~M. Fattouh, and Kamal~M. Jambi.
+\newblock {LSHADE} with semi-parameter adaptation hybrid with {CMA}-{ES} for
+  solving {CEC} 2017 benchmark problems.
+\newblock In {\em 2017 {IEEE} Congress on Evolutionary Computation ({CEC})}.
+  {IEEE}, jun 2017.
+
+\bibitem{nayak2013}
+Nandita Nayak, Hang Chang, Alexander Borowsky, Paul Spellman, and Bahram
+  Parvin.
+\newblock Classification of tumor histopathology via sparse feature learning.
+\newblock In {\em Biomedical Imaging (ISBI), 2013 IEEE 10th International
+  Symposium on}, pages 410--413. IEEE, 2013.
+
+\bibitem{nei2017}
+Kuan~Pei Nei, Stephanie Chua, and Ehfa~Bujang Safawi.
+\newblock A comparative study of features extracted in the classification of
+  human skin burn depth.
+\newblock {\em Journal of Telecommunication, Electronic and Computer
+  Engineering (JTEC)}, 9(3-11):47--50, 2017.
+
+\bibitem{Niu2014}
+Qun Niu, Letian Zhang, and Kang Li.
+\newblock A biogeography-based optimization algorithm with mutation strategies
+  for model parameter estimation of solar and fuel cells.
+\newblock {\em Energy Conversion and Management}, 86:1173--1185, oct 2014.
+
+\bibitem{o2011}
+Stephen O'Hara and Bruce~A Draper.
+\newblock Introduction to the bag of features paradigm for image classification
+  and retrieval.
+\newblock {\em arXiv preprint arXiv:1101.3354}, 2011.
+
+\bibitem{Ong1996}
+SH~Ong, XC~Jin, R~Sinniah, et~al.
+\newblock Image analysis of tissue sections.
+\newblock {\em Computers in biology and medicine}, 26(3):269--279, 1996.
+
+\bibitem{orting2018}
+Silas~Nyboe {\O}rting, Jens Petersen, Laura~H Thomsen, Mathilde~MW Wille, and
+  Marleen de~Bruijne.
+\newblock Detecting emphysema with multiple instance learning.
+\newblock In {\em Biomedical Imaging (ISBI 2018), 2018 IEEE 15th International
+  Symposium on}, pages 510--513. IEEE, 2018.
+
+\bibitem{Pal2018a}
+Raju Pal and Mukesh Saraswat.
+\newblock Enhanced bag of features using alexnet and improved
+  biogeography-based optimization for histopathological image analysis.
+\newblock In {\em Proc. of Eleventh International Conference on Contemporary
+  Computing, Noida, India, pp. 1--6}, pages 1--6. IEEE, 2018.
+
+\bibitem{panchal2013}
+PM~Panchal, SR~Panchal, and SK~Shah.
+\newblock A comparison of sift and surf.
+\newblock {\em International Journal of Innovative Research in Computer and
+  Communication Engineering}, 1(2):323--327, 2013.
+
+\bibitem{peng2016}
+Xiaojiang Peng, Limin Wang, Xingxing Wang, and Yu~Qiao.
+\newblock Bag of visual words and fusion methods for action recognition:
+  Comprehensive study and good practice.
+\newblock {\em Computer Vision and Image Understanding}, 150:109--125, 2016.
+
+\bibitem{qureshi2009}
+Hammad~A Qureshi, Nasir~Mahmood Rajpoot, Tim~W Nattkemper, and Volkmar Hans.
+\newblock A robust adaptive wavelet-based method for classification of
+  meningioma histology images.
+\newblock 2009.
+
+\bibitem{raza2011}
+S~Hussain Raza, R~Mitchell Parry, Richard~A Moffitt, Andrew~N Young, and May~D
+  Wang.
+\newblock An analysis of scale and rotation invariance in the bag-of-features
+  method for histopathological image classification.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 66--74. Springer, 2011.
+
+\bibitem{Rezatofighi2011}
+Seyed~Hamid Rezatofighi and Hamid Soltanian-Zadeh.
+\newblock Automatic recognition of five types of white blood cells in
+  peripheral blood.
+\newblock {\em Computerized Medical Imaging and Graphics}, 35(4):333--343,
+  2011.
+
+\bibitem{Saha2018}
+Monjoy Saha, Chandan Chakraborty, and Daniel Racoceanu.
+\newblock Efficient deep learning model for mitosis detection using breast
+  histopathology images.
+\newblock {\em Computerized Medical Imaging and Graphics}, 64:29--40, 2018.
+
+\bibitem{sanchez2018k}
+Daniel Sanchez-Morillo, Jes{\'u}s Gonz{\'a}lez, Marcial Garc{\'\i}a-Rojo, and
+  Julio Ortega.
+\newblock Classification of breast cancer histopathological images using kaze
+  features.
+\newblock In {\em International Conference on Bioinformatics and Biomedical
+  Engineering}, pages 276--286. Springer, 2018.
+
+\bibitem{saygili2015}
+Ahmet Saygili, Gunalp Uysal, and Gokhan Bilgin.
+\newblock Comparative analysis of codeword representation by clustering methods
+  for the classification of histological tissue types.
+\newblock In {\em Eighth International Conference on Machine Vision (ICMV
+  2015)}, volume 9875, page 98750U. International Society for Optics and
+  Photonics, 2015.
+
+\bibitem{simon2008}
+Dan Simon.
+\newblock Biogeography-based optimization.
+\newblock {\em IEEE transactions on evolutionary computation}, 12(6):702--713,
+  2008.
+
+\bibitem{sinha2003}
+Neelam Sinha and AG~Ramakrishnan.
+\newblock Automation of differential blood count.
+\newblock In {\em TENCON 2003. Conference on Convergent Technologies for the
+  Asia-Pacific Region}, volume~2, pages 547--551. IEEE, 2003.
+
+\bibitem{sirinukunwattana2016locality}
+Korsuk Sirinukunwattana, Shan E~Ahmed Raza, Yee-Wah Tsang, David~RJ Snead,
+  Ian~A Cree, and Nasir~M Rajpoot.
+\newblock Locality sensitive deep learning for detection and classification of
+  nuclei in routine colon cancer histology images.
+\newblock {\em IEEE transactions on medical imaging}, 35:1196--1206, 2016.
+
+\bibitem{spanhol2016}
+Fabio~A Spanhol, Luiz~S Oliveira, Caroline Petitjean, and Laurent Heutte.
+\newblock A dataset for breast cancer histopathological image classification.
+\newblock {\em IEEE Transactions on Biomedical Engineering}, 63(7):1455--1462,
+  2016.
+
+\bibitem{srinivas2014}
+Umamahesh Srinivas, Hojjat~Seyed Mousavi, Vishal Monga, Arthur Hattel, and
+  Bhushan Jayarao.
+\newblock Simultaneous sparsity model for histopathological image
+  representation and classification.
+\newblock {\em IEEE transactions on medical imaging}, 33(5):1163--1179, 2014.
+
+\bibitem{strange2013}
+Harry Strange and Reyer Zwiggelaar.
+\newblock Meningioma subtype classification using morphology features and
+  random forests.
+\newblock In {\em Medical Imaging 2013: Digital Pathology}, volume 8676, page
+  86760S. International Society for Optics and Photonics, 2013.
+
+\bibitem{Theera2007}
+Nipon Theera-Umpon and Sompong Dhompongsa.
+\newblock Morphological granulometric features of nucleus in automatic bone
+  marrow white blood cell classification.
+\newblock {\em IEEE Transactions on Information Technology in Biomedicine},
+  11(3):353--359, 2007.
+
+\bibitem{wang2010}
+Wei Wang, John~A Ozolek, and Gustavo~K Rohde.
+\newblock Detection and classification of thyroid follicular lesions based on
+  nuclear structure from histopathology images.
+\newblock {\em Cytometry Part A: The Journal of the International Society for
+  Advancement of Cytometry}, 77(5):485--494, 2010.
+
+\bibitem{fermat2017}
+Wikipedia.
+\newblock {\em Fermat's Spiral - wikipedia, the free encyclopedia}, 12 2017.
+
+\bibitem{xu2014}
+Jun Xu, Lei Xiang, Renlong Hang, and Jianzhong Wu.
+\newblock Stacked sparse autoencoder (ssae) based framework for nuclei patch
+  classification on breast cancer histopathology.
+\newblock In {\em 2014 IEEE 11th International Symposium on Biomedical Imaging
+  (ISBI)}, pages 999--1002. IEEE, 2014.
+
+\bibitem{xu2016}
+Jun Xu, Lei Xiang, Qingshan Liu, Hannah Gilmore, Jianzhong Wu, Jinghai Tang,
+  and Anant Madabhushi.
+\newblock Stacked sparse autoencoder (ssae) for nuclei detection on breast
+  cancer histopathology images.
+\newblock {\em IEEE transactions on medical imaging}, 35(1):119--130, 2016.
+
+\bibitem{zhang2013}
+Yungang Zhang, Bailing Zhang, Frans Coenen, and Wenjin Lu.
+\newblock Breast cancer diagnosis from biopsy images with highly reliable
+  random subspace classifier ensembles.
+\newblock {\em Machine vision and applications}, 24(7):1405--1420, 2013.
+
+\bibitem{abcd}
+Elizabeth Zimmermann.
+\newblock Frozen section analysis for breast cancer could save time, anxiety
+  and more than 90 million dollar.
+\newblock \url{https://newsnetwork.mayoclinic.org/discussion/}, February 2016.
+
+\end{thebibliography}

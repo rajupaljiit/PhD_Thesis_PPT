@@ -1,0 +1,2378 @@
+\documentclass [9pt,times] {beamer}
+\usepackage{ amsmath, amssymb}
+%beamerthemeshadow,
+%\beamertemplateboxminiframe
+\usepackage{subfigure}
+\usepackage{ragged2e}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{xcolor, soul}
+\usepackage{epsfig}
+\usepackage{colortbl}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+\usepackage{textcomp}
+%\usepackage{sidecap}
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\setbeamercolor{footnote}{fg=blue}
+\usecolortheme{rose}
+\usetheme{CambridgeUS}
+%\usetheme{Malmoe}
+
+%\beamertemplatesolidbackgroundcolor{white!25}
+%\setlength{\parskip}{8pt plus .5pt minus .5pt}
+%\setbeamertemplate{footline}[frame number]
+\logo{\includegraphics[height=0.75cm]{Figures/Intro/Logo}}
+
+
+\title[Computer Science Engineering \& IT]{Enhancement of  Bag-of-Features Method for Classification of Histopathological Images}
+\vspace{1in}
+\author[Raju Pal]{\small{Presented by: \\ Raju Pal (PhDI-1443008)}}
+
+
+\institute[] % (optional, but mostly needed)
+{
+	\textbf{\small Under Guidance of :}\\
+	
+	\small Dr. Mukesh Saraswat\\[0.5cm]
+	\begin{figure}[h!]
+		\begin{center}
+			
+			\includegraphics[scale=0.3]{Figures/Intro/Logo}
+			%	      \caption{\fontsize{8pt}{7pt}\selectfont Clustering Formation \cite{The5Clus96:online}.}
+		\end{center}
+	\end{figure}
+	\vspace{0.5cm}
+	%  \inst{1}%
+	\small  Department of Computer Science\\
+	\small Jaypee Institute of Information Technology, Noida\\
+	\vspace{0.5cm}
+	
+}
+
+\date{December 16, 2019}
+\subject{PhD Deference presentation, Jan 2019}
+
+
+%\pgfdeclareimage[height=0.75cm]{university-logo}{Logo}
+%\logo{\pgfuseimage{university-logo}}
+\setbeamertemplate{caption}[numbered]
+
+
+% Let's get started
+\begin{document}
+	
+\frame[plain]{\titlepage}
+	
+	
+%%Outline
+%\begin{frame}[shrink]%[allowframebreaks]%
+%\frametitle{Outline}
+%\transdissolve
+%\tableofcontents[hideallsubsections]
+%\end{frame}
+
+\section{Introduction and Motivation}
+\subsection*{Introduction}\label{IC}
+\begin{frame}\frametitle{Introduction}
+\justifying
+\fontsize{9pt}{11pt}\selectfont
+\begin{columns}
+	\begin{column}{7cm}
+			\begin{itemize}
+				\item Image Classification \\[1ex]
+				\begin{itemize}					
+					\item Medical image analysis   
+						\begin{itemize}
+							\item  \textcolor[rgb]{1.00,0.00,0.00} {Histopathological image analysis}
+						\end{itemize}
+				\end{itemize}
+				\item Histopathological Analysis $\rightarrow$ \textcolor[rgb]{1.00,0.00,0.00}{Study the changes in tissue images}\\[1ex]
+%				\item Various \textcolor[rgb]{0.00,0.00,1.00}{staining} methods are used to provide the colors to Tissues\\[1ex]
+%				\begin{itemize}
+%					\item H\&E Staining
+%					\begin{itemize}
+%						
+%						\item Hematoxylin $\rightarrow$ bluish nuclie
+%						\item Eosin $\rightarrow$ red cytoplasm 
+%					\end{itemize}
+%				\end{itemize}
+
+		\item  \textcolor[rgb]{0.00,0.00,1.00}{Application Areas:}\\[1ex] 
+			\begin{enumerate}
+			%\scriptsize
+			\item Counting of various cells (i.e. Leukocytes, RBC etc.) in histopathological images \\[0.8ex] %(\textcolor[rgb]{0.00,0.00,1.00}{Quantitative})
+			
+			\item Identification of inflamed and healthy histopathological images %(\textcolor[rgb]{0.00,0.00,1.00}{Qualitative})
+			
+
+			\end{enumerate}
+	\end{itemize}
+			
+			
+	\end{column}
+\begin{column}{5cm}
+	\begin{figure}[h!]
+			\begin{center}
+			\subfigure[\fontsize{5pt}{7pt}\selectfont Healthy tissue]{\includegraphics[width=0.6\textwidth]{Figures/Intro/LN}}
+%			\caption{\fontsize{6pt}{8pt}\selectfont  \cite{ADLdataset}}
+		\subfigure[\fontsize{5pt}{7pt}\selectfont Inflamed tissue]{	\includegraphics[width=0.6\textwidth]{Figures/Intro/LI}}
+			
+			\end{center}
+		\caption{\fontsize{6pt}{8pt}\selectfont Histopathological Images \cite{ADLdataset}}
+			
+		\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\subsection*{Motivation}\label{Motivation}
+\begin{frame}\frametitle{Motivation}
+\begin{columns}
+	\begin{column}{5.6cm}
+		\fontsize{5pt}{7pt}\selectfont
+		\begin{block}{\textbf{Problems Associated with Manual Histopathological Analysis \cite{gurcan2009, Ong1996}}}
+				\begin{block}{}
+					\begin{itemize}
+					\fontsize{6pt}{8pt}\selectfont
+						\item A shortage of dedicated trained pathologists\\[.20cm]
+						\item The individual microscope observations are biased in nature\\[.20cm]
+						\item Wide natural biological variability across tissue sections\\[.20cm]
+						\item Time consuming process\\[.20cm]
+				\end{itemize}
+				\end{block}
+	\end{block}	
+	\end{column}
+
+\begin{column}{6cm}
+\begin{figure}\label{fig:ph}
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/Intro/Analysis}
+	\caption{Manual analysis of histopathological images \cite{abcd}} 
+\end{figure}
+\end{column}
+\end{columns}
+
+\fontsize{5pt}{7pt}\selectfont
+	\begin{block}{\textbf{Challenges Associated with Automated  Histopathological Analysis \cite{gurcan2009, Ong1996}}}
+		\begin{block}{}
+				\begin{itemize}
+						\fontsize{6pt}{8pt}\selectfont
+						\item Lack of labeled image dataset  \\[.20cm]
+						\item Histopathological images have complex morphological structure \\[.20cm]
+						%\item Enormous density of data as compared with radiological and other imaging modalities\\[.20cm]
+						%\item Extremely large size of a single histopathology image\\[.20cm]
+						\item Classification accuracies are still adequate
+				\end{itemize}
+	\end{block}
+	\end{block}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Literature Survey}
+
+\begin{frame}\frametitle{Automated Histopathological Image Classification}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Figures/Intro/basic_model1}
+	\caption{General work flow of an automated histopathological image classification}
+	\label{fig:ac}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}\frametitle{Automated Histopathological Image Classification}
+\begin{itemize}
+\justifying
+\item On the basis of Image representation, Histopathological Image Classification methods can be divided into three categories \cite{gutierrez2013}: \\[0.2cm]
+		\begin{itemize}
+			\item  \textcolor[rgb]{0.00,0.00,1.00}{Statistical-based methods}  \\[0.1cm]%Low-level representation
+					\begin{itemize}
+						\item Extract handcrafted features like color, morphological structures \cite{difranco2011}, nuclei distribution \cite{zhang2013}, and many more  \\[0.1cm]
+						\item \textcolor[rgb]{1.00,0.00,0.00}{Not able to express the complex visual morphology} in histopathology images \cite{qureshi2009} \cite{gutierrez2013}
+
+					\end{itemize}
+			\item  \textcolor[rgb]{0.00,0.00,1.00}{Learning-based methods} %Learning-based representation 
+					\begin{itemize}
+							\item Use different machine learning techniques to automatically extract the features that are used to represent the data in a more meaningful and collective manner \\[0.1cm]
+							\item Auto-encoders \cite{cruz2013, xu2016}, restricted Boltzmann machines \cite{nayak2013, chang2013},  Convolutional Neural Network \cite{malon2008, hou2016}, and many more \cite{Bayramoglu2016, Saha2018, Bosnacki2019} \\[0.1cm]
+\item  \textcolor[rgb]{1.00,0.00,0.00}{Large training dataset is required for training}
+							\item \textcolor[rgb]{1.00,0.00,0.00}{Require more memory and high computational time} \cite{gutierrez2013}
+
+					\end{itemize}
+
+			\item \textcolor[rgb]{0.00,0.00,1.00}{Mid-level representation based methods}
+				\begin{itemize}
+					\item  Transforming low-level descriptors into a global and richer image representation \\[0.1cm]
+					\item The NeTra toolbox \cite{ma1999}, RETIN system \cite{fournier2001}, Bag of features (BOF) \cite{caicedo2009} \\[0.1cm]
+					%\item Caicedo et al. \cite{caicedo2009} used BOF to classify histopathological images in 2009.
+ 					\item \textcolor[rgb]{1.00,0.00,0.00}{Kumar et al. \cite{kumar2017} validated that Bag of feature representations outperforms other representation for histopathological image classification}
+
+				\end{itemize}
+			
+			\end{itemize}
+
+
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Bag of Features based Histopathological Image Classification System}
+\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{Figures/Intro/BOVW2}
+		\caption{Bag-of-feature approach for Histopathological image classification \cite{caicedo2009}}
+		\label{fig:bof2}
+	\end{figure}
+\end{frame}
+
+
+\subsection*{Features Extraction}\label{ Features Extraction}
+\begin{frame}\frametitle{Features Extraction}
+\justifying
+\fontsize{9pt}{11pt}\selectfont
+\begin{itemize}
+	\item Visual features aim to describe the most relevant information
+	to feed a specific Machine Learning (ML) algorithm 
+	%\item In histopathology image domain, feature extraction methods are usually classified as follows:
+
+\begin{block}{}
+\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.5}
+% if using array.sty, it might be a good idea to tweak the value of
+%\extrarowheight{2} %as needed to properly center the text within the cells
+\caption{Categorization of Features used in Bag of features methods \cite{li2015}}
+\label{Tab:features}
+\centering
+ %Some packages, such as MDW tools, offer better commands for making tables
+% than the plain LaTeX2e tabular which is used here.
+\scriptsize{
+\begin{tabular}{p{1.5cm}|p{1.6cm}|p{2.5cm}|p{3.2cm}}
+	 \hline
+	\textbf{Category}  & \textbf{Classification} &  \textbf{Comments} & \textbf{Methods}\\
+	 \hline 
+	Blob detection (Interest Point) &  Partial Differential Equations based & Based on the partial
+differentiation on Gaussian scale spaces & LoG \cite{o2011}, DoG \cite{raza2011}, DoH, Hessian-Laplacian \cite{orting2018}, SIFT \cite{cruz2011, galaro2011}, SURF \cite{raza2011, spanhol2016}, KAZE \cite{sanchez2018k}\\
+
+ & Template based & Based on binary comparison and decision tree; computationally fast & BRISK \cite{li2016f}, FREAK \cite{nei2017}, ORB \cite{spanhol2016}\\
+
+\hline
+Learned Features & Deep Features &  High-level abstractions obtained from raw images &DNN \cite{cirecsan2013, bar2015}, SSAE \cite{xu2014}, CNN \cite{cruz2013} \\
+
+\hline
+
+\end{tabular}
+}
+\end{table}
+\end{block}
+
+
+\item SIFT and SURF features are robust to scale, rotation, and illumination changes while ORB is a computationally fast method \cite{bay2008}
+
+\item However, due to complex morphological structures of histopathological images these methods generate high dimensional feature vectors
+
+
+\end{itemize}
+
+\end{frame}
+
+
+%\begin{frame}{Features Extraction}
+%
+%\begin{itemize}
+%\justifying
+%\item  Lowe \cite{lowe1999object} developed a breakthrough method to find scale-invariant features, called SIFT which is invariant to uniform scaling, orientation, illumination changes, and partially invariant to affine distortion
+%
+%\item  SIFT is really good, but not fast enough, so people came up with a speeded-up version called SURF \cite{bay2008}
+%
+%\item  ORB \cite{rublee2011} is basically a fusion of FAST keypoint detector and BRIEF descriptor with many modifications to enhance the performance
+%
+%
+%\end{itemize}
+%
+%\end{frame}
+
+
+\subsection{Codebook Construction}\label{CC}
+\begin{frame}\frametitle{Codebook Construction}
+\begin{itemize}
+\item The extracted features are quantized into different clusters to find the visual words. The collection of visual words is known as \textcolor[rgb]{0.00,0.00,1.00}{codebook}
+
+\begin{block}{}
+\begin{table}[!t]
+
+\renewcommand{\arraystretch}{1.5}
+\caption{Various codebook construction methods used in Bag of features \cite{jurie2005}}
+\label{Tab:clustering}
+\centering
+\scriptsize{
+\begin{tabular}{p{1.2cm}|p{1.9cm}|p{4.8cm}}
+	 \hline
+	 \justifying
+	\textbf{Category} &\textbf{Methods}  &  \textbf{Comments}\\
+	 \hline 
+	Partitional methods & K-means \cite{jurie2005, caicedo2009, saygili2015}, FCM, GMM \cite{saygili2015}  & Generates non-uniform coding (biased towards dense regions) \newline optimal codebook size (K) is unambiguous\\
+
+Hierarchical methods & Agglomerative clustering \cite{agarwal2004, leibe2006}, Mean Shift \cite{georgescu2003} & These methods can not applied to large datasets or histology images due to high computational cost \\
+
+Meta-heuristic methods & PSO, GSA, DE, CSMO \cite{kumar2018} & Used to find optimal visual words based on some objective function defined over compactness and separation \newline Computationally expensive \\
+
+
+\hline
+\end{tabular}
+}
+\end{table}
+\end{block}
+\end{itemize}
+\end{frame}
+
+
+
+\subsection{Encoding}\label{Encoding}
+
+\begin{frame}\frametitle{Feature Encoding}
+\begin{itemize}
+\item Each image is encoded in terms of visual words  by different \textcolor[rgb]{0.00,0.00,1.00}{feature encoding methods}
+
+\end{itemize}
+\begin{block}{}
+\begin{table}[!t]
+
+\renewcommand{\arraystretch}{1.5}
+\caption{Various encoding methods used in Bag of features \cite{huang2014, peng2016}}
+\label{Tab:encoding}
+\centering
+\scriptsize{
+\begin{tabular}{p{1.3cm}|p{3cm}|p{4cm}}
+	 \hline
+	\textbf{Type} &\textbf{Methods}  &  \textbf{Comments}\\
+	 \hline 
+	Voting based & Hard voting (HV), Soft-assignment (SA), Localized SA, Salient coding (SC), Group salient coding (GSC) & Describe distribution of features with a histogram which carries the occurrence of information of codewords\\
+
+Reconstruction based & Orthogonal matching pursuit (OMP), Sparse coding (SC), Locality-constrained Linear Coding (LLC), Local Coordinate Coding (LCC) &  Use a small part of codewords to describe each feature via solving a least-square-based optimization problem with constraints on codewords \\
+
+Super vector based & Local Tangent-based Coding (LTC), Super Vector Coding (SVC), Fisher Vector, Vector of Locally Aggregated Descriptors (VLAD) & Estimate the distribution of features with GMM consisting of weights, means, and covariance matrix of multiple Gaussian distributions, each of which reflect one pattern of feature \\
+\hline
+
+
+\end{tabular}
+}
+\end{table}
+\end{block}
+
+\begin{itemize}
+\item  All encoding methods use single feature to encode the images and this can be extended for more than one feature
+
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Classification}\label{Classification}
+\begin{frame}\frametitle{Classification}
+\justifying
+%\fontsize{8pt}{10pt}\selectfont
+\fontsize{9pt}{11pt}\selectfont
+\begin{itemize}
+	\item The classifier  identifies or categorizes image components based on the extracted features\\[.20cm]
+	
+\end{itemize}
+
+\fontsize{7pt}{9pt}\selectfont
+\begin{block}{}
+	\begin{table}[!t]
+		%% increase table row spacing, adjust to taste
+		\renewcommand{\arraystretch}{1.5}
+		% if using array.sty, it might be a good idea to tweak the value of
+		%\extrarowheight{2} %as needed to properly center the text within the cells
+		\caption{Popularly used classification methods for Histopathological Image Classification}
+		\label{Tab:classification}
+		\centering
+		%Some packages, such as MDW tools, offer better commands for making tables
+		% than the plain LaTeX2e tabular which is used here.
+		\begin{tabular}{p{1.9cm}|p{6.9cm}|p{1cm}}
+			\hline
+			  \textbf{Classifier}& \textbf{Comments}& \textbf{References}\\
+			
+			\hline
+			Random Forest&  Creates a set of decision trees and aggregates the votes from different decision trees to decide the final class of the test image& \cite{sirinukunwattana2016locality} \cite{strange2013}\\
+			
+			Logistic Regression &  A Linear classifier which uses the calculated logits (score ) to predict the target class   &\cite{wang2010} \cite{hou2016}	\\
+			
+			Support Vector Machine &  A discriminative classifier formally defined by a separating hyperplane which are further used to categorize new test images& \cite{sinha2003} \cite{kuse2010} \cite{Rezatofighi2011}\\
+			
+			Linear Discriminant Analysis & Find a linear combination of features that characterizes or separates two or more classes of images  & \cite{Long2005}\\
+			
+			Bayesian Classifier &  A probabilistic model where the classification is a latent variable that is probabilistically related to the observed variables & \cite{sinha2003} \cite{Theera2007} \cite{ghosh2010}\\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{block}
+\end{frame}
+
+
+
+
+\section{Research gaps} 
+\begin{frame}{Research Gaps}
+\begin{enumerate}
+	\justifying
+\item  High dimensional keypoint descriptors \\[0.3cm]
+\begin{itemize}
+\item Histopathological images contains various morphological variabilities and structures, due to which high dimensional keypoint descriptors are generated \\[0.2cm]
+
+\item This make codebook construction computationally expensive and prompt to generate irrelevant visual words \\[0.2cm]%\cite{lin2016}.
+
+\item No method has been reported to select the relevant keypoints from the extracted high dimensional keypoint descriptors in BOF method for histopathological images
+\end{itemize}
+\item The generated visual words are biased towards densest regions in descriptor space and thus failing to code other informative regions \\[0.2cm]%\cite{jurie2005}. 
+%\item BBO based visual word generation methods outperforms other meta-heuristic based methods, however it has poor exploration capabilities
+\item Existing meta-heuristic based visual word generation methods are computationally expensive \\[0.2cm]
+\item Existing feature encoding methods consider only single image feature to encode an image %\cite{huang2014}.
+
+\end{enumerate}
+\end{frame}
+
+
+\section{Objectives}
+\subsection{Objectives}
+\begin{frame}{Objectives}
+\begin{enumerate}
+	\justifying
+	\item To design a new keypoint selection method for finding discriminative and relevant features for codebook construction \\[3ex]
+
+	\item To design an efficient meta-heuristic based codebook generation method to reduce the effect of dense regions of histopathological images \\[3ex]
+	
+	\item To design a computationally efficient and effective codebook generation method for finding the relevant visual words \\[3ex]
+
+	\item To design an efficient feature encoding method by incorporating the merits of two different features descriptors for the better image representation
+	
+\end{enumerate}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Proposed Works}
+
+\subsection{GKS}
+
+
+\begin{frame}\frametitle{Grey Relational Analysis based Keypoint Selection Method}
+\begin{figure}[t]
+			\centering
+			\includegraphics[width=0.7\textwidth]{Figures/BBO-BOF/BOF}
+			\caption{{\scriptsize Flow chart of the BOF method}}\label{fig:emp}
+\end{figure}
+		
+\begin{itemize}
+\justifying
+\item  In histopathological images, the extracted feature vectors are of high dimension\\[2ex]
+
+\item An efficient keypoint selection method can improve the performance\\[2ex]
+
+\item Various keypoints selection methods are: IKS \cite{lin2016}, ICF \cite{brighton2002}, IB3 \cite{aha1991} \\[2ex]
+
+\item These keypoints selection methods are based on Euclidean similarity which increases the computational cost when applied on high dimensional data \cite{chang2005}\\[2ex]
+
+\item In this work, grey relational analysis (GRA)  based keypoint selection method is presented which is an efficient similarity measure \\[0.2cm] 
+
+
+\end{itemize}
+\end{frame}
+%\cite{Julong1989}
+
+
+%\begin{frame}\frametitle{Grey Relational Analysis based Keypoint Selection Method}
+%\begin{itemize}
+%\justifying
+%
+%\item Feature selection is a problem of deciding an optimal subset of features based on some selecting algorithm and used to promote classification performance \cite{huang2009}
+%
+%\item Feature selection methods are computationally expensive when dimensionality
+%is large. However, keypoint selection is computationally faster  \cite{ghosh2015}
+%
+%
+%\begin{block}{}
+%\begin{table}[!t]
+%
+%\renewcommand{\arraystretch}{1.2}
+%\caption{Various Feature and Keypoint Selection method \cite{chandrashekar2014}}
+%\label{Tab:clustering}
+%\centering
+%\scriptsize{
+%
+%\begin{tabular}{p{2cm}|p{4.5cm}|p{2.5cm}}
+%
+%	\hline
+%	\textbf{Category} & \textbf{Description} &\textbf{Method}\\
+%	\hline 
+%	Filter Methods &Select features based on their characteristics and some basic statistical objective functions such as correlation and information gain& mRMR \cite{chekkoury2012, kothari2012}, CFS \cite{wu2016a}\\
+%	Wrapper Methods& Learning based methods and use a
+%predefined model to analyze the discriminability of the features & IFFS \cite{nakariyakul2009, sun2006}, GLGS\cite{liu2009}, SBS \cite{jain2000} \\ 
+%	Embedded Methods& Incorporate the feature selection as part of the training process &  PCA \cite{song2010}, BDLDA \cite{sheng2009}, SVM-REF  \cite{guyon2002} \\
+%	Keypoints based Methods& Select the keypoints
+%that are most useful for recognition & IKS \cite{lin2016}, GA-KS \cite{bostanci2017}, SKS \cite{buoncompagni2015} \\
+%\hline
+%\end{tabular}
+%
+%}
+%\end{table}
+%\end{block}
+%
+%
+%\item The existing keypoint selection methods are based on Euclidean similarity which increases the computational cost. 
+%
+%\item In the proposed method, grey relational analysis (GRA) \cite{Julong1989}  is used as a similarity measure between keypoints. \\[0.2cm] 
+%
+%\end{itemize}
+%
+%
+%\end{frame}
+
+%\begin{frame}{Grey Relational Analysis based Keypoint Selection Method (GKS)}
+%
+%\begin{block}{Main steps of proposed methods}
+%		\begin{description}
+%		\justifying
+%		\item[1. Keypoint detection:] SURF is used to detect a set of strong keypoints in training image dataset.
+%		\item[2. keypoint selection using GRA:] GRA is used to find the similarity between a reference tuple to all other tuple in the given data using grey relational grades (GRGs). (More details on slide \textbf{\ref{KGRA}})
+%		\item [3. Vector quantization:] Perform clustering using approximate k-means
+%		\item [4. Histogram generation]
+%		\item [5. Train the classifier]
+%	\end{description}
+%\end{block}
+%\end{frame}
+
+\begin{frame}[fragile]{Grey Relational Analysis based Keypoint Selection Method (GKS)}\label{KGRA}
+\scriptsize
+\begin{block}{Initial parameters}
+
+\begin{itemize}
+\justifying
+%	\item All of the detected keypoints are not relevant for images classification and annotation, therefore keypoint selection is required to select a subset of relevant keypoints. \\[0.2cm]
+	%\item Cluster the keypoints into $n$ clusters using approximate K-means  (AKM) algorithm \cite{wang2015}
+	\item Let $P$ is the number of keypoints detected from the training set
+	
+	\item Select a set of $n$ reference keypoints using approximate K-means ($X_o={X_{r1}, X_{r2}, \dots, X_{ri}, \dots, X_{rn}}$)
+	
+	\item Each reference point is a $u$ dimensional vector  ($	X_{ri}=\langle X_{ri}(1), X_{ri}(2), \dots, X_{ri}(u) \rangle$)
+	\item The set of remaining $m=P-n$ keypoints are considered as comparative keypoints ($	X_{c}=\langle X_{c1}, X_{c2}, \dots, X_{cm} \rangle$)	
+	\end{itemize}
+\end{block}
+
+
+\begin{block}{Similarity measure using grey relational analysis}
+\begin{enumerate}
+\item GRA uses the  grey relational coefficients (GRC) to describe the trend relationship between the comparative and reference keypoints. The GRC value, between $i^{th}$ keypoint of $X_o$ and $m$ keypoints of $X_c$ is given is by
+
+\begin{equation*} \label{eq:grc}
+GRC(X_{r1}(u), X_{cj}(u))=\frac{ \triangle_{min} + \xi \triangle_{max} }{\triangle_{r1j}(u)+\xi \triangle_{max}}, 
+\end{equation*}
+where,  $\xi \in (0,1]$ is a random number and  $ \triangle_{r1j}(u)$ is computed by $\mid X_{r1}(u) - X_{cj}(u) \mid$ for  $j=1, 2, \dots, m$
+
+\item Then, grey relational grade (GRG) is used to find overall similarity degree between the reference keypoint $X_{r1}$ and comparative keypoints $X_{cj}$
+
+	\begin{equation*} \label{eq:grg}
+GRG (X_{r1}, X_{cj})= \frac{1}{m}\sum_{t=1}^m[ GRC(X_{r1}(t), X_{cj}(t))]
+\end{equation*}
+
+\item When the value of GRG approaches $1$, the two sequences are `more closely similar'. When GRG approaches a value $0$, the two sequences are `more dissimilar'.
+\end{enumerate}
+\end{block}	
+	\end{frame}
+	
+\begin{frame}[fragile]{Grey Relational Analysis based Keypoint Selection Method (GKS)}
+
+\begin{block}{Keypoint selection}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item The above computation is performed to find the highly similar points with cluster center and eliminate $s\%$ of the keypoints from each cluster whose GRG values are higher, in their corresponding cluster. Here, $s$ is termed as shrinking threshold. 
+\item Repeat the steps 1 to 4 till the remaining keypoints are greater than $n$ and add  the last set (having $n$ points only) of cluster centers to the selected keypoints set.
+
+\item Use the selected keypoints set as input to the next phase of BOF i.e., codebook construction.
+
+
+\end{enumerate}
+	
+\end{block}
+\end{frame}
+	
+
+\begin{frame}{Experimental Results}
+\fontsize{7pt}{9pt}\selectfont
+\begin{enumerate}
+			\justifying
+			\item The proposed keypoint selection method has been validated against 						other state-of-the-art keypoint selection methods, namely IB3, IKS1, and 						IKS2 \cite{lin2016} \\[0.2cm]
+			
+			\item Two standard \textcolor[rgb]{1.00,0.00,0.00}{histopathological image datasets} are considered for the classification task
+			\begin{enumerate}
+\fontsize{7pt}{9pt}\selectfont
+			\item  \textcolor[rgb]{0.00,0.00,1.00}{ADL Dataset} \cite{srinivas2014}
+			\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+				\item Hematoxylin and Eosin (H\&E) dye is used for staining
+				\item Scanning at $40\times$ optical magnification   
+				\item  Three bovine organs - Kidney, Lung, Spleen   (healthy/inflamed)
+%				\begin{itemize}
+%				\item Kidney (healthy/inflamed)
+%				\item Lung (healthy/inflamed)
+%				\item Spleen (healthy/inflamed)
+%				\end{itemize}
+				\item $120$ images per condition per organ
+			\end{itemize}
+			\item \textcolor[rgb]{0.00,0.00,1.00}{Blue Histology Dataset} \cite{sirinukunwattana2016locality}
+ 			\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+				\item Contains images of four tissues, namely epithelium, connective, muscular, and nervous
+				\item Each image category contains 101 tissue images
+				
+				\item Various staining methods are used - H\&E, Trichrome, Elastin, Methylene blue, Immunocytochemistry, Carbocyanine, etc.
+				
+				
+
+			\end{itemize}
+			\end{enumerate}
+			
+			\item K-means is used to generate the visual words from the selected keypoints which are further encoded by vector quantization method
+			\item The encoded images with labels are used to train support vector machine			
+			\item The performance of GKS method has been evaluated in terms of 
+			\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+			\item Number of selected keypoints
+			\item Average computation time 
+			\item Confusion matrices
+			\item Classification accuracy
+			\item Radar charts
+			\end{itemize}
+\end{enumerate}
+
+
+\end{frame}
+
+\begin{frame}[plain]{Experimental Analysis: Keypoint Selection}
+
+\begin{figure}
+			\centering
+			\includegraphics[width=0.5\textwidth]{Figures/GKS/Emp_up}
+			\caption{{\scriptsize Classification accuracy on validation set using the GKS method with different shrinking threshold values}}\label{fig:emp}
+\end{figure}
+
+
+
+\begin{block}{}
+\begin{table}
+\centering
+\scriptsize
+\caption{{\scriptsize Number of selected keypoints returned by IB3, IKS1, IKS2, and GKS on considered datasets along with their average computational cost.}}
+\begin{tabular}{cll|cc}
+    \hline
+    
+\textbf{Methods}    & \multicolumn{2}{c}{ \textbf{Number of keypoints}} &  \multicolumn{2}{|c}{\textbf{Average computational time (in hours)}}   \\
+\cline{2-5}
+&\textbf{ADL}&\textbf{Blue histology}&\textbf{ADL}&\textbf{Blue histology}\\
+\hline
+Without keypoints selection        &    4177920    &    158720    \\
+IB3 &  626688 (85\%) & 57139 (64\%) &85.71 & 15\\ 
+IKS1        &    1100000 (74\%)    &    65948 (59\%)  & 40& 7    \\
+IKS2        &    2003000 (52\%) &    70312 (56\%)     & 8 &3.5\\    
+GKS        &    \textbf{203000 (95\%)}     &\textbf{51000 (68\%)}    &  \textbf{4} &\textbf{1}    \\
+\hline
+\end{tabular}
+\label{tab:selectK}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{Experimental Analysis: Classification performance}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Figures/GKS/SVM}
+  \caption{{\scriptsize Classification accuracy on validation set using the GKS method with different classifiers}}\label{ch3:fig:svm}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Experimental Analysis: Classification performance - ADL Dataset}
+
+\begin{figure}
+\centering
+\subfigure[IB3]{\includegraphics[width=0.33\linewidth]{Figures/GKS/CM-IB3-ADL}} ~
+\subfigure[IKS1]{\includegraphics[width=0.33\linewidth]{Figures/GKS/CM-IKS1-ADL}}\\
+\subfigure[IKS2]{\includegraphics[width=0.33\linewidth]{Figures/GKS/CM-IKS2-ADL}}~
+\subfigure[GKS]{\includegraphics[width=0.33\linewidth]{Figures/GKS/CM-GKS-ADL}}
+\caption{{\scriptsize The confusion matrices for the ADL dataset,  generated by (a) IB3, (b) IKS1, (c) IKS2, and (d) GKS based classification methods.}}
+\label{fig:CM1}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Experimental Analysis: Classification performance - Blue Histology Dataset}
+
+\begin{figure}
+\centering
+\subfigure[IB3]{\includegraphics[height=1in, width=1.6in]{Figures/GKS/CM-IB3-Tissue}} ~~
+\subfigure[IKS1]{\includegraphics[height=1in, width=1.6in]{Figures/GKS/CM-IKS1-Tissue}}\\
+\subfigure[IKS2]{\includegraphics[height=1in, width=1.6in]{Figures/GKS/CM-IKS2-Tissue}}~~
+\subfigure[GKS]{\includegraphics[height=1in, width=1.6in]{Figures/GKS/CM-GKS-Tissue}}
+\caption{{\scriptsize The confusion matrices for the Blue histology dataset, generated by (a) IB3, (b) IKS1, (c) IKS2, and (d) GKS based classification methods. }}
+\label{fig:CM2}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Classification Performance}
+\begin{table}
+\renewcommand{\arraystretch}{1.2}
+	\centering
+	\scriptsize
+	\caption{{\scriptsize Comparative analysis of the proposed GKS based BOF method with other considered methods in terms of average accuracy. The best results are in bold	}}
+	\label{tab:adl}
+	\begin{tabular}{|p{1.2in}|c|c|c|c|c|c|}
+		\hline
+		\textbf{Category}   &	\textbf{IB3}	&	\textbf{IKS1}	&	\textbf{IKS2}	&	\textbf{GKS}	\\
+		\hline
+	ADL Dataset &  27 & 68 & 69 & \textbf{78}\\
+	Blue Histology  &  17 & 36 & 43 & \textbf{48}\\
+	\hline	
+	\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\subfigure[ADL dataset]{\includegraphics[width=0.35\linewidth]{Figures/GKS/radar_ADL}}
+\subfigure[Tissue Dataset]{\includegraphics[width=0.35\linewidth]{Figures/GKS/radar_tissue}}
+ \caption{{\scriptsize Radar Charts for average results obtained for SVM classifier on a) ADL dataset and b) Tissue image dataset by considering F-1 score, sensitivity, specificity, and G-mean}}
+\label{fig:rc}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Research contribution}
+\begin{itemize}
+	\justifying
+	\item A new Grey relational analysis based keypoints selection  technique is proposed and used in BOF framework for finding the relevant keypoints\\[3ex]
+	
+	\item The proposed method selects minimum number of keypoints and increases the classification accuracy by 13\% and 11\% for ADL dataset and Blue Histology dataset respectively
+\end{itemize}
+
+%\textcolor[rgb]{0.00,0.00,1.00}{R. Pal and M. Saraswat, ``	Efficient Bag-Of-Features using grey relational analysis for Histopathology Image classification", \emph{Medical \& Biological Engineering \& Computing} }(Under review)
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Objectives}
+\begin{frame}{Objectives}
+\begin{enumerate}
+	\justifying
+	\item To design a new keypoint selection method for finding discriminative and relevant features for codebook construction \\[3ex]
+
+	\item \textcolor{red}{To design an efficient meta-heuristic based codebook generation method to reduce the effect of dense regions of histopathological images }\\[3ex]
+	
+	\item To design a computationally efficient and effective codebook generation method for finding the relevant visual words \\[3ex]
+
+	\item To design an efficient feature encoding method by incorporating the merits of two different features descriptors for the better image representation
+	
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\subsection{Optimal Codebook Generation}
+
+\begin{frame}{Codebook Generation}
+
+\begin{figure}[t]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figures/BBO-BOF/codebook}
+			\caption{{\scriptsize Flow chart of the BOF method}}\label{fig:emp}
+		\end{figure}
+\begin{itemize}
+\justifying
+\fontsize{7pt}{10pt}\selectfont
+\item Codebook is the collection of prominent visual words
+\item Partitional clustering methods are used to generate visual words which are biased towards densest regions in histopathological images
+\item Various meta-heuristics based methods are used to generate optimal set of visual words
+\item In literature, it has been stated that Biogeography-based Optimization (BBO) outperforms other meta-heuristics in computer vision applications \cite{ma2017}
+\item However, BBO also suffers from the following demerits \cite{ma2011, lim2016}:\\[0.1cm]
+\begin{itemize}
+\scriptsize
+\item Single feature migration property\\[0.2cm]
+\item Poor population diversity\\[0.2cm]
+\item BBO may get stuck in local optima\\[0.2cm]
+
+\end{itemize}
+\end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{Codebook Generation}
+\begin{itemize}
+
+\item Two new variants of BBO, namely \textcolor[rgb]{0.00,0.00,1.00}{improved biogeography-based optimization} (IBBO) and \textcolor[rgb]{0.00,0.00,1.00}{spiral biogeography-based optimization} (SBBO) are proposed \\[3ex]
+\item The proposed methods are used to generate the optimal visual words 
+
+\end{itemize}
+
+
+\end{frame}
+
+
+\subsubsection{BBO variants}
+\begin{frame}[fragile]{Biogeography-based Optimization}
+\begin{itemize}
+\item BBO \cite{simon2008} is an evolutionary algorithm which is inspired from the mathematical model of island biogeography
+
+\end{itemize}
+\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Figures/BBO/BBO}
+		\caption{Flow chart of BBO algorithm}
+		\label{fig:flowchart}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Biogeography-based Optimization}
+
+\begin{columns}
+\begin{column}{5cm}
+\begin{block}{Migration Operator \cite{ma2010analysis}}
+\begin{algorithm}[H]
+%\caption{Migration Operator \cite{ma2010analysis}}
+%\label{algo:migration}
+\scriptsize
+\begin{algorithmic}[1]
+
+\STATE \textbf{Input:} Let  $\lambda_i$ and $\mu_i$ are the immigration rate and emigration rate of $i^{th}$ island ($island_i$) respectively.
+\STATE Each island has $d$ suitability index variables (SIVs) i.e.  ($SIV_1, \ SIV_2\ ,\dots, \ SIV_d$) 
+\STATE Let $P_{modify}$ is the island modification probability.
+\STATE \textbf{Output:}  A population of $m$ modified islands.
+
+\FOR  {$i= 1\ to\ m$}
+  \IF {$rand < P_{modify}$}
+    \STATE    continue;
+  \ENDIF
+ \FOR  {$j= 1\ to\ d$}
+
+    \IF {$rand < \lambda_i$}
+
+        \STATE Select emigrating island, $island_k$, according to $\mu_i$ using roulette wheel selection
+
+           \STATE  \hl{$island_i(SIV_j) \leftarrow island_k(SIV_j)$}
+    \ENDIF
+\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+\end{block}
+\end{column}
+
+
+\begin{column}{5cm}
+\begin{block}{Mutation Operator \cite{ma2010analysis}}
+\begin{algorithm}[H]
+\scriptsize
+%\caption{Mutation Operator \cite{ma2010analysis}}
+%\label{algo:mutation}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Let population $P$ has $n$ islands ($island_i,\ \ i=1,\ 2,\dots, \ n$) and $m_i$ is the mutation rate of $i^{th}$ island. 
+	\STATE \textbf{Output: } Modified Population $P$
+\FOR  {$i= 1\  to\ n$}
+\STATE $m_i=m_{max}*(1-\frac{P_i}{P_{max}} )$
+        \IF {$m_i > rand$}
+        \STATE Generate a feasible random value R in solution space
+        \STATE \hl{$island_i (SIV_j) \leftarrow R$}
+    \ENDIF
+    \ENDFOR
+\end{algorithmic}
+\end{algorithm}
+\end{block}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Improved Biogeography-based Optimization (IBBO)}
+\begin{columns}
+
+\begin{column}{5.5cm}
+\begin{block}{Improved Migration Operator}
+\begin{algorithm}[H]
+\scriptsize
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Let  $\lambda_i$ and $\mu_i$ are the immigration rate and emigration rate of $i^{th}$ island ($island_i$) respectively.
+\STATE Each island has $d$ suitability index variables (SIVs) i.e.  ($SIV_1, \ SIV_2\ ,\dots, \ SIV_d$) 
+\STATE Let $P_{modify}$ is the island modification probability.
+
+	\STATE \textbf{Output: } A population of $m$ modified islands.
+
+\FOR  {$i= 1\ to\ Population\_Size$}
+  \IF {$rand < P_{modify}$}
+	\STATE	continue;
+  \ENDIF
+ \FOR  {$j= 1\ to\ d$}
+ % \STATE	select $island_i$ according to  $\lambda_i$
+    \IF {$rand < \lambda_i$}
+        %\STATE $island_i$ with feature $j$ is selected.
+		\STATE Select emigrating island, $island_k$, according to $\mu_i$ using roulette wheel selection
+		   \STATE  \textcolor[rgb]{0.00,0.00,1.00}{$island_i(SIV_j) \leftarrow island_k(SIV_j)$}
+    \ELSE
+		 \STATE \textcolor[rgb]{0.00,0.00,1.00}{$island_i(SIV_j) \leftarrow island_{best}(SIV_j)$}
+     
+    \ENDIF
+\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+\end{block}
+\end{column}
+\hspace{3pt}
+\begin{column}{5cm}
+\begin{block}{Improved Mutation Operator}
+\begin{algorithm}[H]
+\scriptsize
+%\caption{Improved Mutation Operator}
+%\label{algo:Emutation}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:}  Let population $P$ has $n$ islands ($island_i,\ \ i=1,\ 2,\dots, \ n$) and $m_i$ is the mutation rate of $i^{th}$ island. 
+	\STATE \textbf{Output: } Modified Population $P$
+\FOR  {$i= 1\  to\ n$}
+\STATE $m_i=m_{max}*(1-\frac{P_i}{P_{max}} )$
+        \IF {$m_i > rand$}
+     \STATE \textcolor[rgb]{0.00,0.00,1.00} {Randomly generate two permutation ($P^n_1(i)$ and $P^n_2(i)$) of $i^{th}$ island}
+\STATE \textcolor[rgb]{0.00,0.00,1.00}{$s_i= P^n_1(i)- P^n_2(i)$}
+
+        \STATE \textcolor[rgb]{0.00,0.00,1.00}{$island_i(t+1)=island_i(t)+ s_i*r(t)$}
+    \STATE \textcolor[rgb]{0.00,0.00,1.00}{Check whether $island_i(t+1)$ is feasible or not}
+\STATE \textcolor[rgb]{0.00,0.00,1.00}{If not then map to the original bounds}
+\ENDIF
+
+\ENDFOR	
+
+\end{algorithmic}
+\end{algorithm}
+\end{block}
+\end{column}
+\end{columns}
+\begin{itemize}
+\item \scriptsize \textcolor{red}{IBBO shows limitations for  shifted and rotated problems like, CEC 2017 benchmark functions}
+
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Spiral Biogeography-based Optimization (SBBO)}
+
+\begin{itemize}
+\item The mutation operator is modified by introducing a  \textcolor[rgb]{0.00,0.00,1.00}{spiral search phase} in mutation along with  \textcolor[rgb]{0.00,0.00,1.00}{random search}  \\[0.2cm]
+
+\item {\bf Spiral Search:}
+\begin{itemize}
+\item New island are searched in a spiral trajectory defined by Fermat's spiral \cite{fermat2017} function
+\begin{figure}
+\centering
+
+     \subfigure[]{\includegraphics[width=0.4\linewidth]{Figures/BBO/SpiralPlot}}
+       \subfigure[]{\includegraphics[width=0.4\textwidth]{Figures/BBO/SpiralPlot3D1}}
+
+  \caption{The Fermat's Spiral Function in (a) 2D and (b) 3D }\label{fig:sp}
+\end{figure}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Spiral Biogeography-based Optimization (SBBO)}
+
+\begin{itemize}
+\item  {\bf Spiral Search:}
+	\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+		\item The movement of species in mutation operator is around the best island so far and is defined mathematically by:
+		
+\begin{equation*}\label{eq:S}
+ Island_i(t+1)=Island_{Best}(t) + sgn(R_i(t))\cdot|R_i(t)|\cdot l ^{(1/2)}\cdot cos(2*\pi*l) 
+\end{equation*}
+
+where, $R_i(t)$ is the absolute distance between the best island ($Island_{Best}$) and $i^{th}$ island at $t^{th}$ iteration as depicted below  and $l$ is randomly generated value 
+\begin{equation*}\label{eq:D}
+R_i(t)=  Island_{best} (t)- Island_{i}(t)
+\end{equation*}
+\begin{equation*}\label{eq:D11}
+l=  1+ t*random/max_{iteration}
+\end{equation*}
+
+	\end{itemize}
+	
+\item {\bf Random Search:}
+
+\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+\item The population diversity in BBO can be increased by random search which generates the new SIVs using the randomly selected islands
+
+\begin{equation*}\label{eq:final2} 
+Island_i(t+1)= Island_{random}(t)- R_i(t)
+\end{equation*}
+where, $Island_{random}(t)$ is any random island at iteration $t$, $R_i(t)$ is a residual  distance from the randomly selected island 
+\begin{equation*}\label{eq:D1}
+R_i(t)= \| rand * Island_{random} (t)- Island_{i}(t)\|
+\end{equation*}
+here, $rand \in (0, 1)$ and $Island_i$ are the $i^{th}$ individual in the population
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Spiral Biogeography-based Optimization (SBBO)}
+
+\begin{block}{Improved Mutation Operator }
+\begin{algorithm}[H]
+\scriptsize
+%\caption{Mutation Operator \cite{ma2010analysis}}
+%\label{algo:mutation}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Let population $P$ has $n$ islands ($island_i,\ \ i=1,\ 2,\dots, \ n$) and $m_i$ is the mutation rate of $i^{th}$ island 
+	\STATE \textbf{Output: } Modified Population $P$
+\FOR  {$i= 1\  to\ n$}
+        \IF {$rand<=0.5$}
+        \STATE \hl{Update the $Island_i$ using Spiral search}
+    \ELSE
+         \STATE \hl{Update the $Island_i$ using Random search}
+   
+    \ENDIF
+    \ENDFOR
+\end{algorithmic}
+\end{algorithm}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Experiment Results}
+
+\begin{itemize}
+\justifying
+\fontsize{7pt}{9pt}\selectfont
+\item  IBBO and SBBO have been validated against recent meta-heuristic methods
+	\begin{itemize}
+
+		\item Evolutionary-based approaches
+			\begin{itemize}
+
+				\item BBO \cite{simon2008}, 2008
+				\item BBO-M \cite{Niu2014}, 2014
+				\item LX-BBO \cite{Garg2016}, 2016 
+				\item LSHADE \cite{Mohamed2017}, 2017
+			\end{itemize}
+		\item Swarm-based approaches
+			\begin{itemize}
+
+				\item GWO \cite{mirjalili2014}, 2014 
+				\item ckGSA \cite{mittal2016}, 2016
+				\item WOA \cite{mirjalili2016}, 2016
+				\item SSA \cite{Mirjalili2017}, 2017
+			\end{itemize}
+	\end{itemize}
+	
+\item Two sets of benchmarks functions are considered, consisting of both unimodal and multimodal functions
+		\begin{itemize}
+
+			\item Standard Benchmark Functions
+			\item CEC 2017 Benchmark Problems
+		\end{itemize}
+
+\item The performance has been evaluated and statistically analyzed in terms of
+		\begin{itemize}
+
+				\item  Mean fitness value
+				\item Friedman test
+				\item Convergence graph
+				
+	   \end{itemize}
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Experiment Results}
+\begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+\item Standard benchmark functions
+\end{itemize}
+\begin{table}
+\tiny
+%\caption{Represented benchmark functions. In category column MM, UM, NS, and S represent multi-modal, unimodal, non-separable and separable functions respectively. }
+\renewcommand{\arraystretch}{1.5}
+\vspace{-0.25cm}
+  \begin{tabular}{p{0.06in} p{0.9in}  p{0.8in} p{0.3in} p{0.9in} p{0.5in}}
+    \hline
+\textbf{Sr. No.}  &\textbf{Function Name}	&				\textbf{Range }	 & \textbf{Optimal Value} &\textbf{Optimal Position Values }&\textbf{Category}\\
+\hline
+
+1.	&	Ackley	&		[-35 to 35]	&	 0	&	 (0,\dots,0) & MM,\ NS\\
+2.	&	Alpine	&		[-10 to 10] 	&	0	&	 (0,\dots,0)& MM,\ S\\
+3.	&	Brown	&	[-5 to 5] &	0	&	(0,\dots,0)& UM,\ NS\\
+4.	&	Levy	&	[-10 to 10] 	&	 0	&	 (1,1,,\dots,1)& MM\\
+5.	&	New Schwefel	&		[-500 to 500]	 &	0	&	 (420.9687,..., 420.9687)& MM\\
+6.    &	Pathological	&		[-100 to 100]	 &	0	&	(0,\dots,0)& MM,\ NS\\
+7.	&	Penalty1	&		 [-50 to 50]	&	 0	&	(1,1,\dots,1)	& MM,\ NS\\
+8.	&	Penalty2	&	 	[-50 - 50]		& 0	&	  (1,1,\dots,1) &MM,\ NS\\
+9.	&	Powell's First Singular	&		[-4 - 5]	&	0	 &	(0,0,\dots,0)& UM,\ NS\\
+10.	&	Powell's Second Singular	&		[-4 - 5]	&	0	&	 (0,0,\dots,0) & UM,\ NS\\
+11.	&	Powell Sum	&		[-1 - 1]	&	0	 &	(0,0,\dots,0)	& UM,\ S\\
+12.	&	Quartic	&		[-1.28 - 1.28]	&	0	&	(0,0,\dots,0)	& UM,\ S\\
+13.	&	Rastrigin	&		[-5.12 - 5.12]	&	0	&	 (0,0,\dots,0)	& MM\\
+14.	&	Rotated Hyper-Ellipsoid	&		[-65.536 - 65.536] 	&	0	&	 (0,0,\dots,0)	& UM\\
+15.	&	Schwefel	&		[-512 - 512]	&	-12965.5	 &		 (420.9687,..., 420.9687)& MM,\ S\\
+16.	&	Schwefel3	&	[-10 - 10] 	&	 0	&	 (0,0,\dots,0& MM,\ NS \\
+17.	&	Sphere	&		[-5.12 - 5.12]	&	0	&(0,0,\dots,0)	& UM,\ S\\
+18. &	Step	&		[-100 - 100]	&	 0	&	 (0,\dots,0)& UM,\ S\\
+19.	&	Sum Squares	&		[-10 - 10] 	&	0 &	(0,0,\dots,0)	& UM,\ S\\
+20.	&	Trigonometric	&		[0 - pi]	&	 0	&	 (0,0,\dots,0& MM,\ NS \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Experimental Results}
+  \begin{itemize}
+\fontsize{7pt}{9pt}\selectfont
+\item CEC 2017 benchmark functions
+\end{itemize}             
+    \tiny
+\renewcommand{\arraystretch}{1}
+\begin{center}
+ \begin{tabular}{p{0.2in}   p{2.5in}   p{0.4in} p{0.7in}}
+    \hline
+\textbf{S.No.}& \textbf{Function}  &  \textbf{Optimal Value } &\textbf{Characteristic}\\
+\hline
+1. & Shifted and Rotated Bent Cigar Function & 100 &   \\
+2. & Shifted and Rotated Sum of Different Power Function & 200 &Unimodal \\
+3. & Shifted and Rotated Zakharov Function & 300 &  \\ 
+\hline
+4. & Shifted and Rotated Rosenbrock’s Function & 400 &\\ 
+5. & Shifted and Rotated Rastrigin’s Function & 500 & \\ 
+6. & Shifted and Rotated Expanded Scaffer’s F6 Function & 600 & \\ 
+7. & Shifted and Rotated Lunacek B\_Rastrigin Function & 700 &  Simple Multimodal \\ 
+8.& Shifted and Rotated Non-Continuous Rastrigin’s
+Function & 800 & \\  
+9.& Shifted and Rotated Levy Function & 900 & \\
+10. & Shifted and Rotated Schwefel’s Function & 1000 &   \\
+\hline
+11. & Hybrid Function 1 (N=3) & 1100 &  \\
+12. & Hybrid Function 2 (N=3) & 1200 & \\
+13. & Hybrid Function 3 (N=3) & 1300 &  \\
+14. & Hybrid Function 4 (N=4) & 1400 & \\
+15. & Hybrid Function 5 (N=4) & 1500 &  Hybrid\\
+16. & Hybrid Function 6 (N=4) & 1600 & \\
+17. & Hybrid Function 6 (N=5) & 1700 & \\
+18. & Hybrid Function 6 (N=5) & 1800 & \\
+19. & Hybrid Function 6 (N=5) & 1900 & \\
+20. & Hybrid Function 6 (N=6) & 2000 &  \\
+\hline
+21. & Composition Function 1 (N=3) & 2100 &  \\
+22. & Composition Function 2 (N=3) & 2200 & \\
+23. & Composition Function 3 (N=4) & 2300 & \\
+24. & Composition Function 4 (N=4) & 2400 & \\
+25. & Composition Function 5 (N=5) & 2500 & Composition \\
+26. & Composition Function 6 (N=5) & 2600 & \\
+27. & Composition Function 7 (N=6) & 2700 & \\
+28. & Composition Function 8 (N=6) & 2800 & \\
+29. & Composition Function 9 (N=3) & 2900 & \\
+30. & Composition Function 10 (N=3) & 3000 &  \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]{Experimental Results- Standard benchmark problems}
+       \fontsize{8pt}{10pt}\selectfont
+%         \begin{itemize}  
+%  
+%    \item Comparative analysis of \textcolor[rgb]{0,0,0.63}{mean error values}
+%        \end{itemize}
+
+        \begin{center}
+       \fontsize{4.3pt}{7.3pt}\selectfont
+\begin{tabular}{p{0.08in} | p{0.09in} | p{0.25in} |  p{0.23in} |  p{0.25in}|  p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} |  p{0.25in}}
+    \hline
+\hline\textbf{Func.} 	&	 \textbf{Dims.} 	&	 \textbf{BBO} 	&	 \textbf{BBO-M} &	 \textbf{GWO} 	&	 \textbf{ckGSA} 	&	 \textbf{LXBBO} 	&	 \textbf{WOA} 	&	\textbf{LSHADE} 	&	 \textbf{SSA} 	&	 \textbf{IBBO} 	&	\textbf{SBBO} \\
+\hline
+																							
+	&	30	&\textcolor{blue}{	0.1380	}&	1.2600	&	1.4400	&	1.2960	&	0.4710	&	0.4239	&	0.1980	&	0.1782	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F1	&	60	&\textcolor{blue}{	0.4960	}&	1.9300	&	3.1100	&	2.7990	&	0.8260	&	0.7434	&	0.6340	&	0.5706	&\textcolor{green}{	0.0035	}&\textcolor{red}{	0.0024	}\\
+	&	90	&\textcolor{blue}{	0.8840	}&	2.4900	&	3.7800	&	3.4020	&	1.0700	&	0.9630	&	1.0900	&	0.9810	&\textcolor{green}{	0.0863	}&\textcolor{red}{	0.0604	}\\
+\hline																							
+	&	30	&	0.0005	&	0.0027	&	0.8500	&	0.7650	&	0.0098	&	0.0088	&	0.0005	&\textcolor{blue}{	0.0004	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F2	&	60	&\textcolor{blue}{	0.5100	}&	30.4000	&	31.2000	&	28.0800	&	1.8200	&	1.6380	&	1.1400	&	1.0260	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&\textcolor{blue}{	3.8400	}&	84.9000	&	58.1000	&	52.2900	&	5.2600	&	4.7340	&	7.4800	&	6.7320	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&\textcolor{red}{	0.0000	}&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0056	&	0.0051	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F3	&	60	&	0.0484	&	0.0015	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	4.0500	&	3.6450	&	0.1770	&	0.1593	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	1.8800	&	0.9770	&	0.0779	&\textcolor{blue}{	0.0701	}&	22.6000	&	20.3400	&	4.4900	&	4.0410	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&	0.0025	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0080	&	0.0072	&	0.0006	&	0.0005	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F4	&	60	&	0.9950	&	1.6600	&	16.0000	&	14.4000	&	1.0200	&\textcolor{blue}{	0.9180	}&	1.7100	&	1.5390	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	4.9800	&	54.3000	&	59.4000	&	53.4600	&	2.7500	&\textcolor{blue}{	2.4750	}&	9.4600	&	8.5140	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&\textcolor{blue}{	12.5	}&	540.0	&	212.0	&	190.8	&	995.0	&	895.5	&	17.7	&	15.9	&\textcolor{green}{	3.5	}&\textcolor{red}{	2.5	}\\
+F5	&	60	&	209.0	&	15000.0	&	8810.0	&	7929.0	&	4550.0	&	4095.0	&	551.0	&	495.9	&\textcolor{green}{	41.4	}&\textcolor{red}{	29.0	}\\
+	&	90	&	885.0	&	25400.0	&	17200.0	&	15480.0	&	8730.0	&	7857.0	&	2540.0	&	2286.0	&\textcolor{blue}{	157.0	}&\textcolor{green}{	109.9	}\\
+\hline																							
+	&	30	&\textcolor{blue}{	2.6700	}&	2.9800	&	4.4100	&	3.9690	&	5.0500	&	4.5450	&	2.8800	&\textcolor{green}{	2.5920	}&	2.7600	&\textcolor{red}{	1.9320	}\\
+F6	&	60	&	7.5600	&\textcolor{blue}{	6.8600	}&	13.3000	&	11.9700	&	12.9000	&	11.6100	&	8.5000	&	7.6500	&\textcolor{green}{	6.8300	}&\textcolor{red}{	4.7810	}\\
+	&	90	&\textcolor{blue}{	14.5000	}&	20.5000	&	23.4000	&	21.0600	&	21.9000	&	19.7100	&	17.0000	&	15.3000	&\textcolor{green}{	11.2000	}&\textcolor{red}{	7.8400	}\\
+\hline																							
+	&	30	&	0.0019	&\textcolor{blue}{	0.0000	}&	1.1500	&	1.0350	&	0.0233	&	0.0210	&	0.0110	&	0.0099	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F7	&	60	&	8.8	&	37.0	&	11.1	&	10.0	&	2.8	&\textcolor{blue}{	2.6	}&	15.0	&	13.5	&\textcolor{green}{	0.0	}&\textcolor{red}{	0.0	}\\
+	&	90	&	60.7	&	3710000.0	&	44.6	&	40.1	&	9.2	&\textcolor{blue}{	8.3	}&	3510.0	&	3159.0	&\textcolor{green}{	0.1	}&\textcolor{red}{	0.1	}\\
+\hline																							
+	&	30	&	0.5510	&\textcolor{blue}{	0.0000	}&	2.9200	&	2.6280	&	1.6500	&	1.4850	&	0.9540	&	0.8586	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F8	&	60	&	68.5	&	99.2	&	146.0	&	131.4	&	13.8	&\textcolor{blue}{	12.4	}&	2790.0	&	2511.0	&\textcolor{green}{	0.2	}&\textcolor{red}{	0.1	}\\
+	&	90	&	69400.0	&	8240000.0	&	1490000.0	&	1341000.0	&	44.6	&\textcolor{blue}{	40.1	}&	437000.0	&	393300.0	&\textcolor{green}{	1.4	}&\textcolor{red}{	1.0	}\\
+\hline																							
+	&	30	&	0.7170	&	21.7000	&	5.4200	&	4.8780	&\textcolor{green}{	0.0840	}&\textcolor{red}{	0.0756	}&	1.3000	&	1.1700	&	0.4770	&\textcolor{blue}{	0.3339	}\\
+F9	&	60	&	43.1	&	5130.0	&	59.7	&	53.7	&	14.5	&\textcolor{blue}{	13.1	}&	124.0	&	111.6	&\textcolor{green}{	5.1	}&\textcolor{red}{	3.6	}\\
+	&	90	&	239.0	&	17900.0	&	264.0	&	237.6	&	40.9	&\textcolor{blue}{	36.8	}&	461.0	&	414.9	&\textcolor{green}{	17.5	}&\textcolor{red}{	12.3	}\\
+\hline																							
+	&	30	&	0.0084	&	0.0000	&	0.0000	&	0.0000	&	2.1400	&	1.9260	&	0.0003	&	0.0003	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F10	&	60	&	36.3	&\textcolor{blue}{	4.1	}&	143.0	&	128.7	&	71.4	&	64.3	&	94.0	&	84.6	&\textcolor{red}{	0.0	}&\textcolor{red}{	0.0	}\\
+	&\textcolor{blue}{	90	}&	597.0	&	3740.0	&	10200.0	&	9180.0	&	326.0	&	293.4	&	1550.0	&	1395.0	&\textcolor{red}{	0.0	}&\textcolor{red}{	0.0	}\\
+\hline																							
+
+\multicolumn{11}{l}{\textcolor{red}{First best}, \textcolor{green}{Second best}, \textcolor{blue}{Third best}}\\
+\end{tabular}
+\end{center}
+  \end{frame}
+  
+  
+  
+  \begin{frame}[plain]{Experimental Results - Standard benchmark problems}
+      
+%\vspace{-1cm}
+        \begin{center}
+       \fontsize{4.3pt}{7.3pt}\selectfont
+\begin{tabular}{p{0.08in} | p{0.09in} | p{0.25in} |  p{0.23in} |  p{0.25in}|  p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} |  p{0.25in}}
+    \hline
+\hline\textbf{Func.} 	&	 \textbf{Dims.} 	&	 \textbf{BBO} 	&	 \textbf{BBO-M} &	 \textbf{GWO} 	&	 \textbf{ckGSA} 	&	 \textbf{LXBBO} 	&	 \textbf{WOA} 	&	\textbf{LSHADE} 	&	 \textbf{SSA} 	&	 \textbf{IBBO} 	&	\textbf{SBBO} \\
+\hline
+\hline																							
+	&	30	&\textcolor{red}{	0.0000	}&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0000	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F11	&	60	&	0.0000	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0000	&	0.0000	&	0.0000	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	0.0000	&	0.0355	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0000	&	0.0000	&	0.0000	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&\textcolor{red}{	0.0000	}&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0000	&	0.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F12	&	60	&	0.0005	&	0.0003	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0001	&	0.0001	&	0.0006	&	0.0005	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	0.0953	&	1.5100	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&	0.0020	&	0.0018	&	0.1700	&	0.1530	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+
+\hline																							
+	&	30	&\textcolor{red}{	0.0000	}&	126.0000	&	4.5300	&	4.0770	&	1.2200	&	1.0980	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F13	&	60	&\textcolor{blue}{	1.6000	}&	448.0000	&	75.2000	&	67.6800	&	17.5000	&	15.7500	&	4.9200	&	4.4280	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&\textcolor{blue}{	23.0000	}&	833.0000	&	228.0000	&	205.2000	&	54.0000	&	48.6000	&	31.3000	&	28.1700	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&	44.7000	&\textcolor{red}{	0.0000	}&	1110.0000	&	999.0000	&	148.0000	&	133.2000	&	91.8000	&	82.6200	&\textcolor{blue}{	0.6300	}&\textcolor{green}{	0.4410	}\\
+F14	&	60	&	3210.0000	&\textcolor{red}{	10.6000	}&	64600.0000	&	58140.0000	&	2250.0000	&	2025.0000	&	6810.0000	&	6129.0000	&	67.1000	&\textcolor{green}{	46.9700	}\\
+	&	90	&	28000.0000	&	9340.0000	&	323000.0000	&	290700.0000	&	8850.0000	&	7965.0000	&	54400.0000	&	48960.0000	&\textcolor{blue}{	742.0000	}&\textcolor{green}{	519.4000	}\\
+\hline																							
+	&	30	&	120.0000	&	1760.0000	&	554.0000	&	498.6000	&	92.5000	&	83.2500	&	22.1000	&\textcolor{blue}{	19.8900	}&\textcolor{green}{	5.0900	}&\textcolor{red}{	3.5630	}\\
+F15	&	60	&	210.0000	&	8050.0000	&	3960.0000	&	3564.0000	&	4160.0000	&	3744.0000	&	511.0000	&	459.9000	&\textcolor{green}{	30.5000	}&\textcolor{red}{	21.3500	}\\
+	&90&	1180.0000	&	17300.0000	&	7740.0000	&	6966.0000	&	9430.0000	&	8487.0000	&	2420.0000	&	2178.0000	&\textcolor{blue}{	141.0000	}&\textcolor{green}{	98.7000	}\\
+\hline																							
+	&	30	&\textcolor{red}{	0.0000	}&	0.0000	&	21.1000	&	18.9900	&	0.0744	&	0.0670	&	0.0053	&	0.0048	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F16	&	60	&	2.0000	&\textcolor{blue}{	0.7310	}&	99.4000	&	89.4600	&	5.4600	&	4.9140	&	4.0700	&	3.6630	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&\textcolor{blue}{	10.8000	}&	30.0000	&	222.0000	&	199.8000	&	14.6000	&	13.1400	&	19.8000	&	17.8200	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&	0.0010	&\textcolor{blue}{	0.0000	}&	1.8200	&	1.6380	&	1.5100	&	1.3590	&	0.1400	&	0.1260	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F17	&	60	&	0.1930	&\textcolor{blue}{	0.0033	}&	21.8000	&	19.6200	&	0.2490	&	0.2241	&	0.7730	&	0.6957	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	2.9600	&	2.0600	&	76.0000	&	68.4000	&	1.0600	&\textcolor{blue}{	0.9540	}&	7.7700	&	6.9930	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+&	30	&	0.3000	&\textcolor{red}{	0.0000	}&	113.0000	&	101.7000	&	1.9000	&	1.7100	&	2.4000	&	2.1600	&\textcolor{blue}{	0.2000	}&\textcolor{green}{	0.1400	}\\
+F18	&	60	&	28.7000	&\textcolor{red}{	0.0000	}&	510.0000	&	459.0000	&	42.5000	&	38.2500	&	57.8000	&	52.0200	&\textcolor{blue}{	6.7000	}&\textcolor{green}{	4.6900	}\\
+	&90&	128.0000	&	101.0000	&	1050.0000	&	945.0000	&	106.0000	&	95.4000	&	256.0000	&	230.4000	&\textcolor{green}{	23.4000}	&\textcolor{red}{	16.3800	}\\
+\hline																							
+	&	30	&	0.0096	&\textcolor{blue}{	0.0000	}&	1.8200	&	1.6380	&	1.5100	&	1.3590	&	0.1400	&	0.1260	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F19	&	60	&	51.2000	&\textcolor{blue}{	0.2360	}&	676.0000	&	608.4000	&	41.6000	&	37.4400	&	142.0000	&	127.8000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	665.0000	&	204.0000	&	4510.0000	&	4059.0000	&	190.0000	&	171.0000	&	1420.0000	&	1278.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+\hline																							
+	&	30	&	2.4300	&\textcolor{blue}{	0.0009	}&	30.1000	&	27.0900	&	14.7000	&	13.2300	&	2.3500	&	2.1150	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+F20	&	60	&	176.0000	&\textcolor{blue}{	0.3300	}&	4.1700	&	3.7530	&	1700.0000	&	1530.0000	&	315.0000	&	283.5000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+	&	90	&	1300.0000	&\textcolor{blue}{	12.9000	}&	21.6000	&	19.4400	&	6230.0000	&	5607.0000	&	1880.0000	&	1692.0000	&\textcolor{red}{	0.0000	}&\textcolor{red}{	0.0000	}\\
+
+	
+
+
+\hline
+\multicolumn{11}{l}{\textcolor{red}{First best}, \textcolor{green}{Second best}, \textcolor{blue}{Third best}}\\
+\end{tabular}
+\end{center}
+  \end{frame}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+\begin{frame}{Experimental Results- CEC benchmark problems }
+     
+  \begin{center}
+       \fontsize{4.3pt}{7.3pt}\selectfont
+%\renewcommand{\arraystretch}{0.1}
+\begin{tabular}{p{0.08in}  p{0.25in} |  p{0.23in} |  p{0.25in}|  p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} |  p{0.25in}}
+    \hline
+\textbf{Func.} 		&	 \textbf{BBO} 	&	 \textbf{BBO-M} &	 \textbf{LX-BBO} 	&	 \textbf{IBBO} 	&	 \textbf{ckGSA} 	&	 \textbf{SSA} 	&	\textbf{LSHADE} 	&	 \textbf{GWO} 	&	 \textbf{WOA} 	&	\textbf{SBBO} \\
+\hline
+F1	&	6.20E+09	&	6.51E+09	&\textcolor{red}{	8.96E+06	}&	7.82E+10	&	2.05E+10	&	2.15E+10	&	1.41E+11	&	4.88E+09	&\textcolor{blue}{	6.32E+08	}&\textcolor{green}{	1.61E+07	}\\
+F3	&	1.38E+05	&\textcolor{blue}{	1.01E+05	}&	1.63E+05	&	4.62E+05	&	1.81E+05	&	1.82E+05	&	4.74E+05	&\textcolor{green}{	8.61E+04	}&	1.77E+05	&\textcolor{red}{	3.94E+04	}\\
+F4	&	1.20E+03	&	1.26E+03	&\textcolor{green}{	6.52E+02	}&	1.68E+04	&	4.18E+03	&	4.38E+03	&	1.78E+04	&\textcolor{blue}{	8.63E+02	}&	9.74E+02	&\textcolor{red}{	5.05E+02	}\\
+F5	&	8.20E+02	&	8.45E+02	&\textcolor{blue}{	7.36E+02	}&	1.15E+03	&	8.39E+02	&	8.38E+02	&	1.40E+03	&\textcolor{green}{	6.97E+02	}&	9.57E+02	&\textcolor{red}{	5.77E+02	}\\
+F6	&	6.13E+02	&	6.20E+02	&\textcolor{green}{	6.12E+02	}&	6.69E+02	&	6.65E+02	&	6.65E+02	&	6.79E+02	&\textcolor{blue}{	6.12E+02	}&	6.82E+02	&\textcolor{red}{	6.00E+02	}\\
+F7	&	1.33E+03	&\textcolor{blue}{	1.30E+03	}&	1.37E+03	&	2.76E+03	&	1.37E+03	&	1.38E+03	&	5.85E+03	&\textcolor{green}{	1.04E+03	}&	1.73E+03	&\textcolor{red}{	8.21E+02	}\\
+F8	&	1.14E+03	&	1.13E+03	&\textcolor{blue}{	1.03E+03	}&	1.45E+03	&	1.16E+03	&	1.16E+03	&	1.67E+03	&\textcolor{green}{	1.00E+03	}&	1.26E+03	&\textcolor{red}{	8.82E+02	}\\
+F9	&\textcolor{green}{	4.86E+03	}&\textcolor{blue}{	5.17E+03	}&	7.34E+03	&	3.50E+04	&	1.20E+04	&	1.20E+04	&	6.08E+04	&	5.69E+03	&	2.71E+04	&\textcolor{red}{	1.78E+03	}\\
+F10	&	9.94E+03	&	1.03E+04	&\textcolor{green}{	6.85E+03	}&	1.36E+04	&	8.42E+03	&	8.56E+03	&	1.28E+04	&\textcolor{blue}{	7.39E+03	}&	1.10E+04	&\textcolor{red}{	4.56E+03	}\\
+
+F11	&	3.50E+03	&	2.52E+03	&\textcolor{red}{	1.70E+03	}&	4.51E+04	&	1.95E+04	&	1.99E+04	&	3.00E+04	&	3.28E+03	&\textcolor{blue}{	2.24E+03	}&\textcolor{green}{	1.73E+03	}\\
+F12	&\textcolor{blue}{	2.86E+08	}&	3.19E+08	&\textcolor{green}{	2.11E+07	}&	2.27E+10	&	5.30E+09	&	6.24E+09	&	1.91E+10	&	4.68E+08	&	5.57E+08	&\textcolor{red}{	1.97E+06	}\\
+F13	&\textcolor{blue}{	7.73E+05	}&\textcolor{green}{	6.69E+05	}&\textcolor{red}{	1.76E+05	}&	9.93E+09	&	3.75E+07	&	9.57E+07	&	3.23E+09	&	1.63E+08	&	6.57E+06	&	9.71E+07	\\
+F14	&	1.91E+06	&\textcolor{blue}{	8.03E+05	}&	9.17E+05	&	3.78E+07	&	7.11E+06	&	5.54E+06	&	7.88E+06	&\textcolor{green}{	7.42E+05	}&	2.47E+06	&\textcolor{red}{	2.36E+05	}\\
+F15	&	8.03E+04	&\textcolor{red}{	1.47E+04	}&\textcolor{green}{	2.24E+04	}&	3.50E+09	&	1.89E+07	&	5.83E+07	&	8.02E+08	&	1.33E+07	&	6.26E+05	&\textcolor{blue}{	2.42E+04	}\\
+
+
+
+
+\hline
+\multicolumn{11}{l}{\textcolor{red}{First best}, \textcolor{green}{Second best}, \textcolor{blue}{Third best}}\\
+\end{tabular}
+\end{center}
+   
+\end{frame}
+  
+ \begin{frame}{Experimental Results- CEC benchmark problems }
+     
+  \begin{center}
+       \fontsize{4.3pt}{7.3pt}\selectfont
+%\renewcommand{\arraystretch}{0.1}
+\begin{tabular}{p{0.08in}  p{0.25in} |  p{0.23in} |  p{0.25in}|  p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} | p{0.25in} |  p{0.25in} |  p{0.25in}}
+    \hline
+\textbf{Func.} 		&	 \textbf{BBO} 	&	 \textbf{BBO-M} &	 \textbf{LX-BBO} 	&	 \textbf{IBBO} 	&	 \textbf{ckGSA} 	&	 \textbf{SSA} 	&	\textbf{LSHADE} 	&	 \textbf{GWO} 	&	 \textbf{WOA} 	&	\textbf{SBBO} \\
+\hline
+F16	&	3.44E+03	&\textcolor{blue}{	3.38E+03	}&	3.57E+03	&	6.60E+03	&	4.70E+03	&	4.57E+03	&	6.21E+03	&\textcolor{green}{	2.91E+03	}&	5.48E+03	&\textcolor{red}{	2.81E+03	}\\
+F17	&\textcolor{blue}{	2.92E+03	}&	2.95E+03	&	3.24E+03	&	1.15E+04	&	3.80E+03	&	3.76E+03	&	7.42E+03	&\textcolor{green}{	2.79E+03	}&	4.25E+03	&\textcolor{red}{	2.24E+03	}\\
+F18	&	6.35E+06	&\textcolor{green}{	3.71E+06	}&	6.31E+06	&	1.60E+08	&	5.94E+06	&	8.40E+06	&	4.59E+07	&\textcolor{blue}{	3.78E+06	}&	1.79E+07	&\textcolor{red}{	1.54E+06	}\\
+F19	&	6.53E+04	&\textcolor{red}{	1.73E+04	}&\textcolor{blue}{	2.65E+04	}&	1.18E+09	&	2.89E+05	&	3.44E+05	&	2.43E+08	&	4.85E+06	&	6.55E+06	&\textcolor{green}{	1.94E+04	}\\
+F20	&	3.08E+03	&\textcolor{blue}{	2.88E+03	}&	3.41E+03	&	4.58E+03	&	3.74E+03	&	3.67E+03	&	3.91E+03	&\textcolor{green}{	2.84E+03	}&	3.71E+03	&\textcolor{red}{	2.61E+03	}\\
+F21	&	2.63E+03	&	2.63E+03	&\textcolor{blue}{	2.55E+03	}&	2.95E+03	&	2.87E+03	&	2.87E+03	&	3.08E+03	&\textcolor{green}{	2.49E+03	}&	2.95E+03	&\textcolor{red}{	2.39E+03	}\\
+F22	&	1.22E+04	&	1.08E+04	&\textcolor{green}{	8.69E+03	}&	1.53E+04	&	1.21E+04	&	1.22E+04	&	1.47E+04	&\textcolor{blue}{	8.88E+03	}&	1.25E+04	&\textcolor{red}{	4.66E+03	}\\
+F23	&	3.09E+03	&	3.12E+03	&\textcolor{blue}{	3.03E+03	}&	3.61E+03	&	4.89E+03	&	4.82E+03	&	3.36E+03	&\textcolor{green}{	2.93E+03	}&	3.63E+03	&\textcolor{red}{	2.79E+03	}\\
+F24	&	3.30E+03	&	3.34E+03	&\textcolor{blue}{	3.21E+03	}&	3.79E+03	&	4.59E+03	&	4.64E+03	&	3.48E+03	&\textcolor{green}{	3.13E+03	}&	3.70E+03	&\textcolor{red}{	3.00E+03	}\\
+F25	&	3.53E+03	&	3.60E+03	&\textcolor{green}{	3.12E+03	}&	1.42E+04	&	4.78E+03	&	4.91E+03	&	3.38E+04	&	3.42E+03	&\textcolor{blue}{	3.39E+03	}&\textcolor{red}{	2.89E+03	}\\
+F26	&	7.49E+03	&	7.90E+03	&\textcolor{blue}{	6.85E+03	}&	1.30E+04	&	1.24E+04	&	1.27E+04	&	9.96E+03	&\textcolor{green}{	6.00E+03	}&	1.34E+04	&\textcolor{red}{	5.00E+03	}\\
+F27	&	3.56E+03	&	3.61E+03	&\textcolor{green}{	3.27E+03	}&	4.81E+03	&	8.07E+03	&	8.35E+03	&	3.60E+03	&\textcolor{blue}{	3.55E+03	}&	4.42E+03	&\textcolor{red}{	3.26E+03	}\\
+F28	&\textcolor{blue}{	3.82E+03	}&	3.91E+03	&\textcolor{green}{	3.48E+03	}&	1.06E+04	&	5.94E+03	&	6.07E+03	&	8.39E+03	&	3.92E+03	&	4.04E+03	&\textcolor{red}{	3.38E+03	}\\
+F29	&\textcolor{green}{	4.28E+03	}&\textcolor{blue}{	4.35E+03	}&	4.37E+03	&	1.05E+04	&	1.18E+04	&	1.19E+04	&	6.32E+03	&	4.41E+03	&	7.91E+03	&\textcolor{red}{	3.93E+03	}\\
+
+
+\hline
+\multicolumn{11}{l}{\textcolor{red}{First best}, \textcolor{green}{Second best}, \textcolor{blue}{Third best}}\\
+\end{tabular}
+\end{center}
+   
+\end{frame}
+
+
+\begin{frame}{Experimental Results}
+      \fontsize{8pt}{10pt}\selectfont
+
+\begin{table}
+
+\caption{Mean ranking of considered algorithms using Friedman Test}
+\centering 
+\scriptsize
+{\renewcommand{\arraystretch}{2}
+\begin{tabular}{ cl cl cl}
+\hline
+\textbf{Rank} &   \textbf{Algorithm} & \textbf{Mean Rank Value}\\
+\hline
+1    &    SBBO    &    \hl{1.93    }\\
+2    &    BBO-M    &    3.70    \\
+3    &    GWO    &    3.93    \\
+4    &    LX-BBO   &    4.70    \\
+5    &    BBO    &    4.12    \\
+6    &    cKGSA    &    6.97    \\
+7    &    WOA    &    6.97    \\
+8    &    SSA    &    7.92    \\
+9    &    LSHADE    &    8.57\\
+10    &    IBBO    &    9.52    \\
+
+
+\hline
+\end{tabular}}
+\label{tab:rankTest}
+
+\end{table}
+         
+\end{frame}
+  
+\begin{frame}{Experimental Results}
+      \fontsize{8pt}{10pt}\selectfont
+
+\begin{figure}
+    \centering
+\subfigure[\scriptsize Composite Function 5 ($N=5$)]{\includegraphics[width=0.4\linewidth]{Figures/BBO-BOF/16}} 
+\subfigure[\scriptsize Shifted and Rotated Expanded Scaffer's Function ($F_6$)]{\includegraphics[width=0.4\linewidth]{Figures/BBO-BOF/6}}\\
+\subfigure[\scriptsize Hybrid Function 6 (N=6)($F_{7}$)]  {\includegraphics[width=0.4\linewidth]{Figures/BBO-BOF/7}}
+\subfigure[\scriptsize Composition Function 8 ($N=6$) ($F_{21}$)]{\includegraphics[width=0.4\linewidth]{Figures/BBO-BOF/21}}\\
+ \caption{\scriptsize Convergence trend of SBBO with other considered Meta-heuristics.}
+\label{fig:cg}
+\end{figure}
+  
+  
+
+  
+  
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Codebook Generation using SBBO}
+\begin{frame}[fragile]{Codebook Generation using SBBO}
+\begin{columns}
+\begin{column}{7cm}
+\begin{figure}
+		\centering
+		\includegraphics[width=1.0\linewidth]{Figures/BBO-BOF/BOF+GBBO2}
+		\caption{The flow chart of proposed method}
+		\label{fig:flowchart}
+\end{figure}
+\end{column}
+
+\begin{column}{4.2cm}
+\begin{itemize}
+\scriptsize
+\justifying
+\item Let $F$ is a set of local features $\{f_1, f_2, \cdots, f_N\}$, where $f_n \in \mathbb{R}^D$
+\item Apply K-means clustering on the set $F$ to find the initial $K$ cluster centers \{$c_1, c_2, \cdots, c_K$\} where $c_k \in \mathbb{R}^D$ . 
+\item \textbf{Objective function:}
+\begin{equation*}\label{eq:fitness} 
+Min.  \ \delta(f_m, c_k)   =  \sum_{i=1}^N \sum_{j=1}^K \parallel f_m - c_k \parallel ^2
+\end{equation*}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Experiment Results - Confusion matrix - Blue Histology Dataset}
+\scriptsize
+\begin{figure}
+\centering
+        \subfigure[BOF]{\includegraphics[width=0.31\linewidth]{Figures/BBO-BOF/CM_BOF}} 
+            \subfigure[ IB3]{\includegraphics[width=0.31\linewidth]{Figures/BBO-BOF/CM_IB3}}         \subfigure[IKS2]{\includegraphics[width=0.31\linewidth]{Figures/BBO-BOF/CM_IKS2}} \\
+        \subfigure[BBO-BOF]{\includegraphics[width=0.31\linewidth]{Figures/BBO-BOF/CM_BBO-BOF}}
+        \subfigure[ SBBO-BOF]{\includegraphics[width=0.31\linewidth]{Figures/BBO-BOF/CM_SBBO-BOF}}
+        
+  \caption{The normalized confusion matrix for the blue histology tissue dataset for the five methods (a) BOF, (b) IKS2, (c) BBO-BOF, and (d) SBBO-BOF}
+\label{fig:cm_tissue}
+\end{figure}
+\end{frame}
+
+
+
+%\begin{frame}{Experiment Results - Radar charts}	
+%\begin{figure}
+%\centering
+%\subfigure[Connective Tissue]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/CT_radar}}
+%\subfigure[ Epithelial Tissue]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/ET_radar}}
+%\subfigure[Muscle Tissue]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/MT_radar}} 
+%\subfigure[Nervous Tissue]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/NT_radar}} 
+% \caption{Radar chart for average results obtained for SVM classifier on (a) Connective Tissue, (b)Epithelial Tissue, (c) Muscle Tissue and (d) Nervous Tissue by considering F1 score, G-mean, sensitivity, and specificity. }
+%\label{fig:T3}
+%\end{figure}
+%\end{frame}	
+
+\begin{frame}{Experiment Results - Confusion matrix - ADL Dataset}
+\scriptsize
+\begin{columns}
+\begin{column}{5cm}
+\begin{table}
+
+\scriptsize
+    \caption{The confusion matrix for kidney image classification}
+    \label{tab:cm_kid}
+ 
+{\renewcommand{\arraystretch}{1}
+\begin{tabular}{|p{0.4in}|p{0.3in}|p{0.4in}|p{0.45in}|}
+
+    \hline
+Class    &    Healthy    &    Inflammatory    &    Method    \\
+\hline
+Healthy    &    0.6925    &    0.3075    &    SVM    \\
+    &    0.875    &    0.125    &    SRC    \\
+    &    0.825    &    0.175    &    SHIRC    \\
+    &    \textbf{0.89}    &    0.11    &    SBBO-BOF    \\
+\hline
+Inflammatory    &    0.2812    &    0.7188    &    SVM    \\
+    &    0.25    &    0.75    &    SRC    \\
+    &    0.1667    &    0.8333    &    SHIRC    \\
+    &    0.175    &    \textbf{0.875}    &    SBBO-BOF    \\
+
+\hline
+ \end{tabular}}
+\end{table}
+\end{column}
+\begin{column}{5cm}
+\begin{table}
+
+\scriptsize
+    \caption{The confusion matrix for lung image classification}
+    \label{tab:cm_lg}
+{\renewcommand{\arraystretch}{1}    
+\begin{tabular}{|p{0.4in}|p{0.3in}|p{0.4in}|p{0.45in}|}
+
+    \hline
+Class    &    Healthy    &    Inflammatory    &    Method    \\
+\hline
+Healthy    &    0.8875    &    0.1125    &    SVM    \\
+    &    0.725    &    0.275    &    SRC    \\
+    &    0.75    &    0.25    &    SHIRC    \\
+    &\textbf{    0.92    }&    0.08    &    SBBO-BOF    \\
+\hline
+Inflammatory    &    0.372    &    0.6238    &    SVM    \\
+    &    0.2417    &    0.7853    &    SRC    \\
+    &    0.15    &    0.85    &    SHIRC    \\
+    &    0.15    &\textbf{    0.85    }&    SBBO-BOF    \\
+
+
+\hline
+ \end{tabular}}
+\end{table}
+\end{column}
+\end{columns}
+
+\begin{table}
+
+\scriptsize
+    \caption{The confusion matrix for spleen image classification}
+    \label{tab:cm_spl}
+{\renewcommand{\arraystretch}{1}    
+\begin{tabular}{|p{0.4in}|p{0.3in}|p{0.4in}|p{0.45in}|}
+
+    \hline
+Class    &    Healthy    &    Inflammatory    &    Method    \\
+\hline
+Healthy    &    0.5112    &    0.488    &    SVM    \\
+    &    0.7083    &    0.2917    &    SRC    \\
+    &    0.65    &    0.35    &    SHIRC    \\
+    &\textbf{    0.828    }&    0.172    &    SBBO-BOF    \\
+\hline
+Inflammatory    &    0.1275    &    0.8725    &    SVM    \\
+    &    0.2083    &    0.7917    &    SRC    \\
+    &    0.1167    &    0.8833    &    SHIRC    \\
+    &    0.1    &\textbf{    0.9    }&    SBBO-BOF    \\
+
+
+\hline
+ \end{tabular}}
+\end{table}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Experiment Results}
+\begin{figure}
+\centering
+\subfigure[Spleen]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/Spleen_radar}}
+\subfigure[ Kidney]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/Kidney_radar}}
+\subfigure[Lung]{\includegraphics[width=0.3\linewidth]{Figures/BBO-BOF/l_radar}} 
+ \caption{Radar chart for average results on (a) Spleen dataset, (b) Kidney dataset, and (c) Lung dataset.}
+\label{fig:T3}
+\end{figure}
+
+ \begin{table}
+\center
+\scriptsize
+    \caption{Comparative analysis of the proposed meta-heuristic  based classification method.}
+    \label{tab:perfor}
+    
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{|p{0.55in}|p{0.51in}|p{0.55in}|p{0.55in}|p{0.55in}|p{0.6in}|}
+
+    \hline
+  Dataset    &        BOF    &    IKS2    &    BBO-BOF    &    IBBO-BOF    &    SBBO-BOF    \\
+ \hline
+Blue Histology 	&            47.5    &    50.63    &    62.03 & 65       &\textbf{    72.23    }\\
+ADL &70.6 & 72.5&78.5 & 69.1&\textbf{   87  } \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\end{frame}
+
+%
+%\begin{frame}{Experiment Results}
+%
+%\begin{itemize}
+%\item  {\bf Time complexity analysis:}
+%
+%\begin{itemize}
+%\item   The K-means method has time complexity of $O(N^2)$, where $N$ corresponds to the number of descriptors \cite{Pakhira2014}.\\[3ex]
+%
+%\item The considered fitness function calculates the sum of squared euclidean distances between the descriptors and the corresponding cluster centroids. Therefore, the complexity of fitness function will be $O(N \times C)$, where $C$ is the number of clusters.\\[3ex]
+%
+%\item  Since, the proposed SBBO only modifies the mutation operator of BBO, therefore its time complexity will be same as BBO which is $O(P^2)$ \cite{Wang2014}, where $P$ is the population size.
+%
+%\end{itemize}
+%\item Therefore, the total time complexity of the proposed SBBO-BOF method can be formulated as $O(N^2 +N × C+P^2)$.
+%\end{itemize}
+%
+%\end{frame}
+
+\begin{frame}{Research contribution}
+\begin{itemize}
+	\justifying
+	\item An efficient spiral biogeography-based optimization (SBBO) based on Fermat's spiral has been presented which shows better convergence precision on both the standard benchmark functions and CEC 2017 functions\\[3ex]
+
+\item The SBBO is used to enhance the codebook generation method in BOF framework \\[3ex]
+
+\item The proposed BOF method gives the accuracy 72.23\% and 87\% for Blue histology and ADL dataset respectively 
+\end{itemize}
+\end{frame}
+
+
+\subsection{Objectives}
+\begin{frame}{Objectives}
+\begin{enumerate}
+	\justifying
+	\item To design a new keypoint selection method for finding discriminative and relevant features for codebook construction \\[3ex]
+
+	\item To design an efficient meta-heuristic based codebook generation method to reduce the effect of dense regions of histopathological images \\[3ex]
+	
+	\item \textcolor{red}{To design a computationally efficient and effective codebook generation method for finding the relevant visual words} \\[3ex]
+
+	\item To design an efficient feature encoding method by incorporating the merits of two different features descriptors for the better image representation
+	
+\end{enumerate}
+\end{frame}
+
+\subsection{GRA-BOF method}
+\begin{frame}{Grey Relational Analysis based Bag-of-Features (GRA-BOF)}
+\begin{figure}[t]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figures/BBO-BOF/codebook}
+			\caption{{\scriptsize Flow chart of the BOF method}}\label{fig:emp}
+\end{figure}
+\begin{itemize}
+\justifying
+\item  GRA based feature selection method produce significant features due to effective GRG similarity measure and is computationally efficient.\\[2ex]
+
+\item However, due to the use of K-means, feature selection based BOF method produces less accuracy \\[2ex]
+
+\item In the second approach, meta-heuristic based method performs better, however they are computationally expensive\\[2ex]
+
+\item Therefore, in this work GRA has been used as a clustering method for obtaining optimal visual words in better computational cost
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Keypoint Clustering using GRA}\label{KGRA1}
+\begin{block}{The GRA-BOF Method}
+	\begin{algorithm}[H]
+		\scriptsize
+		%					\caption{The proposed GRA-BOF method}
+		\label{algo:KSGRA}
+		\begin{algorithmic}[1]
+			\STATE \textbf{Input:}  A set of feature vectors known as descriptor $D$ having $n$  strong feature vectors and a cut-off threshold ($T$)  
+			\STATE \textbf{Output:}  Reduced descriptor $S$ having $m$ feature vectors ($m<n$)
+			\WHILE  {($size(D)>1$)}
+			\STATE Select a reference vector ($R$) near to the mean of $D$
+			\STATE $D= D- R$
+			\STATE Calculate GRGs ($\Gamma$) for each feature vector in $D$ with $R$
+					\begin{equation*} \label{eq:grg}
+				\Gamma(R, d)= \frac{1}{D}\sum_{d=1}^D[\gamma(R, d)]
+			\end{equation*} 
+			where, \begin{equation*} \label{eq:grc}
+				\gamma(R, d)=\frac{ \min \limits  \triangle(d) + \xi \max \limits \triangle(d) }{\triangle(d)+\xi \max\limits \triangle(d)}, 
+	\end{equation*}
+	where, $ \triangle(d)= \mid R(d) - D(d) \mid$ and $\xi \in (0,1]$. 
+			\STATE Delete the $T\%$ feature vectors, having the highest GRG values, from $D$
+			\STATE Update vector $S=[S\ \ R]$ 
+			\ENDWHILE \\
+			\STATE Use $S$ to generate histograms.
+			\STATE Train SVM classifier for classification of images into their respective categories.
+		\end{algorithmic}
+	\end{algorithm}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{Keypoint Clustering using GRA}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/GRA-BOF/Codebook_GRA}
+	\caption{\scriptsize The GRA based BOF method}
+	\label{fig:grabof}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Selection of cut-off threshold ($T$) value for GRA-BOF}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Figures/GRA-BOF/emp}
+	\caption{\scriptsize Impact analysis of cut-off threshold ($T$) value over classification accuracy on ADL and Blue histology datasets.}
+	\label{fig:T3}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Classification Performance}
+
+\begin{table}
+\centering
+\scriptsize
+\caption{Classification performance  with  other methods based on  recall, precision, F1 score, specificity, and average accuracy on ADL three organs dataset.}
+    \label{tab:cm}
+\renewcommand{\arraystretch}{1.2} 
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+    Organ &    Algorithms    &    Recall    &Specificity    &Precision    &    FPR    &    Accuracy    \\
+\hline
+    &    SVM    &    0.69    &    0.72    &    0.71    &    0.28    &    0.71    \\
+    &    SRC    &    0.88    &    0.75    &    0.78    &    0.25    &    0.81    \\
+    &    SHIRC    &    0.83    &    0.83    &    0.83    &    0.17    &    0.83    \\
+Kidney    &    BOF    &    0.82    &    0.69    &    0.73    &    0.31    &    0.76    \\
+    &    IKS2-BOF    &    0.85    &    0.77    &    0.79    &    0.23    &    0.81    \\
+    &    GRA-BOF    &\textbf{    0.89    }&\textbf{    0.91    }&\textbf{    0.91    }&\textbf{    0.09    }&\textbf{    0.90    }\\
+\hline    
+&    SVM    &    0.89    &    0.63    &    0.70    &    0.37    &    0.76    \\
+    &    SRC    &    0.73    &    0.76    &    0.75    &    0.24    &    0.75    \\
+    &    SHIRC    &    0.75    &    0.85    &    0.83    &    0.15    &    0.80    \\
+Lung    &    BOF    &    0.72    &    0.75    &    0.74    &    0.25    &    0.74    \\
+    &    IKS2-BOF    &    0.83    &    0.70    &    0.73    &    0.30    &    0.77    \\
+    &    GRA-BOF    &\textbf{    0.92    }&\textbf{    0.94    }&\textbf{    0.94    }&\textbf{    0.06    }&\textbf{    0.93    }\\
+\hline    
+&    SVM    &    0.51    &    0.87    &    0.80    &    0.13    &    0.69    \\
+    &    SRC    &    0.71    &    0.79    &    0.77    &    0.21    &    0.75    \\
+    &    SHIRC    &    0.65    &    0.88    &    0.85    &    0.12    &    0.77    \\
+Spleen    &    BOF    &    0.55    &    0.77    &    0.71    &    0.23    &    0.66    \\
+    &    IKS2-BOF    &    0.68    &    0.87    &    0.84    &    0.13    &    0.78    \\
+    &    GRA-BOF    &\textbf{    0.75    }&\textbf{    0.89    }&\textbf{    0.87    }&\textbf{    0.11    }&\textbf{    0.82    }\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Classification Performance}
+
+\begin{table}
+\centering
+\caption{Classification performance  with  other methods based on  recall, precision, F1 score, specificity, and average accuracy on Blue histology dataset}
+    \label{tab:cm}
+{\scriptsize
+\renewcommand{\arraystretch}{1.2} 
+\begin{tabular}{|c|l|c|c|c|c|c|c|}
+\hline
+Categoty    &    Parameters    &    SVM    &    SRC    &    SHIRC    &    BOF    &    IKS2    &    GRA-BOF    \\
+\hline
+    &    Recall    &    0.450    &    0.650    &    0.550    &    0.750    &    0.710    &    \textbf{0.800    }\\
+    &    Precision    &    0.512    &    0.512    &    0.500    &    0.375    &    0.399    &    \textbf{0.696}    \\
+CT    &    F1 Score     &    0.573    &    0.573    &    0.524    &    0.500    &    0.511    &    \textbf{0.744    }\\
+    &    Specificity    &    0.806    &    0.806    &    0.814    &    0.583    &    0.643    &    \textbf{0.883    }\\
+    \hline
+    &    Recall    &    0.400    &    0.583    &    0.700    &    0.350    &    0.330    &    \textbf{0.780    }\\
+    &    Precision    &    0.778    &    0.778    &    0.778    &    0.538    &    0.524    &    \textbf{0.650    }\\
+ET    &    F1 Score     &    0.667    &    0.667    &    0.737    &    0.424    &    0.405    &\textbf{    0.709    }\\
+    &    Specificity    &    0.933    &    0.933    &    0.932    &    0.900    &    0.900    &    \textbf{0.860}    \\
+    \hline
+    &    Recall    &    0.300    &    0.750    &    0.737    &    0.750    &    0.730    &\textbf{    0.751    }\\
+    &    Precision    &    0.652    &    0.652    &    0.700    &    0.577    &    0.570    &    \textbf{0.815}    \\
+MT    &    F1 Score     &    0.698    &    0.698    &    0.718    &    0.652    &    0.640    &    \textbf{0.781    }\\
+    &    Specificity    &    0.875    &    0.875    &    0.900    &    0.817    &    0.817    &\textbf{    0.943}    \\
+    \hline
+    &    Recall    &    0.200    &    0.480    &    0.550    &    0.050    &    0.250    &    \textbf{0.650    }\\
+    &    Precision    &    0.545    &    0.545    &    0.579    &    1.000    &    0.806    &\textbf{    0.890}    \\
+NT    &    F1 Score     &    0.511    &    0.511    &    0.564    &    0.095    &    0.382    &\textbf{    0.751    }\\
+    &    Specificity    &    0.875    &    0.875    &    0.864    &    1.000    &    0.980    &    \textbf{0.973}    \\
+    \cline{2-8}
+    &    Average Accuracy    &    33.8    &    61.4    &    63.3    &    47.5    &    50.5    &\textbf{    74.5    }\\
+
+\hline
+\end{tabular}
+}
+
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}{Classification Performance}
+
+\begin{figure}
+\centering
+\subfigure[Kidney]{\includegraphics[width=0.3\linewidth]{Figures/GRA-BOF/kidney}}
+\subfigure[Lung]{\includegraphics[width=0.3\linewidth]{Figures/GRA-BOF/lung}}
+\subfigure[Spleen]{\includegraphics[width=0.3\linewidth]{Figures/GRA-BOF/spleen}}
+
+ \caption{{\scriptsize Radar Charts for average results obtained for SVM classifier on a) ADL dataset and b) Tissue image dataset by considering F-1 score, sensitivity, specificity, and G-mean}}
+\label{fig:rc}
+\end{figure}
+
+\begin{table}
+\renewcommand{\arraystretch}{1.2}
+	\centering
+	\scriptsize
+	\caption{{\scriptsize Comparative analysis of the proposed GKS based BOF method with other considered methods in terms of average accuracy. The best results are in bold	}}
+	\label{tab:adl}
+	\begin{tabular}{|p{1.2in}|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Category}   &	\textbf{SVM}	&	\textbf{SRC}	&	\textbf{SHIRC}	&	\textbf{BOF} & \textbf{IKS2} & \textbf{GRA-BOF}	\\
+		\hline
+	ADL Dataset &  72 & 77 & 80 &  72& 69& \textbf{88.3}\\
+	Blue Histology  &  29 & 33 & 50 &30 & 43& \textbf{74.5}\\
+	\hline	
+	\end{tabular}
+\end{table}
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Research Contribution}
+
+\begin{itemize}
+\justifying
+	\item A new Grey relational analysis based BOF method (GRA-BOF) which improves the efficiency of vector quantization step of the standard BOF method is introduced\\[3ex]
+	\item The GRA-BOF method has been validated on two datasets, Blue histology and ADL histopathological image dataset\\[3ex]
+	\item The average accuracy of the GRA-BOF method is 88.3\% which is the highest among other state-of-the-art methods followed by SRC (81.9\%) and SHIRC (78.9\%)\\[3ex]
+	\item The experimental results validate that the GRA-BOF method outperforms the other considered methods for histopathological image classification
+\end{itemize}
+\end{frame}
+
+
+\section*{Objectives}
+\subsection{Objectives}
+\begin{frame}{Objectives}
+\begin{enumerate}
+	\justifying
+	\item To design a new keypoint selection method for finding discriminative and relevant features for codebook construction \\[3ex]
+
+	\item To design an efficient meta-heuristic based codebook generation method to reduce the effect of dense regions of histopathological images \\[3ex]
+	
+	\item To design a computationally efficient and effective codebook generation method for finding the relevant visual words \\[3ex]
+
+	\item \textcolor{red}{To design an efficient feature encoding method by incorporating the merits of two different features descriptors for the better image representation}
+	
+\end{enumerate}
+\end{frame}
+
+
+\subsection{A new feature encoding method}
+
+
+\begin{frame}{Weighted Two Dimensional Vector Quantization}
+
+\begin{figure}[t]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figures/BBO-BOF/encoding}
+			\caption{{\scriptsize Flow chart of the BOF method}}\label{fig:emp}
+\end{figure}
+
+
+\begin{itemize}
+\justifying
+\fontsize{7pt}{9pt}\selectfont
+\item Single feature based vector quantization method represents the images into histograms, however, every feature extraction method produces different feature vector with various qualities and shortcomings \\[3ex]
+
+\item Such as, SIFT produces better results than SURF when applied on images having different scales \cite{panchal2013} \\[3ex]
+
+\item SURF works well for noisy and blurred images \cite{panchal2013} \\[3ex]
+
+\item ORB performs better in rotation and noise than SIFT \cite{Karami2017} \\[3ex]
+
+\item That's why, this work introduces a weighted two dimensional vector quantization method based on the information of two different feature descriptors
+
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Weighted Two Dimensional Vector Quantization}
+
+
+
+
+\begin{figure}[t]
+			\centering
+			\includegraphics[width=0.9\textwidth]{Figures/2D/WVQ}
+			\caption{{\scriptsize Flow chart of weighted two dimensional vector quantization}}\label{fig:emp}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Weighted Two Dimensional Vector Quantization}
+\begin{itemize}
+\item Let $X=[x_1, x_2, \cdots, x_N] \in \mathbb{R}^{D \times N}$ be $N$ $D-$dimensional features extracted from an image and $\mathcal{B}_i= [b_1, b_2, \cdots, b_K] \in \mathbb{R}^{D \times N}$ is a codebook of $K$ codewords.  The objective of encoding is to compute a code s for input x with D
+
+
+\item In current voting based methods, each descriptor $x$ is represented by a code $s(i)=\phi(x)$, $ i=1, 2, \cdots, K$ which is determined by its voting value to codeword $d$ 
+
+
+\begin{equation*}
+\phi(x)= \begin{cases}1 & if \ i = \underset{j}{\mathrm{argmin}} (\parallel x-b_j\parallel_2)\\0 & otherwise\end{cases}
+\end{equation*}
+ 
+
+\item Let $Y=[y_1, y_2, \cdots, y_N] \in \mathbb{R}^{D \times N}$ be the another $N$ $D-$dimensional features extracted from an image and  $\mathcal{C}_i= [c_1, c_2, \cdots, c_K] \in \mathbb{R}^{D \times N}$ be  the codebook with $K$ codewords then the weighted two dimensional vector quantization  is defined as follows:
+
+\begin{equation*}
+\forall_i\ s(i, j)=\alpha \cdot \phi_1(x) + (1- \alpha) \cdot \phi_2(x),\ j=1,\ 2,\ \cdots,\ K
+\end{equation*}
+ where, $\alpha$ is a weighting factor between zero and one
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Experimental Analysis}
+
+\begin{table}
+\renewcommand{\arraystretch}{1.1}
+    \centering
+    
+    
+    \caption[Comparative analysis of considered methods on ADL dataset in terms of various performance parameters]{{\scriptsize Comparative analysis of considered methods on ADL dataset in terms of various performance parameters}}
+    
+    \label{tab:adlpm}
+    \scriptsize
+    \begin{tabular}{|c|l|c|c|c|c|c|}
+\hline
+\textbf{Organ }    &    \textbf{Algorithms}    &    \textbf{Sensitivity}    &    \textbf{Specificity}    &    \textbf{Precision    }&    \textbf{FNR}    &    \textbf{Accuracy}    \\
+\hline
+Kidney    &    SIFT    &    0.670    &    0.720    &    0.705    &    0.330    &    0.695    \\
+    &    ORB    &    0.650    &    0.710    &    0.691    &    0.350    &    0.680    \\
+    &    SURF    &    0.640    &    0.700    &    0.681    &    0.360    &    0.670    \\
+    &    SIFT+ORB    &    0.780    &    0.828    &\textbf{    0.821    }&    0.220    &\textbf{    0.804    }\\
+    &    SIFT+SURF    &\textbf{    0.844    }&    0.490    &    0.598    &\textbf{    0.156    }&    0.658    \\
+    &    ORB+SURF    &    0.690    &\textbf{    0.830    }&    0.802    &    0.310    &    0.760    \\
+\hline
+Lung    &    SIFT    &    0.740    &    0.730    &    0.733    &    0.260    &    0.735    \\
+    &    ORB    &    0.730    &    0.720    &    0.723    &    0.270    &    0.725    \\
+    &    SURF    &    0.720    &    0.710    &    0.713    &    0.280    &    0.715    \\
+    &    SIFT+ORB    &\textbf{    0.820    }&\textbf{    0.830    }&\textbf{    0.828    }&\textbf{    0.180    }&\textbf{    0.825    }\\
+    &    SIFT+SURF    &    0.790    &    0.810    &    0.806    &    0.210    &    0.800    \\
+    &    ORB+SURF    &    0.790    &    0.740    &    0.752    &    0.210    &    0.765    \\
+\hline
+Spleen    &    SIFT    &    0.590    &    0.750    &    0.702    &    0.410    &    0.670    \\
+    &    ORB    &    0.580    &    0.760    &    0.707    &    0.420    &    0.670    \\
+    &    SURF    &    0.570    &    0.750    &    0.695    &    0.430    &    0.660    \\
+    &    SIFT+ORB    &\textbf{    0.760    }&\textbf{    0.790    }&\textbf{    0.784    }&\textbf{    0.240    }&\textbf{    0.775    }\\
+    &    SIFT+SURF    &    0.720    &    0.780    &    0.766    &    0.280    &    0.750    \\
+    &    ORB+SURF    &    0.670    &    0.780    &    0.753    &    0.330    &    0.725    \\
+
+
+
+\hline    
+    \end{tabular}
+\end{table}
+\end{frame}
+
+
+
+\begin{frame}[plain]{Experimental Analysis}
+\begin{table}[t!]
+\renewcommand{\arraystretch}{1.1}
+    \centering
+   
+    \caption[Comparative analysis of the considered methods on Blue Histology  dataset in terms of various performance parameters]{{ \scriptsize Comparative analysis of the considered methods on Blue Histology  dataset in terms of various performance parameters}}
+    \label{tab:tissuepm}
+     \scriptsize
+    \begin{tabular}{|c|l|c|c|c|c|c|c|}
+\hline
+\textbf{Category }    &    \textbf{Algorithms}    &    \textbf{Sensitivity}    &    \textbf{Specificity}    &    \textbf{Precision    }&    \textbf{FNR}    &    \textbf{F1 Score}    \\
+\hline
+CT    &    SIFT    &    0.84    &    0.75    &    0.54    &    0.16    &    0.66    \\
+    &    ORB    &    0.80    &    0.68    &    0.46    &    0.20    &    0.58    \\
+    &    SURF    &    0.70    &    0.75    &    0.48    &    0.30    &    0.57    \\
+    &    SIFT+ORB    &\textbf{    0.86    }&\textbf{    0.95    }&\textbf{    0.85    }&\textbf{    0.14    }&\textbf{    0.85    }\\
+    &    SIFT+SURF    &    0.70    &    0.83    &    0.58    &    0.30    &    0.64    \\
+    &    ORB+SURF    &    0.70    &    0.91    &    0.73    &    0.30    &    0.71    \\
+\hline
+ET    &    SIFT    &    0.64    &    0.84    &    0.58    &    0.36    &    0.61    \\
+    &    ORB    &    0.53    &    0.90    &    0.63    &    0.47    &    0.57    \\
+    &    SURF    &    0.63    &    0.87    &    0.60    &    0.37    &    0.62    \\
+    &    SIFT+ORB    &\textbf{    0.76    }&\textbf{    0.94    }&\textbf{    0.80    }&\textbf{    0.24    }&\textbf{    0.78    }\\
+    &    SIFT+SURF    &    0.75    &    0.90    &    0.71    &    0.25    &    0.73    \\
+    &    ORB+SURF    &    0.69    &    0.88    &    0.66    &    0.31    &    0.68    \\
+\hline
+MT    &    SIFT    &    0.55    &    0.95    &    0.79    &    0.45    &    0.65    \\
+    &    ORB    &    0.75    &    0.85    &    0.63    &    0.25    &    0.68    \\
+    &    SURF    &    0.65    &    0.92    &    0.72    &    0.35    &    0.68    \\
+    &    SIFT+ORB    &\textbf{    0.78    }&    0.91    &    0.74    &\textbf{    0.22    }&    0.76    \\
+    &    SIFT+SURF    &    0.60    &    0.90    &    0.67    &    0.40    &    0.63    \\
+    &    ORB+SURF    &    0.70    &\textbf{    0.97    }&\textbf{    0.88    }&    0.30    &\textbf{    0.78    }\\
+\hline
+NT    &    SIFT    &    0.31    &    0.93    &    0.56    &    0.69    &    0.40    \\
+    &    ORB    &    0.05    &\textbf{    0.95    }&    0.25    &    0.95    &    0.08    \\
+    &    SURF    &    0.35    &    0.92    &    0.58    &    0.65    &    0.44    \\
+    &    SIFT+ORB    &\textbf{    0.69    }&    0.90    &\textbf{    0.72    }&\textbf{    0.31    }&\textbf{    0.70    }\\
+    &    SIFT+SURF    &    0.60    &    0.92    &    0.71    &    0.40    &    0.65    \\
+    &    ORB+SURF    &    0.65    &    0.82    &    0.54    &    0.35    &    0.59    \\
+\hline    
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Classification Accuracy}
+%\begin{figure}[t]
+%			\centering
+%			\subfigure[SIFT+ORB]{\includegraphics[width=0.3\linewidth]{Figures/2D/CM_Tissue_SIFT_ORB}}
+%\subfigure[SIFT+SURF]{\includegraphics[width=0.3\linewidth]{Figures/2D/CM_Tissue_SIFT_SURF}}
+%\subfigure[SURF+ORB]{\includegraphics[width=0.3\linewidth]{Figures/2D/CM_Tissue_SURF_ORB}}
+%			\caption{{\scriptsize Confusion Matrix }}\label{fig:ep}
+%\end{figure}
+\begin{table}
+\renewcommand{\arraystretch}{1.2}
+	\centering
+	\scriptsize
+	\caption{{\scriptsize Comparative analysis of the proposed 2DVQ method average classification accuracy}}
+	\label{tab:adl}
+	\begin{tabular}{|p{1.2in}|c|c|c|c|}
+		\hline
+		\textbf{Features}   &	\textbf{Encoding}	&	\textbf{ADL}	&	\textbf{Blue histology}		\\
+		\hline
+	SIFT	&	HV	&	70	&	62	\\
+ORB	&	HV	&	69	&	53	\\
+SURF	&	HV	&	68	&	58	\\
+SIFT+ORB	&	2DVQ	&	79	&	74	\\
+SIFT+SURF	&	2DVQ	&	74	&	66	\\
+ORB+SURF	&	2DVQ	&	75	&	69	\\
+
+	\hline	
+	\end{tabular}
+\end{table}
+\end {frame}
+
+
+\begin{frame}{Research Contribution}
+\begin{itemize}
+\justifying
+%\fontsize{7pt}{9pt}\selectfont
+\item In this work, a weighted two dimensional vector quantization method has been introduced\\[3ex]
+
+\item The proposed method measures the weighted  information of two different feature descriptors, namely SIFT and ORB
+\end{itemize}
+\end{frame}
+
+\subsection{Efficient Bag-of-Features Method for Histopathological Image Classification}
+\begin{frame}[plain]\frametitle{Efficient Bag-of-Features Method for Histopathological Image Classification}
+\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{Figures/Intro/W2DVQ}
+		\caption{The proposed Bag-of-feature approach for Histopathological image classification \cite{caicedo2009}}
+		\label{fig:bof2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}\frametitle{Efficient Bag-of-Features Method for Histopathological Image Classification}
+\rm
+\begin{block}{}
+\fontsize{8pt}{10pt}\selectfont
+\begin{table}[!t]
+\renewcommand{\arraystretch}{1.3}
+\caption{The performance comparison of various proposed BOF methods  on ADL and Blue histology dataset.}
+\label{Tab:classifier}
+\centering
+\footnotesize {
+\begin{tabular}{c l c c}
+  \hline
+\textbf{S.No.} &\textbf{BOF Approach}&\textbf{ADL}& \textbf{Blue Histology}\\
+ &&\textbf{ Dataset}& \textbf{ Dataset}\\
+\hline
+                   1. &GKS-BOF        & 78   & 48 \\
+                   2. &SBBO-BOF        & 87  & 72.23 \\
+                   3. &GRA-BOF            & 88.3  & 74.5     \\
+                   4. &Weighted-BOF          & 79  & 74    \\
+                   5. &GRA-Weighted-BOF     & 91.2  & 77.5     \\
+                   6. &Bayramoglu et al. \cite{Bayramoglu2016} &52.72 & 28.12 \\
+                   7. & CNN-IBBO-BOF \cite{Pal2018a}&87.66 &67\\
+ \hline
+\end{tabular}
+}
+\end{table}
+\end{block}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusion and Scope for Future Work}
+\subsection*{Conclusion}\label{concl}
+\begin{frame}[allowframebreaks]{Conclusion}
+\fontsize{9pt}{12pt}\selectfont
+\begin{itemize}
+\justifying
+%%%%%%%%%%
+\item A new Grey relational analysis based keypoints selection phase has been introduced in BOF method which reduces the extracted high dimensional features by 95\% and 68\% from the ADL and Blue histology datasets respectively. This also increases the respected classification accuracy by 13\% and 11\%.\\[3ex]
+	
+	%%%%%%
+	
+\item To overcome the limitations of k-means based codebook construction algorithm in BOF method, an optimal SBBO has been presented which gives the best mean ranking of 1.93 by Friedman test. It produces 72.23\% and 87\% accuracy for Blue histology and ADL datasets respectively. However, the method is computationally expensive.\\[3ex]
+
+
+%%%%%%%%%%%
+
+\item To make the codebook construction computationally efficient, a new GRA-BOF has been presented which improves the efficiency of codebook construction step of the standard BOF method and gives the accuracy of 74.5\% and  88.3\% for Blue histology and ADL datasets respectively.
+\\[3ex]
+
+	
+\item To take the merits of two different feature descriptors, a new weighted two dimensional vector quantization method has been introduced  which gives the classification accuracy 74\% and  79\% for Blue histology and ADL datasets respectively using SIFT and ORB features.\\[3ex]
+
+\item Finally, a new and efficient bag-of-features model is presented using GRA based codebook construction and weighted 2D vector quantization methods. The presented model gives the classification accuracy 77.5\% and  91.2\% for Blue histology and ADL datasets respectively which is the best among other methods.
+
+\end{itemize}
+\end{frame}
+
+
+%
+\subsection*{Scope for Future Work}\label{fw}
+\begin{frame}{Future Work}
+\fontsize{9pt}{12pt}\selectfont
+\begin{itemize}
+\justifying
+%\item Improvement in the performance of classification accuracy\\[.20cm]
+\item The developed BOF method can be used to analyze the different structures of histopathological and cytological images.\\[3ex]
+\item The proposed keypoints selection method may be applied to other data sets such as microarrays data sets.\\[3ex]
+\item The developed classification system may be explored for solving other real world pattern recognition problems.\\[3ex]
+\item The classification of the accuracy of the system can be increased by introducing some pre-processing steps in tissue images.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Research Papers}
+\begin{block}{International Journals}
+	
+\begin{itemize}
+	\scriptsize
+\justifying
+	\item R. Pal and M. Saraswat, ``Improved Biogeography based optimization", \emph{International Journal of Advanced Intelligence Paradigms}, 2017. (In press) (Indexing: Scopus, H-index: 7)
+	
+	\item R. Pal and M. Saraswat, ``Grey Relational Analysis based Keypoint selection in Bag-of-Features for Histopathological Image Classification", \emph{Recent Patents on Computer Science}, 2018. (In Press) (Indexing: Scopus, H-index: 9)
+	
+	\item R. Pal and M. Saraswat, ``Histopathological Image Classification using Enhanced Bag-of-Feature with Spiral Biogeography-based Optimization", \emph{Applied Intelligence, Springer}, Volume 49, Issue 9, pp 3406–3424, 2019. (Indexing: SCI, H-index: 36)
+
+\item   R. Pal and M. Saraswat, ``A New Weighted Two Dimensional Vector Quantization Encoding Method in Bag-of-Features for Histopathological Image Classification'', \emph{International Journal of Intelligent Information and Database Systems}, 2019. (In press)(Indexing: Scopus, H-index: 10)
+ 
+	\item  R. Pal and M. Saraswat, ``Efficient Bag-Of-Features using grey relational analysis for Histopathology Image classification", \emph{Computers in Biology and Medicine}. (Under review)
+\end{itemize}
+\end{block}
+
+\begin{block}{International Conferences}
+	
+\begin{itemize}
+	\scriptsize
+\justifying
+	\item R. Pal and M. Saraswat, ``Data clustering using enhanced Biogeography based optimization", In proc. of \emph{Tenth International Conference on Contemporary Computing (IC3)}, pp. 1-6, 2017.
+	
+	\item R. Pal and M. Saraswat, ``Enhanced Bag of Features using AlexNet and improved biogeography-based optimization for Histopathological Image Analysis", \emph{Eleventh International Conference on Contemporary Computing (IC3)}, pp. 1-6, 2018.
+	
+	\item R. Pal and M. Saraswat, ``A new Bag-of-feature method using Biogeography-based Optimization for categorization of Histology images", The 4th International Conference on Computers and Management,  Delhi, India, pp. 155-160, 2018.
+	
+\end{itemize}	
+\end{block}
+\end{frame}
+
+\subsection*{Acknowledgment}\label{Ack}
+\begin{frame}\frametitle{Acknowledgment}
+\justifying
+\fontsize{8pt}{10pt}\selectfont
+\textcolor[rgb]{1.00,0.00,0.00}{I am thankful to}
+ Science and Engineering Research Board, Department of Science \& Technology, Government of India, New Delhi for funding this work as part of the project (ECR/2016/000844).
+
+%\begin{itemize}
+% \item Defence Research and Development Establishment (DRDE), Gwalior, India for funding a part of this work under the project (DRDE-P1-2011/Task-190)
+% \item Dr. S. C. Pant, Scientist �F� at D.R.D.E., Gwalior
+% \item Dr. Vinay Lomash, Ph.D., MVSc (Pathology)
+% \item Dr. Vikas Galav, MVSc (Pathology)
+%
+%\end{itemize}
+\end{frame}
+
+\section{Key References}\label{ref}
+
+\footnotesize
+
+
+\begin{frame}[allowframebreaks]\frametitle{Key References}
+\fontsize{5pt}{7pt}\selectfont
+\setbeamertemplate{bibliography item}[text]
+\bibliographystyle{plain}
+\renewcommand{\bibname}{KEY REFERENCES}
+\bibliography{references}
+\end{frame}
+
+
+\begin{frame}
+\transdissolve
+\rm
+\begin{center}
+\Huge{Thank You}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]{Appendix I}
+\begin{itemize}
+\item Standard benchmark functions
+\end{itemize}
+\begin{table}
+
+\fontsize{6pt}{5pt}\selectfont
+%\caption{Represented benchmark functions. In category column MM, UM, NS, and S represent multi-modal, unimodal, non-separable and separable functions respectively. }
+\renewcommand{\arraystretch}{1}
+\vspace{-0.25cm}
+  \begin{tabular}{p{0.06in} p{0.32in} p{1.5in} p{0.4in} p{0.08in} p{0.34in} p{0.34in}}
+    \hline
+\fontsize{6pt}{5pt}\selectfont
+\textbf{Sr. No.}  &\textbf{Function Name}	&	 \textbf{Equation}	&			\textbf{Range }	 & \textbf{OV} &\textbf{Optimal Position Values }&\textbf{Category}\\
+\hline
+
+1.	&	Ackley	&	$ -20 e^{-0.02\sqrt{d^-1 \sum_{i=1}^d x_i^2}}-e^{d^-1\sum_{i=1}^d cos(2\pi x_i)}+20+e$	&	[-35 to 35]	&	 0	&	 (0,\dots,0) & MM,\ NS\\
+2.	&	Alpine	&	$ \sum_{i=1}^{d} |x_i \sin(x_i) + 0.1 x_i|$	&	[-10 to 10] 	&	0	&	 (0,\dots,0)& MM,\ S\\
+3.	&	Brown	&	$ \sum_{i=1}^{d-1} (x_i^2)^{(x_{i+1}^2+1)} + (x_{i+1}^2)^{(x_i^2+1)}$ &	 [-1 to 4]	 &	0	&	(0,\dots,0)& UM,\ NS\\
+4.	&	Levy	&	$ \sin^2(\pi w_1) + \sum_{i=1}^{d-1} (w_i-1)^2 \left[1 + 10\sin^2(\pi w_i+1)\right] + (w_d-1)^2 \left[1+sin^2(2\pi w_d)\right], where$ $w_i = 1 + \frac{x_i-1}{4} ,$ $for$ $all$ $i = 1,\cdots,d $	&	[-10 to 10] 	&	 0	&	 (1,1,,\dots,1)& MM\\
+5.	&	New Schwefel	&	$ 418.9829d - \sum_{i=1}^{d}x_i \sin(\sqrt{|x_i|})$	&	[-500 to 500]	 &	0	&	 (420.9687,..., 420.9687)& MM\\
+6.    &	Pathological	&	$ \sum_{i=1}^{d-1}   \left( 0.5 + \frac{\sin^2 \sqrt{ 100x_i^2 + x_{i+1}^2} - 0.5} {1 + 0.001 (x_i^2 - 2x_ix_{i+1} + x_{i+1}^2)^2} \right) $	&	[-100 to 100]	 &	0	&	(0,\dots,0)& MM,\ NS\\
+7.	&	Penalty1	&	$ 10\sin^2 (\pi y_1) + \sum_{i=1}^{d-1} (y_i-1)^2 [1 + 10 \sin^2 (\pi y_{(i+1)}] + (y_d-1)^2 + \sum_{i=1}^{d} u_i$ $where$ $y_i = 1 + \frac{(x_i+1)}{4},$ $and$ $u_i = \begin{cases}k(x_i-a)^m & x_i>a\\0 & -a\leq x_i \leq a\\k(-x_i-a)^m & x_i < -a\end{cases} $	&	 [-50 to 50]	&	 0	&	(1,1,\dots,1)	& MM,\ NS\\
+
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}[fragile]{Appendix I}
+\begin{itemize}
+\item Standard benchmark functions
+\end{itemize}
+\begin{table}
+\scriptsize
+%\caption{Represented benchmark functions. In category column MM, UM, NS, and S represent multi-modal, unimodal, non-separable and separable functions respectively. }
+\renewcommand{\arraystretch}{1}
+\vspace{-0.25cm}
+  \begin{tabular}{p{0.06in} p{0.32in} p{1.5in} p{0.4in} p{0.08in} p{0.34in} p{0.34in}}
+    \hline
+\textbf{Sr. No.}  &\textbf{Function Name}	&	 \textbf{Equation}	&			\textbf{Range }	 & \textbf{OV} &\textbf{Optimal Position Values }&\textbf{Category}\\
+\hline
+8.	&	Penalty2	&	 $\sum_{i=1}^{d} u_i $ + $ 0.1 \left\{ 10 \sin ^ 2 ( 3 \pi x_1 ) + \sum_{i=1}^{d-1} ( x_i  - 1 ) ^ 2   [  1  +  \sin^2  ( 3 \pi x_{i+1} ) ]  +  ( x_d - 1 ) ^ 2 [ 1 + \sin ^ 2 ( 2 \pi x_d ) ] \right\} $ 	&	[-50 - 50]		& 0	&	  (1,1,\dots,1) &MM,\ NS\\
+9.	&	Powell's First Singular	&	$ \sum_{i=1}^{d/4} (x_{4i-3} + 10x_{4i-2})^2 + 5(x_{4i-1} - x_{4i})^2 + (x_{4i-2} - x_{4i-1})^4 + 10 (x_{4i-3} - x_{4i})^4 $	&	[-4 - 5]	&	0	 &	(0,0,\dots,0)& UM,\ NS\\
+10.	&	Powell's Second Singular	&	$ \sum_{i=1}^{d-2} (x_{i-1} + 10x_i)^2 + 5 (x_{i+1} - x_{i+2})^2 + (x_{i} - 2x_{i+1})^4 + 10(x_{i-1} - x_{i+2})^4 $ &	[-4 - 5]	&	0	&	 (0,0,\dots,0) & UM,\ NS\\
+11.	&	Powell Sum	&	$  \sum_{i=1}^{d} |x_i|^{i+1} $ &	[-1 - 1]	&	0	 &	(0,0,\dots,0)	& UM,\ S\\
+12.	&	Quartic	&	$ \sum_{i=1}^{d} i x_i^4 $	&	[-1.28 - 1.28]	&	0	&	(0,0,\dots,0)	& UM,\ S\\
+13.	&	Rastrigin	&	$ 10d + \sum_{i=1}^d (x_i^2 - 10cos(2\pi x_i))$	&	[-5.12 - 5.12]	&	0	&	 (0,0,\dots,0)	& MM\\
+14.	&	Rotated Hyper-Ellipsoid	&	$  \sum_{i=1}^{d} \sum_{j=1}^{i} x_j^2 $ &	[-65.536 - 65.536] 	&	0	&	 (0,0,\dots,0)	& UM\\
+
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Appendix I}
+\begin{itemize}
+\item Standard benchmark functions
+\end{itemize}
+\begin{table}
+\scriptsize
+%\caption{Represented benchmark functions. In category column MM, UM, NS, and S represent multi-modal, unimodal, non-separable and separable functions respectively. }
+\renewcommand{\arraystretch}{1}
+\vspace{-0.25cm}
+  \begin{tabular}{p{0.08in} p{0.32in} p{1.5in} p{0.4in} p{0.08in} p{0.34in} p{0.34in}}
+    \hline
+\textbf{Sr. No.}  &\textbf{Function Name}	&	 \textbf{Equation}	&			\textbf{Range }	 & \textbf{OV} &\textbf{Optimal Position Values }&\textbf{Category}\\
+\hline
+15.	&	Schwefel	&	$ 	- \sum_{i=1}^d x_i \sin\sqrt{|x_i|} $ &	[-512 - 512]	&	0	 &		 (420.9687,..., 420.9687)& MM, S\\
+16.	&	Schwefel3	&	$ \sum_{i=1}^d |x_i| + \prod_{i=1}^d |x_i| $	&	[-10 - 10] 	&	 0	&	 (0,0,\dots,0& MM,\ NS \\
+17.	&	Sphere	&	$ \sum_{i=1}^{d} x_i^2 $ &	[-5.12 - 5.12]	&	0	&(0,0,\dots,0)	& UM,\ S\\
+18. &	Step	&	$\sum_{i=1}^{d} (\lfloor |x_i|\rfloor) $	&	[-100 - 100]	&	 0	&	 (0,\dots,0)& UM,\ S\\
+19.	&	Sum Squares	&	$  \sum_{i=1}^{d}ix_i^2$	&	[-10 - 10] 	&	0 &	(0,0,\dots,0)	& UM,\ S\\
+20.	&	Trigonometric	&	$ 	 \sum_{i=1}^{d} [d - \sum_{j=1}^d \cos x_j + i (1 - cos(x_i) - sin(x_i))]^2 $ &	[0 - pi]	&	 0	&	 (0,0,\dots,0& MM,\ NS \\
+
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[t]
+			\centering
+			\subfigure[SURF]{\includegraphics[width=0.3\linewidth]{Figures/2D/SURF_Points}}
+\subfigure[ORB]{\includegraphics[width=0.5\linewidth]{Figures/2D/ORB_Points}}
+			\caption{{\scriptsize $100$ keypoints detected by a) SURF and b) ORB }}\label{fig:emp}
+\end{figure}
+\end{frame}
+
+
+\end{document}
+
+

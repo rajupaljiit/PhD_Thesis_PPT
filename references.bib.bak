@@ -1,0 +1,1723 @@
+% Encoding: windows-1252
+
+@INPROCEEDINGS{orting2018,
+  author = {{\O}rting, Silas Nyboe and Petersen, Jens and Thomsen, Laura H and
+	Wille, Mathilde MW and de Bruijne, Marleen},
+  title = {Detecting emphysema with multiple instance learning},
+  booktitle = {Biomedical Imaging (ISBI 2018), 2018 IEEE 15th International Symposium
+	on},
+  year = {2018},
+  pages = {510--513},
+  organization = {IEEE}
+}
+
+@ARTICLE{agarwal2004,
+  author = {Agarwal, Shivani and Awan, Aatif and Roth, Dan},
+  title = {Learning to detect objects in images via a sparse, part-based representation},
+  journal = {IEEE transactions on pattern analysis and machine intelligence},
+  year = {2004},
+  volume = {26},
+  pages = {1475--1490},
+  number = {11},
+  publisher = {IEEE}
+}
+
+@ARTICLE{akakin2012,
+  author = {Akakin, Hatice Cinar and Gurcan, Metin N},
+  title = {Content-based microscopic image retrieval system for multi-image
+	queries},
+  journal = {IEEE transactions on information technology in biomedicine},
+  year = {2012},
+  volume = {16},
+  pages = {758-769},
+  number = {4},
+  publisher = {IEEE}
+}
+
+@ARTICLE{arevalo2014,
+  author = {Ar{\'e}valo, John and Cruz-Roa, Angel and others},
+  title = {Histopathology image representation for automatic analysis: A state-of-the-art
+	review},
+  journal = {Revista Med},
+  year = {2014},
+  volume = {22},
+  pages = {79-91},
+  number = {2},
+  publisher = {Universidad Militar Nueva Granada}
+}
+
+@ARTICLE{arevalo2015,
+  author = {Arevalo, John and Cruz-Roa, Angel and Arias, Viviana and Romero,
+	Eduardo and Gonz{\'a}lez, Fabio A},
+  title = {An unsupervised feature learning framework for basal cell carcinoma
+	image analysis},
+  journal = {Artificial intelligence in medicine},
+  year = {2015},
+  volume = {64},
+  pages = {131--145},
+  number = {2},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{babaie2017,
+  author = {Babaie, Morteza and Kalra, Shivam and Sriram, Aditya and Mitcheltree,
+	Christopher and Zhu, Shujin and Khatami, Amin and Rahnamayan, Shahryar
+	and Tizhoosh, Hamid R},
+  title = {Classification and retrieval of digital pathology scans: a new dataset},
+  booktitle = {Cvmi workshop@ cvpr},
+  year = {2017}
+}
+
+@INPROCEEDINGS{bar2015,
+  author = {Bar, Yaniv and Diamant, Idit and Wolf, Lior and Lieberman, Sivan
+	and Konen, Eli and Greenspan, Hayit},
+  title = {Chest pathology detection using deep learning with non-medical training.},
+  booktitle = {ISBI},
+  year = {2015},
+  pages = {294--297},
+  organization = {Citeseer}
+}
+
+@INPROCEEDINGS{basavanhally2011,
+  author = {Basavanhally, Ajay and Ganesan, Shridar and Shih, Natalie and Mies,
+	Carolyn and Feldman, Michael and Tomaszewski, John and Madabhushi,
+	Anant},
+  title = {A boosted classifier for integrating multiple fields of view: Breast
+	cancer grading in histopathology},
+  booktitle = {Biomedical Imaging: From Nano to Macro, 2011 IEEE International Symposium
+	on},
+  year = {2011},
+  pages = {125--128},
+  organization = {IEEE}
+}
+
+@ARTICLE{bay2008,
+  author = {Bay, Herbert and Ess, Andreas and Tuytelaars, Tinne and Van Gool,
+	Luc},
+  title = {Speeded-up robust features (SURF)},
+  journal = {Computer vision and image understanding},
+  year = {2008},
+  volume = {110},
+  pages = {346-359},
+  number = {3},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.16}
+}
+
+@ARTICLE{bentaieb2016,
+  author = {BenTaieb, Aicha and Nosrati, Masoud S and Li-Chang, Hector and Huntsman,
+	David and Hamarneh, Ghassan},
+  title = {Clinically-inspired automatic classification of ovarian carcinoma
+	subtypes},
+  journal = {Journal of pathology informatics},
+  year = {2016},
+  volume = {7},
+  owner = {raju.pal},
+  publisher = {Medknow Publications},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{bostanci2017,
+  author = {Bostanci, E},
+  title = {Enhanced image coverage using evolutionary keypoint selection},
+  journal = {The Imaging Science Journal},
+  year = {2017},
+  volume = {65},
+  pages = {30--39},
+  number = {1},
+  publisher = {Taylor \& Francis}
+}
+
+@ARTICLE{buoncompagni2015,
+  author = {Buoncompagni, Simone and Maio, Dario and Maltoni, Davide and Papi,
+	Serena},
+  title = {Saliency-based keypoint selection for fast object detection and matching},
+  journal = {Pattern Recognition Letters},
+  year = {2015},
+  volume = {62},
+  pages = {32--40},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{caicedo2009,
+  author = {Caicedo, Juan C and Cruz, Angel and Gonzalez, Fabio A},
+  title = {Histopathology image classification using bag of features and kernel
+	functions},
+  booktitle = {Conference on Artificial Intelligence in Medicine in Europe},
+  year = {2009},
+  pages = {126--135},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{chaddad2011,
+  author = {Chaddad, Ahmad and Tanougast, Camel and Dandache, Abbas and Al Houseini,
+	A and Bouridane, Ahmed},
+  title = {Improving of colon cancer cells detection based on Haralick's features
+	on segmented histopathological images},
+  booktitle = {Computer Applications and Industrial Electronics (ICCAIE), 2011 IEEE
+	International Conference on},
+  year = {2011},
+  pages = {87--90},
+  organization = {IEEE}
+}
+
+@ARTICLE{chandrashekar2014,
+  author = {Chandrashekar, Girish and Sahin, Ferat},
+  title = {A survey on feature selection methods},
+  journal = {Computers and Electrical Engineering},
+  year = {2014},
+  volume = {40},
+  pages = {16--28},
+  number = {1},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{chang2013,
+  author = {Chang, Hang and Nayak, Nandita and Spellman, Paul T and Parvin, Bahram},
+  title = {Characterization of tissue histopathology via predictive sparse decomposition
+	and spatial pyramid matching},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted
+	Intervention},
+  year = {2013},
+  pages = {91--98},
+  organization = {Springer},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{chang12005,
+  author = {Chang, K-C and Yeh, M-F},
+  title = {Grey relational analysis based approach for data clustering},
+  journal = {IEE Proceedings-Vision, Image and Signal Processing},
+  year = {2005},
+  volume = {152},
+  pages = {165-172},
+  number = {2},
+  publisher = {IET}
+}
+
+@INPROCEEDINGS{chekkoury2012,
+  author = {Chekkoury, Andrei and Khurd, Parmeshwar and Ni, Jie and Bahlmann,
+	Claus and Kamen, Ali and Patel, Amar and Grady, Leo and Singh, Maneesh
+	and Groher, Martin and Navab, Nassir and others},
+  title = {Automated malignancy detection in breast histopathological images},
+  booktitle = {Medical Imaging 2012: Computer-Aided Diagnosis},
+  year = {2012},
+  volume = {8315},
+  pages = {831515},
+  organization = {International Society for Optics and Photonics}
+}
+
+@ARTICLE{chen2016,
+  author = {Chen, Xu and Tianfield, Huaglory and Du, Wenli and Liu, Guohai},
+  title = {Biogeography-based optimization with covariance matrix based migration},
+  journal = {Applied Soft Computing},
+  year = {2016},
+  volume = {45},
+  pages = {71--85},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{cirecsan2013,
+  author = {Cire{\c{s}}an, Dan C and Giusti, Alessandro and Gambardella, Luca
+	M and Schmidhuber, J{\"u}rgen},
+  title = {Mitosis detection in breast cancer histology images with deep neural
+	networks},
+  booktitle = {International Conference on Medical Image Computing and Computer-assisted
+	Intervention},
+  year = {2013},
+  pages = {411--418},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{cruz2013,
+  author = {Cruz-Roa, Angel Alfonso and Ovalle, John Edison Arevalo and Madabhushi,
+	Anant and Osorio, Fabio Augusto Gonz{\'a}lez},
+  title = {A deep learning architecture for image representation, visual interpretability
+	and automated basal-cell carcinoma cancer detection},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted
+	Intervention},
+  year = {2013},
+  pages = {403--410},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{Cruz-Roa2013,
+  author = {Cruz-Roa, Angel Alfonso and Ovalle, John Edison Arevalo and Madabhushi,
+	Anant and Osorio, Fabio Augusto Gonz{\'a}lez},
+  title = {A deep learning architecture for image representation, visual interpretability
+	and automated basal-cell carcinoma cancer detection},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted
+	Intervention},
+  year = {2013},
+  pages = {403--410},
+  organization = {Springer},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{cruz2011,
+  author = {Cruz-Roa, Angel and Caicedo, Juan C and Gonz{\'a}lez, Fabio A},
+  title = {Visual pattern mining in histology image collections using bag of
+	features},
+  journal = {Artificial intelligence in medicine},
+  year = {2011},
+  volume = {52},
+  pages = {91-106},
+  number = {2},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{cruz2009,
+  author = {Cruz-Roa, Angel and Caicedo, Juan C and Gonz{\'a}lez, Fabio A},
+  title = {Visual pattern analysis in histopathology images using bag of features},
+  booktitle = {Iberoamerican Congress on Pattern Recognition},
+  year = {2009},
+  pages = {521--528},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{csurka2004,
+  author = {Csurka, Gabriella and Dance, Christopher and Fan, Lixin and Willamowski,
+	Jutta and Bray, C{\'e}dric},
+  title = {Visual categorization with bags of keypoints},
+  booktitle = {Workshop on statistical learning in computer vision, ECCV},
+  year = {2004},
+  volume = {1},
+  number = {1-22},
+  pages = {1--2},
+  organization = {Prague}
+}
+
+@INPROCEEDINGS{dalal2005,
+  author = {Dalal, Navneet and Triggs, Bill},
+  title = {Histograms of oriented gradients for human detection},
+  booktitle = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer
+	Society Conference on},
+  year = {2005},
+  volume = {1},
+  pages = {886--893},
+  organization = {IEEE},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{Dalal2005,
+  author = {Dalal, Navneet and Triggs, Bill},
+  title = {Histograms of oriented gradients for human detection},
+  booktitle = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer
+	Society Conference on},
+  year = {2005},
+  volume = {1},
+  pages = {886--893},
+  organization = {IEEE},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{difranco2011,
+  author = {DiFranco, Matthew D and O’Hurley, Gillian and Kay, Elaine W and Watson,
+	R William G and Cunningham, Padraig},
+  title = {Ensemble based system for whole-slide prostate cancer probability
+	mapping using color texture features},
+  journal = {Computerized medical imaging and graphics},
+  year = {2011},
+  volume = {35},
+  pages = {629--645},
+  number = {7},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{du2009,
+  author = {Du, Dawei and Simon, Dan and Ergezer, Mehmet},
+  title = {Biogeography-based optimization combined with evolutionary strategy
+	and immigration refusal},
+  booktitle = {Systems, Man and Cybernetics, 2009. SMC 2009. IEEE International
+	Conference on},
+  year = {2009},
+  pages = {997--1002},
+  organization = {IEEE}
+}
+
+@ARTICLE{dundar2011,
+  author = {Dundar, M Murat and Badve, Sunil and Bilgin, Gokhan and Raykar, Vikas
+	and Jain, Rohit and Sertel, Olcay and Gurcan, Metin N},
+  title = {Computerized classification of intraductal breast lesions using histopathological
+	images},
+  journal = {IEEE Transactions on Biomedical Engineering},
+  year = {2011},
+  volume = {58},
+  pages = {1977--1984},
+  number = {7},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{ergezer2009,
+  author = {Ergezer, Mehmet and Simon, Dan and Du, Dawei},
+  title = {Oppositional biogeography-based optimization},
+  booktitle = {Systems, Man and Cybernetics, 2009. SMC 2009. IEEE International
+	Conference on},
+  year = {2009},
+  pages = {1009--1014},
+  organization = {IEEE}
+}
+
+@ARTICLE{Feng2013,
+  author = {Feng, Quanxi and Liu, Sanyang and Tang, Guoqiang and Yong, Longquan
+	and Zhang, Jianke},
+  title = {Biogeography-based optimization with orthogonal crossover},
+  journal = {Mathematical Problems in Engineering},
+  year = {2013},
+  volume = {2013},
+  publisher = {Hindawi}
+}
+
+@ARTICLE{fournier2001,
+  author = {Fournier, J{\'e}r{\^o}me and Cord, Matthieu and Philipp-Foliguet,
+	Sylvie},
+  title = {Retin: A content-based image indexing and retrieval system},
+  journal = {Pattern Analysis \& Applications},
+  year = {2001},
+  volume = {4},
+  pages = {153--173},
+  number = {2-3},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{galaro2011,
+  author = {Galaro, Joseph and Judkins, Alexander R and Ellison, David and Baccon,
+	Jennifer and Madabhushi, Anant},
+  title = {An integrated texton and bag of words classifier for identifying
+	anaplastic medulloblastomas},
+  booktitle = {Engineering in Medicine and Biology Society, EMBC, 2011 Annual International
+	Conference of the IEEE},
+  year = {2011},
+  pages = {3443--3446},
+  organization = {IEEE}
+}
+
+@ARTICLE{Garg2016,
+  author = {Garg, Vanita and Deep, Kusum},
+  title = {Performance of Laplacian Biogeography-Based Optimization Algorithm
+	on CEC 2014 continuous optimization benchmarks and camera calibration
+	problem},
+  journal = {Swarm and Evolutionary Computation},
+  year = {2016},
+  volume = {27},
+  pages = {132--144},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{Gelasca2008,
+  author = {Elisa Drelie Gelasca and Jiyun Byun and Boguslaw Obara and B.S. Manjunath},
+  title = {Evaluation and benchmark for biological image segmentation},
+  booktitle = {2008 15th {IEEE} International Conference on Image Processing},
+  year = {2008},
+  publisher = {{IEEE}},
+  doi = {10.1109/icip.2008.4712130}
+}
+
+@INPROCEEDINGS{georgescu2003,
+  author = {Georgescu, Bogdan and Shimshoni, Ilan and Meer, Peter},
+  title = {Mean Shift Based Clustering in High Dimensions: A Texture Classification
+	Example.},
+  booktitle = {ICCV},
+  year = {2003},
+  volume = {3},
+  pages = {456}
+}
+
+@INPROCEEDINGS{ghosh2010,
+  author = {Ghosh, Madhumala and Das, Devkumar and Mandal, Subhodip and Chakraborty,
+	Chandan and Pala, Mallika and Maity, Ashok K and Pal, Surjya K and
+	Ray, Ajoy K},
+  title = {Statistical pattern analysis of white blood cell nuclei morphometry},
+  booktitle = {Students' Technology Symposium (TechSym), 2010 IEEE},
+  year = {2010},
+  pages = {59--66},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{ghosh2015,
+  author = {Ghosh, Soumyadeep and Dhamecha, Tejas I and Keshari, Rohit and Singh,
+	Richa and Vatsa, Mayank},
+  title = {Feature and keypoint selection for visible to near-infrared face
+	matching},
+  booktitle = {Biometrics Theory, Applications and Systems (BTAS), 2015 IEEE 7th
+	International Conference on},
+  year = {2015},
+  pages = {1--7},
+  organization = {IEEE}
+}
+
+@ARTICLE{gong2010BBO,
+  author = {Gong, Wenyin and Cai, Zhihua and Ling, Charles X},
+  title = {DE/BBO: a hybrid differential evolution with biogeography-based optimization
+	for global numerical optimization},
+  journal = {Soft Computing},
+  year = {2010},
+  volume = {15},
+  pages = {645--665},
+  number = {4},
+  publisher = {Springer}
+}
+
+@ARTICLE{gurcan2009,
+  author = {Gurcan, Metin N and Boucheron, Laura E and Can, Ali and Madabhushi,
+	Anant and Rajpoot, Nasir M and Yener, Bulent},
+  title = {Histopathological image analysis: A review},
+  journal = {IEEE reviews in biomedical engineering},
+  year = {2009},
+  volume = {2},
+  pages = {147-171},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{gutierrez2013,
+  author = {Guti{\'e}rrez, Ricardo and Rueda, Andrea and Romero, Eduardo},
+  title = {Learning semantic histopathological representation for basal cell
+	carcinoma classification},
+  booktitle = {Proc. of SPIE Vol},
+  year = {2013},
+  volume = {8676},
+  pages = {86760U--1},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{guyon2002,
+  author = {Guyon, Isabelle and Weston, Jason and Barnhill, Stephen and Vapnik,
+	Vladimir},
+  title = {Gene selection for cancer classification using support vector machines},
+  journal = {Machine learning},
+  year = {2002},
+  volume = {46},
+  pages = {389--422},
+  number = {1-3},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{hou2016,
+  author = {Hou, Le and Samaras, Dimitris and Kurc, Tahsin M and Gao, Yi and
+	Davis, James E and Saltz, Joel H},
+  title = {Patch-based convolutional neural network for whole slide tissue image
+	classification},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern
+	Recognition},
+  year = {2016},
+  pages = {2424--2433}
+}
+
+@ARTICLE{huang2009,
+  author = {Huang, Po-Whei and Lee, Cheng-Hsiung},
+  title = {Automatic classification for pathological prostate images based on
+	fractal analysis},
+  journal = {IEEE transactions on medical imaging},
+  year = {2009},
+  volume = {28},
+  pages = {1037--1050},
+  number = {7},
+  publisher = {IEEE}
+}
+
+@ARTICLE{huang2014,
+  author = {Huang, Yongzhen and Wu, Zifeng and Wang, Liang and Tan, Tieniu},
+  title = {Feature coding in image classification: A comprehensive study},
+  journal = {IEEE transactions on pattern analysis and machine intelligence},
+  year = {2014},
+  volume = {36},
+  pages = {493--506},
+  number = {3},
+  publisher = {IEEE}
+}
+
+@ARTICLE{jain2000,
+  author = {Jain, Anil K and Duin, Robert PW and Mao, Jianchang},
+  title = {Statistical pattern recognition: A review},
+  journal = {IEEE Transactions on pattern analysis and machine intelligence},
+  year = {2000},
+  volume = {22},
+  pages = {4--37},
+  number = {1},
+  publisher = {Ieee}
+}
+
+@ARTICLE{Julong1989,
+  author = {Julong, Deng},
+  title = {Introduction to grey system theory},
+  journal = {The Journal of grey system},
+  year = {1989},
+  volume = {1},
+  pages = {1-24},
+  number = {1}
+}
+
+@INPROCEEDINGS{jurie2005,
+  author = {Jurie, Frederic and Triggs, Bill},
+  title = {Creating efficient codebooks for visual recognition},
+  booktitle = {Computer Vision, 2005. ICCV 2005. Tenth IEEE International Conference
+	on},
+  year = {2005},
+  volume = {1},
+  pages = {604--610},
+  organization = {IEEE}
+}
+
+@ARTICLE{kandemir2015,
+  author = {Kandemir, Melih and Hamprecht, Fred A},
+  title = {Computer-aided diagnosis from weak supervision: a benchmarking study},
+  journal = {Computerized Medical Imaging and Graphics},
+  year = {2015},
+  volume = {42},
+  pages = {44--50},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{Kandemir2015,
+  author = {Kandemir, Melih and Hamprecht, Fred A},
+  title = {Computer-aided diagnosis from weak supervision: a benchmarking study},
+  journal = {Computerized Medical Imaging and Graphics},
+  year = {2015},
+  volume = {42},
+  pages = {44--50},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{kothari2012,
+  author = {Kothari, Sonal and Phan, John H and Osunkoya, Adeboye O and Wang,
+	May D},
+  title = {Biological interpretation of morphological patterns in histopathological
+	whole-slide images},
+  booktitle = {Proceedings of the ACM Conference on Bioinformatics, Computational
+	Biology and Biomedicine},
+  year = {2012},
+  pages = {218--225},
+  organization = {ACM}
+}
+
+@ARTICLE{krishnan2012,
+  author = {Krishnan, M Muthu Rama and Chakraborty, Chandan and Paul, Ranjan
+	Rashmi and Ray, Ajoy K},
+  title = {Hybrid segmentation, characterization and classification of basal
+	cell nuclei from histopathological images of normal oral mucosa and
+	oral submucous fibrosis},
+  journal = {Expert Systems with Applications},
+  year = {2012},
+  volume = {39},
+  pages = {1062-1077},
+  number = {1},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{krishnan2011,
+  author = {Krishnan, M Muthu Rama and Shah, Pratik and Choudhary, Anirudh and
+	Chakraborty, Chandan and Paul, Ranjan Rashmi and Ray, Ajoy K},
+  title = {Textural characterization of histopathological images for oral sub-mucous
+	fibrosis detection},
+  journal = {Tissue and Cell},
+  year = {2011},
+  volume = {43},
+  pages = {318-330},
+  number = {5},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{krishnan2012a,
+  author = {Krishnan, M Muthu Rama and Venkatraghavan, Vikram and Acharya, U
+	Rajendra and Pal, Mousumi and Paul, Ranjan Rashmi and Min, Lim Choo
+	and Ray, Ajoy Kumar and Chatterjee, Jyotirmoy and Chakraborty, Chandan},
+  title = {Automated oral cancer identification using histopathological images:
+	a hybrid feature extraction paradigm},
+  journal = {Micron},
+  year = {2012},
+  volume = {43},
+  pages = {352-364},
+  number = {2-3},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{kumar2017,
+  author = {Kumar, Meghana Dinesh and Babaie, Morteza and Zhu, Shujin and Kalra,
+	Shivam and Tizhoosh, HR},
+  title = {A Comparative Study of CNN, BoVW and LBP for Classification of Histopathological
+	Images},
+  journal = {arXiv preprint arXiv:1710.01249},
+  year = {2017}
+}
+
+@ARTICLE{kumar2018,
+  author = {Kumar, Sandeep and Sharma, Basudev and Sharma, Vivek Kumar and Poonia,
+	Ramesh C},
+  title = {Automated soil prediction using bag-of-features and chaotic spider
+	monkey optimization algorithm},
+  journal = {Evolutionary Intelligence},
+  year = {2018},
+  pages = {1--12},
+  publisher = {Springer}
+}
+
+@InProceedings{Kundra2011,
+  author        = {Kundra, Harish and Arora, Guneet Kaur and Khullar, Sunil and Sandhu, Parvinder S},
+  title         = {Burgeoning Nature of Biogeography Based Optimization},
+  booktitle     = {International Conference on Computer and Computer Intelligence (ICCCI 2011)},
+  year          = {2011},
+  organization  = {ASME Press},
+  __markedentry = {[raju3:]},
+}
+
+@INCOLLECTION{kuse2010,
+  author = {Kuse, Manohar and Sharma, Tanuj and Gupta, Sudhir},
+  title = {A classification scheme for lymphocyte segmentation in H\&E stained
+	histology images},
+  booktitle = {Recognizing Patterns in Signals, Speech, Images and Videos},
+  publisher = {Springer},
+  year = {2010},
+  pages = {235--243}
+}
+
+@INCOLLECTION{leibe2006,
+  author = {Leibe, Bastian and Schiele, Bernt},
+  title = {Interleaving object categorization and segmentation},
+  booktitle = {Cognitive Vision Systems},
+  publisher = {Springer},
+  year = {2006},
+  pages = {145--161}
+}
+
+@ARTICLE{li2016f,
+  author = {Li, Li and Feng, Lin and Yu, Laihang and Wu, Jun and Liu, Shenglan},
+  title = {Fusion framework for color image retrieval based on bag-of-words
+	model and color local haar binary patterns},
+  journal = {Journal of Electronic Imaging},
+  year = {2016},
+  volume = {25},
+  pages = {023022},
+  number = {2},
+  publisher = {International Society for Optics and Photonics}
+}
+
+@ARTICLE{li2015,
+  author = {Li, Yali and Wang, Shengjin and Tian, Qi and Ding, Xiaoqing},
+  title = {A survey of recent advances in visual feature detection},
+  journal = {Neurocomputing},
+  year = {2015},
+  volume = {149},
+  pages = {736--751},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{lim2016,
+  author = {Lim, Wee Loon and Wibowo, Antoni and Desa, Mohammad Ishak and Haron,
+	Habibollah},
+  title = {A biogeography-based optimization algorithm hybridized with tabu
+	search for the quadratic assignment problem},
+  journal = {Computational intelligence and neuroscience},
+  year = {2016},
+  volume = {2016},
+  pages = {27},
+  publisher = {Hindawi Publishing Corp.}
+}
+
+@ARTICLE{lin2016,
+  author = {Lin, Wei-Chao and Tsai, Chih-Fong and Chen, Zong-Yao and Ke, Shih-Wen},
+  title = {Keypoint selection for efficient bag-of-words feature generation
+	and effective image classification},
+  journal = {Information Sciences},
+  year = {2016},
+  volume = {329},
+  pages = {33--51},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{liu2009,
+  author = {Liu, Qingzhong and Sung, Andrew H and Chen, Zhongxue and Liu, Jianzhong
+	and Huang, Xudong and Deng, Youping},
+  title = {Feature selection and classification of MAQC-II breast cancer and
+	multiple myeloma microarray gene expression data},
+  journal = {PloS one},
+  year = {2009},
+  volume = {4},
+  pages = {e8250},
+  number = {12},
+  publisher = {Public Library of Science}
+}
+
+@ARTICLE{long2005,
+  author = {Long, Xi and Cleveland, W Louis and Yao, Y Lawrence},
+  title = {A new preprocessing approach for cell recognition},
+  journal = {IEEE Transactions on Information Technology in Biomedicine},
+  year = {2005},
+  volume = {9},
+  pages = {407-412},
+  number = {3},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{lowe1999object,
+  author = {Lowe, David G},
+  title = {Object recognition from local scale-invariant features},
+  booktitle = {Computer vision, 1999. The proceedings of the seventh IEEE international
+	conference on},
+  year = {1999},
+  volume = {2},
+  pages = {1150--1157},
+  organization = {Ieee}
+}
+
+@ARTICLE{ma2010analysis,
+  author = {Ma, Haiping},
+  title = {An analysis of the equilibrium of migration models for biogeography-based
+	optimization},
+  journal = {Information Sciences},
+  year = {2010},
+  volume = {180},
+  pages = {3444--3464},
+  number = {18},
+  owner = {mukesh.saraswat},
+  publisher = {Elsevier},
+  timestamp = {2018.12.21}
+}
+
+@ARTICLE{ma2011,
+  author = {Ma, Haiping and Simon, Dan},
+  title = {Blended biogeography-based optimization for constrained optimization},
+  journal = {Engineering Applications of Artificial Intelligence},
+  year = {2011},
+  volume = {24},
+  pages = {517--525},
+  number = {3},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{ma2013,
+  author = {Ma, Haiping and Simon, Dan and Fei, Minrui and Xie, Zhikun},
+  title = {Variations of biogeography-based optimization and Markov analysis},
+  journal = {Information Sciences},
+  year = {2013},
+  volume = {220},
+  pages = {492-506},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{ma2017,
+  author = {Ma, Haiping and Simon, Dan and Siarry, Patrick and Yang, Zhile and
+	Fei, Minrui},
+  title = {Biogeography-based optimization: a 10-year review},
+  journal = {IEEE Transactions on Emerging Topics in Computational Intelligence},
+  year = {2017},
+  volume = {1},
+  pages = {391--407},
+  number = {5},
+  publisher = {IEEE}
+}
+
+@ARTICLE{ma1999,
+  author = {Ma, Wei-Ying and Manjunath, Bangalore S},
+  title = {Netra: A toolbox for navigating large image databases},
+  journal = {Multimedia systems},
+  year = {1999},
+  volume = {7},
+  pages = {184--198},
+  number = {3},
+  publisher = {Springer}
+}
+
+@ARTICLE{madabhushi2011,
+  author = {Madabhushi, Anant and Agner, Shannon and Basavanhally, Ajay and Doyle,
+	Scott and Lee, George},
+  title = {Computer-aided prognosis: predicting patient and disease outcome
+	via quantitative fusion of multi-scale, multi-modal data},
+  journal = {Computerized medical imaging and graphics},
+  year = {2011},
+  volume = {35},
+  pages = {506-514},
+  number = {7-8},
+  publisher = {Elsevier}
+}
+
+@BOOK{mahoney1994,
+  title = {The mathematical career of Pierre de Fermat, 1601-1665},
+  publisher = {Princeton University Press},
+  year = {1994},
+  author = {Mahoney, Michael Sean}
+}
+
+@INPROCEEDINGS{malon2008,
+  author = {Malon, Christopher and Miller, Matthew and Burger, Harold Christopher
+	and Cosatto, Eric and Graf, Hans Peter},
+  title = {Identifying histological elements with convolutional neural networks},
+  booktitle = {Proceedings of the 5th international conference on Soft computing
+	as transdisciplinary science and technology},
+  year = {2008},
+  pages = {450--456},
+  organization = {ACM},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{mete2009,
+  author = {Mete, Mutlu and Topaloglu, Umit},
+  title = {Statistical comparison of color model-classifier pairs in hematoxylin
+	and eosin stained histological images},
+  booktitle = {Computational Intelligence in Bioinformatics and Computational Biology,
+	2009. CIBCB'09. IEEE Symposium on},
+  year = {2009},
+  pages = {284--291},
+  organization = {IEEE}
+}
+
+@ARTICLE{Mirjalili2017,
+  author = {Mirjalili, Seyedali and Gandomi, Amir H and Mirjalili, Seyedeh Zahra
+	and Saremi, Shahrzad and Faris, Hossam and Mirjalili, Seyed Mohammad},
+  title = {Salp Swarm Algorithm: A bio-inspired optimizer for engineering design
+	problems},
+  journal = {Advances in Engineering Software},
+  year = {2017},
+  volume = {114},
+  pages = {163--191},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{mirjalili2016,
+  author = {Mirjalili, Seyedali and Lewis, Andrew},
+  title = {The whale optimization algorithm},
+  journal = {Advances in Engineering Software},
+  year = {2016},
+  volume = {95},
+  pages = {51-67},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{mirjalili2016whale,
+  author = {Mirjalili, Seyedali and Lewis, Andrew},
+  title = {The whale optimization algorithm},
+  journal = {Advances in Engineering Software},
+  year = {2016},
+  volume = {95},
+  pages = {51--67},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{mirjalili2014,
+  author = {Mirjalili, Seyedali and Mirjalili, Seyed Mohammad and Lewis, Andrew},
+  title = {Grey wolf optimizer},
+  journal = {Advances in engineering software},
+  year = {2014},
+  volume = {69},
+  pages = {46-61},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2018.10.10}
+}
+
+@INPROCEEDINGS{mittal2016,
+  author = {Mittal, Himanshu and Pal, Raju and Kulhari, Ankur and Saraswat, Mukesh},
+  title = {Chaotic Kbest gravitational search algorithm (CKGSA)},
+  booktitle = {Contemporary Computing (IC3), 2016 Ninth International Conference
+	on},
+  year = {2016},
+  pages = {1--6},
+  organization = {IEEE},
+  owner = {raju.pal},
+  timestamp = {2018.10.10}
+}
+
+@INPROCEEDINGS{Mohamed2017,
+  author = {Ali W. Mohamed and Anas A. Hadi and Anas M. Fattouh and Kamal M.
+	Jambi},
+  title = {{LSHADE} with semi-parameter adaptation hybrid with {CMA}-{ES} for
+	solving {CEC} 2017 benchmark problems},
+  booktitle = {2017 {IEEE} Congress on Evolutionary Computation ({CEC})},
+  year = {2017},
+  month = {jun},
+  publisher = {{IEEE}},
+  doi = {10.1109/cec.2017.7969307}
+}
+
+@ARTICLE{monaco2010,
+  author = {Monaco, James P and Tomaszewski, John E and Feldman, Michael D and
+	Hagemann, Ian and Moradi, Mehdi and Mousavi, Parvin and Boag, Alexander
+	and Davidson, Chris and Abolmaesumi, Purang and Madabhushi, Anant},
+  title = {High-throughput detection of prostate cancer in histological sections
+	using probabilistic pairwise Markov modelskk},
+  journal = {Medical image analysis},
+  year = {2010},
+  volume = {14},
+  pages = {617--629},
+  number = {4},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{nakariyakul2009,
+  author = {Nakariyakul, Songyot and Casasent, David P},
+  title = {An improvement on floating search algorithms for feature subset selection},
+  journal = {Pattern Recognition},
+  year = {2009},
+  volume = {42},
+  pages = {1932--1940},
+  number = {9},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{nayak2013,
+  author = {Nayak, Nandita and Chang, Hang and Borowsky, Alexander and Spellman,
+	Paul and Parvin, Bahram},
+  title = {Classification of tumor histopathology via sparse feature learning},
+  booktitle = {Biomedical Imaging (ISBI), 2013 IEEE 10th International Symposium
+	on},
+  year = {2013},
+  pages = {410--413},
+  organization = {IEEE},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{nei2017,
+  author = {Nei, Kuan Pei and Chua, Stephanie and Safawi, Ehfa Bujang},
+  title = {A Comparative Study of Features Extracted in the Classification of
+	Human Skin Burn Depth},
+  journal = {Journal of Telecommunication, Electronic and Computer Engineering
+	(JTEC)},
+  year = {2017},
+  volume = {9},
+  pages = {47--50},
+  number = {3-11}
+}
+
+@ARTICLE{Niu2014,
+  author = {Qun Niu and Letian Zhang and Kang Li},
+  title = {A biogeography-based optimization algorithm with mutation strategies
+	for model parameter estimation of solar and fuel cells},
+  journal = {Energy Conversion and Management},
+  year = {2014},
+  volume = {86},
+  pages = {1173--1185},
+  month = {oct},
+  doi = {10.1016/j.enconman.2014.06.026},
+  publisher = {Elsevier {BV}}
+}
+
+@ARTICLE{o2011,
+  author = {O'Hara, Stephen and Draper, Bruce A},
+  title = {Introduction to the bag of features paradigm for image classification
+	and retrieval},
+  journal = {arXiv preprint arXiv:1101.3354},
+  year = {2011}
+}
+
+@ARTICLE{ojala1996,
+  author = {Ojala, Timo and Pietik{\"a}inen, Matti and Harwood, David},
+  title = {A comparative study of texture measures with classification based
+	on featured distributions},
+  journal = {Pattern recognition},
+  year = {1996},
+  volume = {29},
+  pages = {51--59},
+  number = {1},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{Ojala1996,
+  author = {Ojala, Timo and Pietik{\"a}inen, Matti and Harwood, David},
+  title = {A comparative study of texture measures with classification based
+	on featured distributions},
+  journal = {Pattern recognition},
+  year = {1996},
+  volume = {29},
+  pages = {51--59},
+  number = {1},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{ong1996,
+  author = {Ong, SH and Jin, XC and Sinniah, R and others},
+  title = {Image analysis of tissue sections},
+  journal = {Computers in biology and medicine},
+  year = {1996},
+  volume = {26},
+  pages = {269-279},
+  number = {3},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{ozdemir2012,
+  author = {Ozdemir, Erdem and Sokmensuer, Cenk and Gunduz-Demir, Cigdem},
+  title = {A resampling-based Markovian model for automated colon cancer diagnosis},
+  journal = {IEEE transactions on biomedical engineering},
+  year = {2012},
+  volume = {59},
+  pages = {281-289},
+  number = {1},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{Pakhira2014,
+  author = {Pakhira, Malay K},
+  title = {A linear time-complexity k-means algorithm using cluster shifting},
+  booktitle = {Computational Intelligence and Communication Networks (CICN), 2014
+	International Conference on},
+  year = {2014},
+  pages = {1047--1051},
+  organization = {IEEE},
+  owner = {raju.pal},
+  timestamp = {2019.01.23}
+}
+
+@INPROCEEDINGS{pal2017,
+  author = {Pal, Raju and Saraswat, Mukesh},
+  title = {Data clustering using enhanced biogeography-based optimization},
+  booktitle = {Contemporary Computing (IC3), 2017 Tenth International Conference
+	on},
+  year = {2017},
+  pages = {1--6},
+  organization = {IEEE}
+}
+
+@ARTICLE{peng2016,
+  author = {Peng, Xiaojiang and Wang, Limin and Wang, Xingxing and Qiao, Yu},
+  title = {Bag of visual words and fusion methods for action recognition: Comprehensive
+	study and good practice},
+  journal = {Computer Vision and Image Understanding},
+  year = {2016},
+  volume = {150},
+  pages = {109--125},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{piuri2004,
+  author = {Piuri, Vincenzo and Scotti, Fabio},
+  title = {Morphological classification of blood leucocytes by microscope images},
+  booktitle = {Computational Intelligence for Measurement Systems and Applications,
+	2004. CIMSA. 2004 IEEE International Conference on},
+  year = {2004},
+  pages = {103--108},
+  organization = {IEEE}
+}
+
+@ARTICLE{powell2017,
+  author = {Powell, Reid Trenton and Olar, Adriana and Narang, Shivali and Rao,
+	Ganesh and Sulman, Erik and Fuller, Gregory N and Rao, Arvind},
+  title = {Identification of histological correlates of overall survival in
+	lower grade gliomas using a bag-of-words paradigm: A preliminary
+	analysis based on hematoxylin \& eosin stained slides from the lower
+	grade glioma cohort of the cancer genome Atlas},
+  journal = {Journal of pathology informatics},
+  year = {2017},
+  volume = {8},
+  publisher = {Wolters Kluwer--Medknow Publications}
+}
+
+@ARTICLE{qureshi2009,
+  author = {Qureshi, Hammad A and Rajpoot, Nasir Mahmood and Nattkemper, Tim
+	W and Hans, Volkmar},
+  title = {A robust adaptive wavelet-based method for classification of meningioma
+	histology images},
+  year = {2009},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{ramesh2012,
+  author = {Ramesh, Nisha and Dangott, Bryan and Salama, Mohammed E and Tasdizen,
+	Tolga},
+  title = {Isolation and two-step classification of normal white blood cells
+	in peripheral blood smears},
+  journal = {Journal of pathology informatics},
+  year = {2012},
+  volume = {3},
+  publisher = {Medknow Publications}
+}
+
+@INPROCEEDINGS{raza2011,
+  author = {Raza, S Hussain and Parry, R Mitchell and Moffitt, Richard A and
+	Young, Andrew N and Wang, May D},
+  title = {An analysis of scale and rotation invariance in the bag-of-features
+	method for histopathological image classification},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted
+	Intervention},
+  year = {2011},
+  pages = {66--74},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{raza2009,
+  author = {Raza, S Hussain and Sharma, Yachna and Chaudry, Qaiser and Young,
+	Andrew N and Wang, May D},
+  title = {Automated classification of renal cell carcinoma subtypes using scale
+	invariant feature transform},
+  booktitle = {Engineering in Medicine and Biology Society, 2009. EMBC 2009. Annual
+	International Conference of the IEEE},
+  year = {2009},
+  pages = {6687--6690},
+  organization = {IEEE}
+}
+
+@ARTICLE{rezatofighi2011,
+  author = {Rezatofighi, Seyed Hamid and Soltanian-Zadeh, Hamid},
+  title = {Automatic recognition of five types of white blood cells in peripheral
+	blood},
+  journal = {Computerized Medical Imaging and Graphics},
+  year = {2011},
+  volume = {35},
+  pages = {333-343},
+  number = {4},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{rublee2011,
+  author = {Rublee, Ethan and Rabaud, Vincent and Konolige, Kurt and Bradski,
+	Gary},
+  title = {ORB: An efficient alternative to SIFT or SURF},
+  booktitle = {Computer Vision (ICCV), 2011 IEEE international conference on},
+  year = {2011},
+  pages = {2564--2571},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{sallehuddin2008,
+  author = {Sallehuddin, Roselina and Shamsuddin, Siti Mariyam Hj and Hashim,
+	Siti Zaiton Mohd},
+  title = {Application of grey relational analysis for multivariate time series},
+  booktitle = {Intelligent Systems Design and Applications, 2008. ISDA'08. Eighth
+	International Conference on},
+  year = {2008},
+  volume = {2},
+  pages = {432--437},
+  organization = {IEEE}
+}
+
+@ARTICLE{samsi2012,
+  author = {Samsi, Siddharth and Krishnamurthy, Ashok K and Gurcan, Metin N},
+  title = {An efficient computational framework for the analysis of whole slide
+	images: Application to follicular lymphoma immunohistochemistry},
+  journal = {Journal of computational science},
+  year = {2012},
+  volume = {3},
+  pages = {269-279},
+  number = {5},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{samsi2010,
+  author = {Samsi, Siddharth and Lozanski, Gerard and Shanarah, Arwa and Krishanmurthy,
+	Ashok K and Gurcan, Metin N},
+  title = {Detection of follicles from IHC-stained slides of follicular lymphoma
+	using iterative watershed},
+  journal = {IEEE Transactions on Biomedical Engineering},
+  year = {2010},
+  volume = {57},
+  pages = {2609-2612},
+  number = {10},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{sanchez2018k,
+  author = {Sanchez-Morillo, Daniel and Gonz{\'a}lez, Jes{\'u}s and Garc{\'\i}a-Rojo,
+	Marcial and Ortega, Julio},
+  title = {Classification of Breast Cancer Histopathological Images Using KAZE
+	Features},
+  booktitle = {International Conference on Bioinformatics and Biomedical Engineering},
+  year = {2018},
+  pages = {276--286},
+  organization = {Springer}
+}
+
+@INPROCEEDINGS{saygili2015,
+  author = {Saygili, Ahmet and Uysal, Gunalp and Bilgin, Gokhan},
+  title = {Comparative analysis of codeword representation by clustering methods
+	for the classification of histological tissue types},
+  booktitle = {Eighth International Conference on Machine Vision (ICMV 2015)},
+  year = {2015},
+  volume = {9875},
+  pages = {98750U},
+  organization = {International Society for Optics and Photonics}
+}
+
+@INPROCEEDINGS{sheng2009,
+  author = {Sheng, Lingyan and Pique-Regi, Roger and Asgharzadeh, Shahab and
+	Ortega, Antonio},
+  title = {Microarray classification using block diagonal linear discriminant
+	analysis with embedded feature selection},
+  booktitle = {Acoustics, Speech and Signal Processing, 2009. ICASSP 2009. IEEE
+	International Conference on},
+  year = {2009},
+  pages = {1757--1760},
+  organization = {IEEE}
+}
+
+@ARTICLE{simon2008,
+  author = {Simon, Dan},
+  title = {Biogeography-based optimization},
+  journal = {IEEE transactions on evolutionary computation},
+  year = {2008},
+  volume = {12},
+  pages = {702--713},
+  number = {6},
+  publisher = {IEEE}
+}
+
+@ARTICLE{simon2014,
+  author = {Simon, Dan and Omran, Mahamed GH and Clerc, Maurice},
+  title = {Linearized biogeography-based optimization with re-initialization
+	and local search},
+  journal = {Information Sciences},
+  year = {2014},
+  volume = {267},
+  pages = {140-157},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{simsek2012,
+  author = {Simsek, Ahmet Cagri and Tosun, Akif Burak and Aykanat, Cevdet and
+	Sokmensuer, Cenk and Gunduz-Demir, Cigdem},
+  title = {Multilevel segmentation of histopathological images using cooccurrence
+	of tissue objects},
+  journal = {IEEE Transactions on Biomedical engineering},
+  year = {2012},
+  volume = {59},
+  pages = {1681-1690},
+  number = {6},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{sinha2003,
+  author = {Sinha, Neelam and Ramakrishnan, AG},
+  title = {Automation of differential blood count},
+  booktitle = {TENCON 2003. Conference on Convergent Technologies for the Asia-Pacific
+	Region},
+  year = {2003},
+  volume = {2},
+  pages = {547--551},
+  organization = {IEEE}
+}
+
+@ARTICLE{sirinukunwattana2016locality,
+  author = {Sirinukunwattana, Korsuk and Raza, Shan E Ahmed and Tsang, Yee-Wah
+	and Snead, David RJ and Cree, Ian A and Rajpoot, Nasir M},
+  title = {Locality sensitive deep learning for detection and classification
+	of nuclei in routine colon cancer histology images},
+  journal = {IEEE transactions on medical imaging},
+  year = {2016},
+  volume = {35},
+  pages = {1196-1206},
+  owner = {raju.pal},
+  publisher = {IEEE},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{sivic2003,
+  author = {Sivic, Josef and Zisserman, Andrew},
+  title = {Video Google: A text retrieval approach to object matching in videos},
+  booktitle = {null},
+  year = {2003},
+  pages = {1470},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{song2010,
+  author = {Song, Fengxi and Guo, Zhongwei and Mei, Dayong},
+  title = {Feature selection using principal component analysis},
+  booktitle = {System science, engineering design and manufacturing informatization
+	(ICSEM), 2010 international conference on},
+  year = {2010},
+  volume = {1},
+  pages = {27--30},
+  organization = {IEEE}
+}
+
+@ARTICLE{spanhol2016,
+  author = {Spanhol, Fabio A and Oliveira, Luiz S and Petitjean, Caroline and
+	Heutte, Laurent},
+  title = {A dataset for breast cancer histopathological image classification},
+  journal = {IEEE Transactions on Biomedical Engineering},
+  year = {2016},
+  volume = {63},
+  pages = {1455--1462},
+  number = {7},
+  publisher = {IEEE}
+}
+
+@ARTICLE{srinivas2014,
+  author = {Srinivas, Umamahesh and Mousavi, Hojjat Seyed and Monga, Vishal and
+	Hattel, Arthur and Jayarao, Bhushan},
+  title = {Simultaneous sparsity model for histopathological image representation
+	and classification},
+  journal = {IEEE transactions on medical imaging},
+  year = {2014},
+  volume = {33},
+  pages = {1163--1179},
+  number = {5},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{strange2013,
+  author = {Strange, Harry and Zwiggelaar, Reyer},
+  title = {Meningioma subtype classification using morphology features and random
+	forests},
+  booktitle = {Medical Imaging 2013: Digital Pathology},
+  year = {2013},
+  volume = {8676},
+  pages = {86760S},
+  organization = {International Society for Optics and Photonics}
+}
+
+@INPROCEEDINGS{sun2006,
+  author = {Sun, Y and Babbs, CF and Delp, EJ},
+  title = {A comparison of feature selection methods for the detection of breast
+	cancers in mammograms: adaptive sequential floating search vs. genetic
+	algorithm},
+  booktitle = {2005 IEEE Engineering in Medicine and Biology 27th Annual Conference},
+  year = {2006},
+  pages = {6532--6535},
+  organization = {IEEE}
+}
+
+@ARTICLE{theera2007,
+  author = {Theera-Umpon, Nipon and Dhompongsa, Sompong},
+  title = {Morphological granulometric features of nucleus in automatic bone
+	marrow white blood cell classification},
+  journal = {IEEE Transactions on Information Technology in Biomedicine},
+  year = {2007},
+  volume = {11},
+  pages = {353-359},
+  number = {3},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{tian2016,
+  author = {Tian, Zhonghuan and Fong, Simon and Wong, Raymond and Millham, Richard},
+  title = {Elephant search algorithm on data clustering},
+  booktitle = {Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD),
+	2016 12th International Conference on},
+  year = {2016},
+  pages = {787--793},
+  organization = {IEEE}
+}
+
+@ARTICLE{van1999,
+  author = {Van Leemput, Koen and Maes, Frederik and Vandermeulen, Dirk and Suetens,
+	Paul},
+  title = {Automated model-based tissue classification of MR images of the brain},
+  journal = {IEEE transactions on medical imaging},
+  year = {1999},
+  volume = {18},
+  pages = {897-908},
+  number = {10},
+  publisher = {IEEE}
+}
+
+@ARTICLE{vu2016,
+  author = {Vu, Tiep Huu and Mousavi, Hojjat Seyed and Monga, Vishal and Rao,
+	Ganesh and Rao, UK Arvind},
+  title = {Histopathological image classification using discriminative feature-oriented
+	dictionary learning},
+  journal = {IEEE transactions on medical imaging},
+  year = {2016},
+  volume = {35},
+  pages = {738--751},
+  number = {3},
+  owner = {raju.pal},
+  publisher = {IEEE},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{wan2017,
+  author = {Wan, Tao and Cao, Jiajia and Chen, Jianhui and Qin, Zengchang},
+  title = {Automated grading of breast cancer histopathology using cascaded
+	ensemble with combination of multi-level image features},
+  journal = {Neurocomputing},
+  year = {2017},
+  volume = {229},
+  pages = {34-44},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{wang2013,
+  author = {Wang, Ching-Wei and Yu, Cheng-Ping},
+  title = {Automated morphological classification of lung cancer subtypes using
+	H\&E tissue images},
+  journal = {Machine vision and applications},
+  year = {2013},
+  volume = {24},
+  pages = {1383--1391},
+  number = {7},
+  owner = {raju.pal},
+  publisher = {Springer},
+  timestamp = {2019.01.19}
+}
+
+@INCOLLECTION{wang2015,
+  author = {Wang, Jingdong and Wang, Jing and Ke, Qifa and Zeng, Gang and Li,
+	Shipeng},
+  title = {Fast Approximate $ $ K $ $ K-Means via Cluster Closures},
+  booktitle = {Multimedia Data Mining and Analytics},
+  publisher = {Springer},
+  year = {2015},
+  pages = {373--395}
+}
+
+@ARTICLE{wang2010,
+  author = {Wang, Wei and Ozolek, John A and Rohde, Gustavo K},
+  title = {Detection and classification of thyroid follicular lesions based
+	on nuclear structure from histopathology images},
+  journal = {Cytometry Part A: The Journal of the International Society for Advancement
+	of Cytometry},
+  year = {2010},
+  volume = {77},
+  pages = {485--494},
+  number = {5},
+  publisher = {Wiley Online Library}
+}
+
+@ARTICLE{wang2009,
+  author = {Wang, Yinhai and Crookes, Danny and Eldin, Osama Sharaf and Wang,
+	Shilan and Hamilton, Peter and Diamond, Jim},
+  title = {Assisted diagnosis of cervical intraepithelial neoplasia (CIN)},
+  journal = {IEEE Journal of Selected Topics in Signal Processing},
+  year = {2009},
+  volume = {3},
+  pages = {112-121},
+  number = {1},
+  publisher = {IEEE}
+}
+
+@ARTICLE{Wang2014,
+  author = {Wang, Zhi-Cheng and Wu, Xiao-Bei},
+  title = {Hybrid biogeography-based optimization for integer programming},
+  journal = {The Scientific World Journal},
+  year = {2014},
+  volume = {2014},
+  owner = {raju.pal},
+  publisher = {Hindawi},
+  timestamp = {2019.01.23}
+}
+
+@MANUAL{fermat2017,
+  title = {Fermat's Spiral - wikipedia, the free encyclopedia},
+  author = {Wikipedia},
+  month = {12},
+  year = {2017},
+  owner = {Raju Pal},
+  timestamp = {2017.12.12}
+}
+
+@ARTICLE{wu2016,
+  author = {Wu, Guohua and Mallipeddi, R and Suganthan, PN},
+  title = {Problem Definitions and Evaluation Criteria for the CEC 2017 Competition
+	on Constrained Real-Parameter Optimization},
+  journal = {National University of Defense Technology, Changsha, Hunan, PR China
+	and Kyungpook National University, Daegu, South Korea and Nanyang
+	Technological University, Singapore, Technical Report},
+  year = {2016}
+}
+
+@ARTICLE{wu2016a,
+  author = {Wu, Weimiao and Parmar, Chintan and Grossmann, Patrick and Quackenbush,
+	John and Lambin, Philippe and Bussink, Johan and Mak, Raymond and
+	Aerts, Hugo JWL},
+  title = {Exploratory study to identify radiomics classifiers for lung cancer
+	histology},
+  journal = {Frontiers in oncology},
+  year = {2016},
+  volume = {6},
+  pages = {71},
+  publisher = {Frontiers}
+}
+
+@Article{Xiong2013,
+  author    = {Xiong, Guojiang and Shi, Dongyuan and Duan, Xianzhong},
+  title     = {Multi-strategy ensemble biogeography-based optimization for economic dispatch problems},
+  journal   = {Applied energy},
+  year      = {2013},
+  volume    = {111},
+  pages     = {801--811},
+  publisher = {Elsevier},
+}
+
+@ARTICLE{xu2016deep,
+  author = {Xu, Jun and Luo, Xiaofei and Wang, Guanhao and Gilmore, Hannah and
+	Madabhushi, Anant},
+  title = {A deep convolutional neural network for segmenting and classifying
+	epithelial and stromal regions in histopathological images},
+  journal = {Neurocomputing},
+  year = {2016},
+  volume = {191},
+  pages = {214--223},
+  owner = {raju.pal},
+  publisher = {Elsevier},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{xu2014,
+  author = {Xu, Jun and Xiang, Lei and Hang, Renlong and Wu, Jianzhong},
+  title = {Stacked Sparse Autoencoder (SSAE) based framework for nuclei patch
+	classification on breast cancer histopathology},
+  booktitle = {2014 IEEE 11th International Symposium on Biomedical Imaging (ISBI)},
+  year = {2014},
+  pages = {999--1002},
+  organization = {IEEE}
+}
+
+@ARTICLE{xu2016,
+  author = {Xu, Jun and Xiang, Lei and Liu, Qingshan and Gilmore, Hannah and
+	Wu, Jianzhong and Tang, Jinghai and Madabhushi, Anant},
+  title = {Stacked sparse autoencoder (SSAE) for nuclei detection on breast
+	cancer histopathology images},
+  journal = {IEEE transactions on medical imaging},
+  year = {2016},
+  volume = {35},
+  pages = {119--130},
+  number = {1},
+  owner = {raju.pal},
+  publisher = {IEEE},
+  timestamp = {2019.01.19}
+}
+
+@ARTICLE{zhang2013,
+  author = {Zhang, Yungang and Zhang, Bailing and Coenen, Frans and Lu, Wenjin},
+  title = {Breast cancer diagnosis from biopsy images with highly reliable random
+	subspace classifier ensembles},
+  journal = {Machine vision and applications},
+  year = {2013},
+  volume = {24},
+  pages = {1405--1420},
+  number = {7},
+  owner = {raju.pal},
+  publisher = {Springer},
+  timestamp = {2019.01.19}
+}
+
+@INPROCEEDINGS{zhou2014,
+  author = {Zhou, Yin and Chang, Hang and Barner, Kenneth and Spellman, Paul
+	and Parvin, Bahram},
+  title = {Classification of histology sections via multispectral convolutional
+	sparse coding},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern
+	Recognition},
+  year = {2014},
+  pages = {3081--3088},
+  owner = {raju.pal},
+  timestamp = {2019.01.19}
+}
+
+@MISC{abcd,
+  author = {Elizabeth Zimmermann},
+  title = {Frozen Section Analysis for Breast Cancer Could Save Time, Anxiety
+	and More Than 90 Million dollar},
+  howpublished = {\url{https://newsnetwork.mayoclinic.org/discussion/}},
+  month = feb,
+  year = {2016}
+}
+
+@MISC{ADLdataset,
+  title = {Histopathological Image Data Sets},
+  howpublished = {\url{http://signal.ee.psu.edu/histimg2.html}},
+  note = {(Accessed on 08/04/2018)}
+}
+
+@MISC{BlueHist43:online,
+  title = {Blue Histology},
+  howpublished = {\url{http://www.lab.anhb.uwa.edu.au/mb140/}},
+  note = {(Accessed on 08/04/2018)}
+}
+
+@MISC{ETHZshapeclass,
+  title = {shape},
+  howpublished = {\url{http://www.vision.ee.ethz.ch/en/datasets/}},
+  note = {(Accessed on 08/04/2018)}
+}
+
+@MISC{iciar,
+  title = {ICIAR Grand Challenge 2018, Breast Cancer Histology Images},
+  month = dec,
+  year = {2018},
+  url = {https://iciar2018-challenge.grand-challenge.org/Dataset/}
+}
+
+@InProceedings{chang2005,
+  author       = {Chang, KC and Lee, RG and Wen, C and Yeh, MF},
+  title        = {Comparison of similarity measures for clustering electrocardiogram complexes},
+  booktitle    = {Computers in Cardiology, 2005},
+  year         = {2005},
+  pages        = {759--762},
+  organization = {IEEE},
+}
+
+@Article{Karami2017,
+  author        = {Karami, Ebrahim and Prasad, Siva and Shehata, Mohamed},
+  title         = {Image matching using SIFT, SURF, BRIEF and ORB: performance comparison for distorted images},
+  journal       = {arXiv preprint arXiv:1710.02726},
+  year          = {2017},
+  __markedentry = {[raju3:6]},
+}
+
+@Article{panchal2013,
+  author  = {Panchal, PM and Panchal, SR and Shah, SK},
+  title   = {A comparison of SIFT and SURF},
+  journal = {International Journal of Innovative Research in Computer and Communication Engineering},
+  year    = {2013},
+  volume  = {1},
+  number  = {2},
+  pages   = {323--327},
+}
+
+@InCollection{Bosnacki2019,
+  author    = {Bo{\v{s}}na{\v{c}}ki, Dragan and van Riel, Natal and Veta, Mitko},
+  title     = {Deep Learning with Convolutional Neural Networks for Histopathology Image Analysis},
+  booktitle = {Automated Reasoning for Systems Biology and Medicine},
+  publisher = {Springer},
+  year      = {2019},
+  pages     = {453--469},
+}
+
+@InProceedings{Bayramoglu2016,
+  author    = {Bayramoglu, Neslihan and Kannala, Juho and Heikkil{\"a}, Janne},
+  title     = {Deep learning for magnification independent breast cancer histopathology image classification},
+  booktitle = {Proc. of International conference on pattern recognition, Cancun, Mexico, pp. 2440--2445},
+  year      = {2016},
+}
+
+@Article{Saha2018,
+  author    = {Saha, Monjoy and Chakraborty, Chandan and Racoceanu, Daniel},
+  title     = {Efficient deep learning model for mitosis detection using breast histopathology images},
+  journal   = {Computerized Medical Imaging and Graphics},
+  year      = {2018},
+  volume    = {64},
+  pages     = {29--40},
+  publisher = {Elsevier},
+}
+
+@Article{Coudray2018,
+  author    = {Coudray, Nicolas and Ocampo, Paolo Santiago and Sakellaropoulos, Theodore and Narula, Navneet and Snuderl, Matija and Feny{\"o}, David and Moreira, Andre L and Razavian, Narges and Tsirigos, Aristotelis},
+  title     = {Classification and mutation prediction from non--small cell lung cancer histopathology images using deep learning},
+  journal   = {Nature medicine},
+  year      = {2018},
+  volume    = {24},
+  number    = {10},
+  pages     = {1559},
+  publisher = {Nature Publishing Group},
+}
+
+@InProceedings{Pal2018a,
+  author       = {Pal, Raju and Saraswat, Mukesh},
+  title        = {Enhanced bag of features using alexnet and improved biogeography-based optimization for histopathological image analysis},
+  booktitle    = {Proc. of Eleventh International Conference on Contemporary Computing, Noida, India, pp. 1--6},
+  year         = {2018},
+  pages        = {1--6},
+  organization = {IEEE},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
